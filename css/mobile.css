@@ -135,6 +135,8 @@
     .schedule-table {
         display: block;
         overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        min-width: 480px;
     }
 
     /* Accent cards full width */
@@ -276,6 +278,68 @@
 
     .tab-nav {
         flex-wrap: wrap;
+    }
+
+    /* --- Hero Badge (AZAV abgeschnitten) --- */
+    .hero-badge {
+        font-size: var(--font-xs);
+        white-space: normal;
+        text-align: center;
+    }
+
+    /* --- Badges wrap --- */
+    .badges-row {
+        flex-wrap: wrap;
+        gap: var(--space-2);
+    }
+
+    .badge {
+        font-size: 0.65rem;
+    }
+
+    /* --- Skill Pills zentriert --- */
+    .skill-pills {
+        justify-content: center;
+    }
+
+    /* --- Tables: scrollable wrapper --- */
+    .glass-card:has(.schedule-table),
+    .glass-card:has(.transparency-table) {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .transparency-table {
+        min-width: 500px;
+    }
+
+    /* --- Footer: nicht transparent, bessere Anordnung --- */
+    .footer {
+        background: var(--color-bg-secondary);
+        border-top: 1px solid var(--color-border);
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr !important;
+        gap: var(--space-6) var(--space-4);
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+        text-align: center;
+    }
+
+    .footer-brand img {
+        margin: 0 auto;
+    }
+
+    .footer-brand p {
+        max-width: 100%;
+    }
+
+    /* --- Contact Tab: versteckt auf Mobile --- */
+    .contact-tab {
+        display: none !important;
     }
 
     /* --- Cookie Banner --- */

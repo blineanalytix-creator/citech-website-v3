@@ -503,7 +503,7 @@
                     ' M34,116 L66,116 L64,120 L36,120 Z'
                 );
             }
-            const targetH = this.height * 0.55;
+            const targetH = this.height * (this.isMobile ? 0.35 : 0.55);
             const scale = targetH / 125; // path viewbox ~100x125
             const oX = (this.width - 100 * scale) / 2;
             const oY = (this.height - 125 * scale) / 2;
@@ -533,9 +533,10 @@
             off.width = this.width;
             off.height = this.height;
 
-            const fontSize = text.length <= 2 ? this.height * 0.52
-                           : text.length <= 4 ? this.height * 0.30
-                           : this.height * 0.22;
+            const m = this.isMobile;
+            const fontSize = text.length <= 2 ? this.height * (m ? 0.35 : 0.52)
+                           : text.length <= 4 ? this.height * (m ? 0.2 : 0.30)
+                           : this.height * (m ? 0.15 : 0.22);
             octx.font = '700 ' + fontSize + 'px Inter, sans-serif';
             octx.textAlign = 'center';
             octx.textBaseline = 'middle';
@@ -600,7 +601,7 @@
 
         // CITECH Symbol centered (for leitbild etc.)
         genSymbolCenter(n) {
-            const s = (this.height * 0.55) / this.svgH;
+            const s = (this.height * (this.isMobile ? 0.35 : 0.55)) / this.svgH;
             const oX = (this.width - this.svgW * s) / 2;
             const oY = (this.height - this.svgH * s) / 2;
             return this._pathPts(n, s, oX, oY);
