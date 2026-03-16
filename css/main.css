@@ -1975,70 +1975,19 @@ p {
 .text-right { text-align: right; }
 
 /* ============================================
-   INTRO ANIMATION OVERLAY
-   5-Phase Cinematic Logo Reveal
-   seed -> drawing -> awakening -> brand-visible -> burst -> fade-out
+   INTRO ANIMATION (Wegweiser-Style)
+   Clean Logo Reveal: Symbol → Brand → Morph Out → Page
    ============================================ */
-
-/* ========== INTRO OVERLAY ========== */
 
 .intro-overlay {
     position: fixed;
     inset: 0;
     z-index: 9999;
-    background:
-        radial-gradient(ellipse 80% 50% at 50% 100%, rgba(0, 50, 80, 0.4) 0%, transparent 60%),
-        radial-gradient(ellipse 60% 40% at 70% 20%, rgba(0, 80, 120, 0.2) 0%, transparent 50%),
-        linear-gradient(180deg,
-            var(--color-bg-primary) 0%,
-            color-mix(in srgb, var(--color-bg-primary) 85%, var(--color-primary-900)) 50%,
-            color-mix(in srgb, var(--color-bg-primary) 70%, var(--color-primary-900)) 100%);
+    background: var(--color-bg-primary);
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: opacity 1.5s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* Floating Orbs */
-.intro-overlay .intro-orb {
-    position: absolute;
-    border-radius: var(--radius-full);
-    filter: blur(80px);
-    opacity: 0;
-    animation: introOrbFadeIn 3s ease forwards;
-}
-
-.intro-orb-1 {
-    width: 500px;
-    height: 500px;
-    background: radial-gradient(circle, rgba(0, 180, 220, 0.15) 0%, transparent 70%);
-    top: 60%;
-    left: 20%;
-    animation-delay: 0.5s !important;
-}
-
-.intro-orb-2 {
-    width: 400px;
-    height: 400px;
-    background: radial-gradient(circle, rgba(0, 150, 200, 0.12) 0%, transparent 70%);
-    top: 20%;
-    right: 15%;
-    animation-delay: 1s !important;
-}
-
-.intro-orb-3 {
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, rgba(0, 200, 255, 0.08) 0%, transparent 70%);
-    bottom: -10%;
-    left: 50%;
-    transform: translateX(-50%);
-    animation-delay: 1.5s !important;
-}
-
-@keyframes introOrbFadeIn {
-    0%   { opacity: 0; transform: scale(0.8); }
-    100% { opacity: 1; transform: scale(1); }
+    transition: opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .intro-overlay.fade-out {
@@ -2050,285 +1999,99 @@ p {
     display: none;
 }
 
-/* ========== SEED POINT (SVG circle) ========== */
-
-.intro-seed-point {
-    fill: var(--color-primary-400);
-    opacity: 0;
-    filter: drop-shadow(0 0 0 rgba(0, 212, 255, 0));
-    animation: seedFlashAndFade 0.8s ease 0.2s forwards;
-}
-
-@keyframes seedFlashAndFade {
-    0%   { opacity: 0; filter: drop-shadow(0 0 0 rgba(0, 212, 255, 0)); }
-    40%  { opacity: 1; filter: drop-shadow(0 0 20px rgba(0, 212, 255, 1)) drop-shadow(0 0 40px rgba(0, 212, 255, 0.6)); }
-    70%  { opacity: 0.8; filter: drop-shadow(0 0 10px rgba(0, 212, 255, 0.8)); }
-    100% { opacity: 0; filter: drop-shadow(0 0 0 rgba(0, 212, 255, 0)); }
-}
-
-/* ========== LOGO CONTAINER ========== */
-
 .intro-logo-container {
-    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     z-index: 10;
 }
 
-/* ========== SVG LOGO ========== */
-
-.intro-logo-svg {
-    width: clamp(200px, 35vw, 400px);
-    height: auto;
-    overflow: visible;
-}
-
-.intro-logo-path {
-    stroke-dasharray: 2000;
-    stroke-dashoffset: 2000;
+/* Symbol */
+.intro-symbol {
     opacity: 0;
-    transition: opacity var(--transition-base);
+    transform: scale(0.8);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    filter: drop-shadow(0 0 30px rgba(0, 212, 255, 0.3));
 }
 
-/* Phase 1: Drawing */
-.intro-overlay.drawing .intro-logo-path {
+.intro-symbol.visible {
     opacity: 1;
-    animation: drawLogo 2.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    transform: scale(1);
 }
 
-@keyframes drawLogo {
-    0%   { stroke-dashoffset: 2000; }
-    100% { stroke-dashoffset: 0; }
-}
-
-/* Glow path (awakening phase) */
-.intro-logo-glow {
+.intro-symbol.morph-out {
     opacity: 0;
-    transition: opacity var(--transition-slow);
+    transform: scale(1.05);
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
 }
 
-.intro-overlay.awakening .intro-logo-glow {
-    animation: glowPulse 1.5s ease-in-out infinite;
-}
-
-@keyframes glowPulse {
-    0%, 100% { opacity: 0.3; }
-    50%      { opacity: 0.7; }
-}
-
-/* ========== BRAND TEXT ========== */
-
-.intro-brand-text {
-    margin-top: var(--space-8);
-    display: flex;
-    gap: 0.15em;
-    font-size: clamp(1.5rem, 4vw, 2.5rem);
-    font-weight: 600;
-    letter-spacing: 0.3em;
-    color: transparent;
-}
-
-.intro-brand-letter {
-    opacity: 0;
-    transform: translateY(20px);
-    background: linear-gradient(135deg, var(--color-primary-400), var(--color-primary-600));
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    text-shadow: 0 0 30px rgba(0, 212, 255, 0.5);
-}
-
-.intro-overlay.brand-visible .intro-brand-letter {
-    animation: letterReveal 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
-}
-
-.intro-overlay.brand-visible .intro-brand-letter:nth-child(1) { animation-delay: 0ms; }
-.intro-overlay.brand-visible .intro-brand-letter:nth-child(2) { animation-delay: 60ms; }
-.intro-overlay.brand-visible .intro-brand-letter:nth-child(3) { animation-delay: 120ms; }
-.intro-overlay.brand-visible .intro-brand-letter:nth-child(4) { animation-delay: 180ms; }
-.intro-overlay.brand-visible .intro-brand-letter:nth-child(5) { animation-delay: 240ms; }
-.intro-overlay.brand-visible .intro-brand-letter:nth-child(6) { animation-delay: 300ms; }
-
-@keyframes letterReveal {
-    0%   { opacity: 0; transform: translateY(20px) scale(0.8); }
-    100% { opacity: 1; transform: translateY(0) scale(1); }
-}
-
-/* ========== ENERGY PARTICLES ========== */
-
-.intro-energy-particles {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 0;
-    height: 0;
-    pointer-events: none;
-}
-
-.intro-energy-particle {
-    position: absolute;
-    width: 4px;
-    height: 4px;
-    background: var(--color-primary-400);
-    border-radius: var(--radius-full);
-    opacity: 0;
-    box-shadow:
-        0 0 6px rgba(0, 212, 255, 0.8),
-        0 0 12px rgba(0, 212, 255, 0.5);
-}
-
-.intro-overlay.burst .intro-energy-particle {
-    animation: particleBurst 1s cubic-bezier(0.16, 1, 0.3, 1) var(--delay) forwards;
-}
-
-@keyframes particleBurst {
-    0%   { opacity: 1; transform: rotate(var(--angle)) translateX(50px) scale(1); }
-    100% { opacity: 0; transform: rotate(var(--angle)) translateX(300px) scale(0); }
-}
-
-/* ========== BURST STATE ========== */
-
-.intro-overlay.burst .intro-logo-svg {
-    animation: logoFlash 0.6s ease forwards;
-}
-
-@keyframes logoFlash {
-    0%   { filter: brightness(1) drop-shadow(0 0 20px rgba(0, 212, 255, 0.8)); }
-    30%  { filter: brightness(2) drop-shadow(0 0 60px rgba(255, 255, 255, 0.9)); }
-    100% { filter: brightness(1) drop-shadow(0 0 30px rgba(0, 212, 255, 0.5)); opacity: 0.8; }
-}
-
-.intro-overlay.burst .intro-brand-text {
-    animation: textFlash 0.6s ease forwards;
-}
-
-@keyframes textFlash {
-    0%   { text-shadow: 0 0 30px rgba(0, 212, 255, 0.5); }
-    30%  { text-shadow: 0 0 60px rgba(255, 255, 255, 0.9); }
-    100% { text-shadow: 0 0 20px rgba(0, 212, 255, 0.3); }
-}
-
-/* ========== CENTRAL GLOW (::after pseudo) ========== */
-
-.intro-overlay::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 300px;
-    height: 300px;
-    transform: translate(-50%, -50%);
-    background: radial-gradient(circle,
-        rgba(0, 212, 255, 0.1) 0%,
-        rgba(0, 180, 220, 0.05) 40%,
-        transparent 70%);
-    pointer-events: none;
-    opacity: 0;
-    transition: all 0.8s ease;
-}
-
-.intro-overlay.drawing::after {
-    opacity: 1;
-    animation: centralPulse 3s ease-in-out infinite;
-}
-
-.intro-overlay.awakening::after {
-    width: 500px;
-    height: 500px;
-    background: radial-gradient(circle,
-        rgba(0, 212, 255, 0.25) 0%,
-        rgba(0, 180, 220, 0.12) 40%,
-        transparent 70%);
-}
-
-.intro-overlay.burst::after {
-    width: 150vw;
-    height: 150vh;
-    opacity: 0;
-    transition: all 0.8s ease;
-}
-
-@keyframes centralPulse {
-    0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.6; }
-    50%      { transform: translate(-50%, -50%) scale(1.15); opacity: 1; }
-}
-
-/* ========== TAGLINE ========== */
-
-.intro-tagline-container {
-    margin-top: var(--space-8);
+/* Brand text */
+.intro-brand {
+    margin-top: var(--space-6);
     text-align: center;
     opacity: 0;
     transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-.intro-tagline-container.visible {
-    animation: taglineFadeIn 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+.intro-brand.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
-@keyframes taglineFadeIn {
-    0%   { opacity: 0; transform: translateY(20px); }
-    100% { opacity: 1; transform: translateY(0); }
+.intro-brand.fade-out {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-.intro-tagline-text {
+.intro-brand-name {
     display: block;
-    font-size: clamp(0.85rem, 2vw, 1.1rem);
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 700;
+    color: var(--color-text-primary);
+    letter-spacing: var(--letter-spacing-tight);
+}
+
+.intro-brand-sub {
+    display: block;
+    margin-top: var(--space-2);
+    font-size: clamp(0.8rem, 1.5vw, 1rem);
     font-weight: 300;
-    color: var(--color-text-secondary);
-    letter-spacing: var(--letter-spacing-wider);
+    color: var(--color-text-muted);
+    letter-spacing: var(--letter-spacing-wide);
     text-transform: uppercase;
 }
 
-.intro-tagline-highlight {
-    display: block;
-    margin-top: var(--space-2);
-    font-size: clamp(1.1rem, 2.5vw, 1.5rem);
-    font-weight: 500;
-    color: var(--color-primary-400);
-    letter-spacing: var(--letter-spacing-wide);
-    text-shadow:
-        0 0 20px rgba(0, 212, 255, 0.6),
-        0 0 40px rgba(0, 212, 255, 0.3);
-}
-
-/* ========== SKIP BUTTON ========== */
-
+/* Skip button */
 .intro-skip {
     position: absolute;
     bottom: var(--space-6);
     right: var(--space-6);
     padding: var(--space-2) var(--space-4);
-    background: rgba(255, 255, 255, 0.05);
+    background: transparent;
     border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: var(--radius-md);
-    font-size: var(--font-sm);
-    color: rgba(255, 255, 255, 0.4);
+    border-radius: var(--radius-full);
+    font-size: var(--font-xs);
+    color: var(--color-text-muted);
     cursor: pointer;
     opacity: 0;
     transition: all var(--transition-base);
     z-index: 20;
-    animation: skipFadeIn 0.5s ease 1s forwards;
+    animation: skipFadeIn 0.5s ease 0.5s forwards;
 }
 
 @keyframes skipFadeIn {
-    to { opacity: 1; }
+    to { opacity: 0.6; }
 }
 
 .intro-skip:hover {
-    background: rgba(255, 255, 255, 0.1);
-    border-color: var(--color-border-hover);
-    color: rgba(255, 255, 255, 0.7);
+    color: var(--color-text-primary);
+    border-color: rgba(255, 255, 255, 0.3);
 }
 
-/* ========== REDUCED MOTION: Skip Intro entirely ========== */
-
 @media (prefers-reduced-motion: reduce) {
-    .intro-overlay {
-        display: none !important;
-    }
+    .intro-overlay { display: none !important; }
 }
 
 /* ============================================
