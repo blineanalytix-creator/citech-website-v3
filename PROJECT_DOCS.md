@@ -440,28 +440,34 @@ Optional Dropdown unter "Schulungen": Module 1-4, Termine
 ### Offene Punkte (Priorisiert)
 
 #### Erledigt
-- [x] Startseite Hero überarbeitet (3 Säulen: Schulung/Beratung/Tools)
-- [x] Kontakt-Slide global (JS-injiziert auf allen Seiten)
+- [x] Startseite Hero überarbeitet (3 Säulen: Schulung/Beratung/Tools, kein "100% förderfähig")
+- [x] Kontakt-Slide global (JS-injiziert, DE/EN aware)
 - [x] .htaccess (CSP, HSTS, Clean URLs, Caching, Bot-Blocking, GZIP)
 - [x] robots.txt + sitemap.xml (13 Seiten, Clean URLs)
 - [x] Fonts TTF → WOFF2 (59% kleiner, DSGVO-sicher)
 - [x] contact-handler.php (CORS, CSRF, Rate Limiting, Honeypot)
 - [x] SEO-Audit + Fixes (Title Tags, Meta Descriptions)
 - [x] Tracking-Entscheidung: Kein GA, kein Cookiebot (passt zum DSGVO-Image)
-- [x] Bild Ingo Poschmann zentriert
-- [x] Git-Repo + GitHub Pages live
-- [x] Mobile Living Network aktiviert (200 Nodes, zentriert)
-- [x] Mobile Grids, Tabellen, Footer, Contact-Tab fixes
+- [x] Bild Ingo Poschmann zentriert (object-position: 100% top)
+- [x] Git-Repo + GitHub Pages live (https://blineanalytix-creator.github.io/citech-website-v3/)
+- [x] Mobile Living Network aktiviert (200 Nodes, zentriert, Höhe fixiert gegen Adressleisten-Tanz)
+- [x] Mobile Grids, Tabellen, Footer (solid BG), Contact-Tab hidden
+- [x] **Englische Version komplett** – alle 13 Seiten übersetzt unter /en/
+- [x] Kontakt-Slide automatisch DE/EN basierend auf URL-Pfad
+- [x] Services-Karten: Zahlen entfernt, Icons linksbündig, gleiche Höhe
+- [x] Module-Karten: "Modul 1 · KI-Anwender" in einer Zeile statt separate Badge
+- [x] Gehirn-Formation stärker leuchtend auf Startseite
+- [x] Footer Desktop: leicht transparenter Hintergrund für besseren Kontrast
 
 #### P0 – Kritisch (vor Launch)
-- [ ] **Englische Version** – Komplette EN-Übersetzung aller 13 Seiten (Toggle existiert, nicht funktional)
-- [ ] **Intro-Animation** – Einleitungsanimation beim ersten Seitenbesuch (wie Wegweiser), mit Skip-Button, sessionStorage für "bereits gesehen"
-- [ ] **Page-Transition** – Smooth Übergangsanimation beim Seitenwechsel
+- [x] ~~Englische Version~~ – ✅ Alle 13 Seiten übersetzt, Toggle funktional
+- [ ] **Intro-Animation** – Erster Versuch revertiert (Body-Opacity Konflikt). Nächster Anlauf: Sauberer Overlay ohne body-Manipulation. Nutzer hat eigene Idee für nächste Session
+- [ ] **Page-Transition** – Revertiert zusammen mit Intro. Fade-Out/In beim Seitenwechsel. Vorsicht: darf bestehende Styles nicht beeinflussen
 - [ ] **Barrierefreiheit prüfen** – WCAG 2.1 AA: Kontraste, Keyboard-Navigation, Screen Reader, Focus-Management, aria-live für dynamische Inhalte
 - [ ] **Leitbild bei Schulungen** prüfen – vollständig?
 - [ ] **Mobile Feinschliff:**
-  - Hero-Badge "AZAV" abgeschnitten (border-radius/overflow)
-  - Hamburger → X nicht sichtbar (z-index Stacking Context Header vs Mobile Menu)
+  - Hero-Badge "AZAV" abgeschnitten (border-radius/overflow) – Fix in main.css @media vorhanden aber wirkt nicht auf GitHub Pages
+  - Hamburger → X nicht sichtbar (z-index Stacking Context: Header z-100 < Mobile Menu z-200, Kind-Element kann Parent nicht überschreiben)
   - Light Mode mobil testen
 
 #### P1 – Wichtig (zeitnah nach Launch)

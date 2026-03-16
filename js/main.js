@@ -106,6 +106,7 @@
                 const isOpen = this.elements.mobileMenu.classList.toggle('open');
                 this.elements.mobileToggle.classList.toggle('active', isOpen);
                 this.elements.mobileMenu.setAttribute('aria-hidden', !isOpen);
+                this.elements.header.classList.toggle('menu-open', isOpen);
                 document.body.style.overflow = isOpen ? 'hidden' : '';
             });
 
@@ -126,6 +127,7 @@
             this.elements.mobileMenu.classList.remove('open');
             this.elements.mobileToggle.classList.remove('active');
             this.elements.mobileMenu.setAttribute('aria-hidden', 'true');
+            this.elements.header.classList.remove('menu-open');
             document.body.style.overflow = '';
         },
 
@@ -168,6 +170,7 @@
                 toggle.addEventListener('click', (e) => {
                     e.preventDefault();
                     dropdown.classList.toggle('open');
+                    toggle.setAttribute('aria-expanded', dropdown.classList.contains('open'));
                 });
             });
         }
@@ -272,6 +275,11 @@
             this.canvas = document.getElementById('neural-bg-canvas');
             if (!this.canvas) return;
             this.isMobile = window.innerWidth <= 768;
+            this.reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            if (this.reducedMotion) {
+                this.canvas.style.display = 'none';
+                return;
+            }
             this.ctx = this.canvas.getContext('2d');
             this.updateColors();
             this.resize();

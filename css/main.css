@@ -33,7 +33,7 @@
     /* Text Hierarchy */
     --color-text-primary: #f0f4f8;
     --color-text-secondary: #8a96a3;
-    --color-text-muted: #566070;
+    --color-text-muted: #7a8494;
 
     /* Functional */
     --color-success: #22c55e;
@@ -626,10 +626,9 @@ p {
     transform: translateY(-7px) rotate(-45deg);
 }
 
-/* Ensure hamburger stays above mobile menu */
-.mobile-menu-toggle {
-    position: relative;
-    z-index: 201;
+/* Header above mobile menu when menu is open */
+.header.menu-open {
+    z-index: 250;
 }
 
 /* Mobile Menu */
@@ -2005,12 +2004,13 @@ p {
 
     /* Hero badge no cutoff */
     .hero-badge {
-        font-size: 0.65rem;
-        white-space: normal;
+        font-size: 0.65rem !important;
+        white-space: normal !important;
         text-align: center;
-        border-radius: var(--radius-lg);
+        border-radius: var(--radius-lg) !important;
         max-width: 100%;
         word-break: break-word;
+        padding: var(--space-2) var(--space-3) !important;
     }
 
     /* Badges smaller */
