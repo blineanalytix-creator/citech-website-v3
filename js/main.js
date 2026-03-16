@@ -859,7 +859,198 @@
     };
 
     /* ========================================
-       9. SMOOTH ANCHOR LINKS
+       9. INTRO ANIMATION
+       Cinematic Logo Reveal Overlay
+       seed -> drawing -> awakening -> brand-visible -> burst -> fade-out
+       ======================================== */
+
+    const IntroAnimation = {
+        overlay: null,
+        skipBtn: null,
+        isEN: false,
+        timers: [],
+
+        init() {
+            // Reduced motion: skip entirely
+            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+            // Already seen this session
+            if (sessionStorage.getItem('citech_intro_seen')) return;
+
+            // Detect language
+            this.isEN = window.location.pathname.includes('/en/');
+
+            this.createOverlay();
+            this.addEventListeners();
+            this.startAnimation();
+        },
+
+        createOverlay() {
+            // Build overlay element
+            this.overlay = document.createElement('div');
+            this.overlay.className = 'intro-overlay';
+            this.overlay.setAttribute('aria-hidden', 'true');
+
+            const skipLabel = this.isEN ? 'Skip' : '\u00dcberspringen';
+            const taglineText = this.isEN
+                ? 'Accessible \u00b7 Offline \u00b7 Low-Code'
+                : 'Niederschwellig \u00b7 Offline \u00b7 Low-Code';
+            const taglineHighlight = this.isEN
+                ? 'We shape AI experts'
+                : 'Wir formen KI-Experten';
+
+            // SVG path data (CITECH S-curve symbol)
+            const symbolPath = 'M263.55,364.68c-33.25-.06-45.7-2.07-69.98-26.61-12.63-12.97-27.52-25.05-35.21-41.79-5.34-11.79-5.03-25.35-4.87-38.13.33-16.86-.52-34.17,8.09-48.47,6.16-10.42,15.17-18.75,23.76-27.21,12.23-11.63,24.82-24.5,41.82-28.34,18.75-4.08,39.73,1.23,58.49-5.24,62.32-17.54,74.01-104.18,18.4-137.29-16.05-9.87-36.16-13.86-54.53-10.34-32.95,5.53-59.25,34.17-62.39,67.45-1.88,15.04-.54,30.87-7,44.69-5.83,13.02-17.26,23.61-27.6,33.74-12.4,11.92-25.46,24.97-42.55,28.64-8.79,2.05-18.2,1.77-27.55,1.89-17.4-.1-34.64,3.51-49.11,13.51-48.86,31.74-42.78,108.53,10.5,131.95,5.5,2.55,11.27,4.43,17.09,5.65,17.44,3.95,36.46.1,53.27,6.55,19.11,7.59,32.84,24.9,47.51,38.97,20.95,20.81,24.91,34.46,24.73,63.51-.37,41.61,30.22,76.76,72.27,79.24,36.59,2.66,71.39-22.74,79.22-58.4,11.93-47.57-25.92-93.77-74.15-93.98h-.2Z';
+
+            // Logo container with SVG, brand text, tagline
+            const logoContainer = document.createElement('div');
+            logoContainer.className = 'intro-logo-container';
+            logoContainer.innerHTML =
+                '<svg class="intro-logo-svg" viewBox="-20 -20 380 540" preserveAspectRatio="xMidYMid meet">' +
+                    '<defs>' +
+                        '<filter id="introLogoGlow" x="-50%" y="-50%" width="200%" height="200%">' +
+                            '<feGaussianBlur stdDeviation="3" result="blur"/>' +
+                            '<feMerge><feMergeNode in="blur"/><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>' +
+                        '</filter>' +
+                        '<linearGradient id="introStrokeGrad" x1="0%" y1="0%" x2="100%" y2="100%">' +
+                            '<stop offset="0%" style="stop-color:#00d4ff"/>' +
+                            '<stop offset="50%" style="stop-color:#00a8cc"/>' +
+                            '<stop offset="100%" style="stop-color:#00d4ff"/>' +
+                        '</linearGradient>' +
+                    '</defs>' +
+                    '<circle class="intro-seed-point" cx="263.55" cy="364.68" r="4" fill="#00d4ff"/>' +
+                    '<path class="intro-logo-glow" d="' + symbolPath + '" fill="none" stroke="url(#introStrokeGrad)" stroke-width="8" filter="url(#introLogoGlow)" opacity="0"/>' +
+                    '<path class="intro-logo-path" d="' + symbolPath + '" fill="none" stroke="url(#introStrokeGrad)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>' +
+                '</svg>' +
+                '<div class="intro-energy-particles"></div>' +
+                '<div class="intro-brand-text">' +
+                    '<span class="intro-brand-letter">C</span>' +
+                    '<span class="intro-brand-letter">I</span>' +
+                    '<span class="intro-brand-letter">T</span>' +
+                    '<span class="intro-brand-letter">E</span>' +
+                    '<span class="intro-brand-letter">C</span>' +
+                    '<span class="intro-brand-letter">H</span>' +
+                '</div>' +
+                '<div class="intro-tagline-container">' +
+                    '<span class="intro-tagline-text">' + taglineText + '</span>' +
+                    '<span class="intro-tagline-highlight">' + taglineHighlight + '</span>' +
+                '</div>';
+
+            this.overlay.appendChild(logoContainer);
+
+            // Energy particles
+            const particleContainer = logoContainer.querySelector('.intro-energy-particles');
+            for (let i = 0; i < 30; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'intro-energy-particle';
+                const angle = (i / 30) * 360;
+                const delay = i * 50;
+                particle.style.cssText = '--angle: ' + angle + 'deg; --delay: ' + delay + 'ms;';
+                particleContainer.appendChild(particle);
+            }
+
+            // Background orbs
+            for (let i = 1; i <= 3; i++) {
+                const orb = document.createElement('div');
+                orb.className = 'intro-orb intro-orb-' + i;
+                this.overlay.appendChild(orb);
+            }
+
+            // Skip button
+            this.skipBtn = document.createElement('button');
+            this.skipBtn.className = 'intro-skip';
+            this.skipBtn.textContent = skipLabel;
+            this.overlay.appendChild(this.skipBtn);
+
+            // Inject into DOM
+            document.body.appendChild(this.overlay);
+        },
+
+        addEventListeners() {
+            this.skipBtn.addEventListener('click', () => this.skipIntro());
+
+            this._escHandler = (e) => {
+                if (e.key === 'Escape') this.skipIntro();
+            };
+            document.addEventListener('keydown', this._escHandler);
+        },
+
+        _schedule(fn, ms) {
+            const id = setTimeout(fn, ms);
+            this.timers.push(id);
+            return id;
+        },
+
+        startAnimation() {
+            const ov = this.overlay;
+
+            // Remove seed point after its flash animation completes
+            this._schedule(() => {
+                const seed = ov.querySelector('.intro-seed-point');
+                if (seed) seed.remove();
+            }, 1100);
+
+            // Phase 1: Drawing (stroke animation)
+            this._schedule(() => { ov.classList.add('drawing'); }, 1000);
+
+            // Phase 2: Awakening (glow pulse)
+            this._schedule(() => { ov.classList.add('awakening'); }, 3600);
+
+            // Phase 3: Brand text reveal
+            this._schedule(() => { ov.classList.add('brand-visible'); }, 3900);
+
+            // Tagline fade in
+            this._schedule(() => {
+                const tagline = ov.querySelector('.intro-tagline-container');
+                if (tagline) tagline.classList.add('visible');
+            }, 4200);
+
+            // Phase 4: Energy burst
+            this._schedule(() => { ov.classList.add('burst'); }, 5200);
+
+            // Phase 5: Complete -> fade-out -> remove
+            this._schedule(() => { this.completeIntro(); }, 5700);
+        },
+
+        completeIntro() {
+            sessionStorage.setItem('citech_intro_seen', 'true');
+
+            this.overlay.classList.add('fade-out');
+
+            this._schedule(() => {
+                this.overlay.classList.add('hidden');
+                this._schedule(() => { this.cleanup(); }, 100);
+            }, 1200);
+        },
+
+        skipIntro() {
+            sessionStorage.setItem('citech_intro_seen', 'true');
+
+            // Cancel all pending timers
+            this.timers.forEach(id => clearTimeout(id));
+            this.timers = [];
+
+            if (this.overlay) {
+                this.overlay.classList.add('hidden');
+                this.cleanup();
+            }
+        },
+
+        cleanup() {
+            if (this._escHandler) {
+                document.removeEventListener('keydown', this._escHandler);
+                this._escHandler = null;
+            }
+            if (this.overlay && this.overlay.parentNode) {
+                this.overlay.remove();
+            }
+            this.overlay = null;
+            this.skipBtn = null;
+        }
+    };
+
+    /* ========================================
+       10. SMOOTH ANCHOR LINKS
        ======================================== */
 
     const SmoothScroll = {
@@ -886,6 +1077,7 @@
        ======================================== */
 
     const init = () => {
+        IntroAnimation.init();
         ThemeManager.init();
         Navigation.init();
         NeuralBackground.init();
