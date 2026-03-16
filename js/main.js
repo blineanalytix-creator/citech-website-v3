@@ -402,8 +402,26 @@
                     { section: '#contact-section', gen: 'genSymbolCenter', alpha: 0.30, flashRate: 0.004, connDist: 58, nodeR: 1.5, lineW: 0.4, digit: null }
                 ];
             }
-            // Schulungen page
+            // Schulungen page (tab-aware: Module vs Leitbild)
             if (document.querySelector('#modul-1')) {
+                // DE version has tabs (#schulungen-tabs) – need separate formation sets
+                if (document.querySelector('#schulungen-tabs')) {
+                    this._tabFormations = {
+                        'tab-module': [
+                            { section: '.page-hero', gen: 'genHeroSymbol', alpha: 0.50, flashRate: 0.014, connDist: 75, nodeR: 2.1, lineW: 0.65, digit: null },
+                            { section: '#modul-1',   gen: 'genBulb',       alpha: 0.30, flashRate: 0.006, connDist: 52, nodeR: 1.5, lineW: 0.38, digit: '1' },
+                            { section: '#modul-2',   gen: 'genBulb',       alpha: 0.30, flashRate: 0.006, connDist: 52, nodeR: 1.5, lineW: 0.38, digit: '2' },
+                            { section: '#modul-3',   gen: 'genBulb',       alpha: 0.30, flashRate: 0.006, connDist: 52, nodeR: 1.5, lineW: 0.38, digit: '3' },
+                            { section: '#modul-4',   gen: 'genBulb',       alpha: 0.30, flashRate: 0.006, connDist: 52, nodeR: 1.5, lineW: 0.38, digit: '4' }
+                        ],
+                        'tab-leitbild': [
+                            { section: '.page-hero',        gen: 'genHeroSymbol',   alpha: 0.50, flashRate: 0.014, connDist: 75, nodeR: 2.1, lineW: 0.65, digit: null },
+                            { section: '#leitbild-content',  gen: 'genSymbolCenter', alpha: 0.28, flashRate: 0.004, connDist: 58, nodeR: 1.5, lineW: 0.4,  digit: null }
+                        ]
+                    };
+                    return this._tabFormations['tab-module'];
+                }
+                // EN version (no tabs) – flat formation array
                 return [
                     { section: '.page-hero', gen: 'genHeroSymbol', alpha: 0.50, flashRate: 0.014, connDist: 75, nodeR: 2.1, lineW: 0.65, digit: null },
                     { section: '#modul-1',   gen: 'genBulb',       alpha: 0.30, flashRate: 0.006, connDist: 52, nodeR: 1.5, lineW: 0.38, digit: '1' },
@@ -651,6 +669,22 @@
         easeInOutCubic(t) { return t < 0.5 ? 4*t*t*t : 1 - Math.pow(-2*t+2, 3)/2; },
         lerp(a, b, t) { return a + (b - a) * t; },
 
+        /* ---------- SWITCH FORMATIONS (for tab systems) ---------- */
+        switchFormations(newFormations) {
+            this.formations = newFormations;
+            const n = this.isMobile ? 200 : this.config.nodeCount;
+            const posArrays = newFormations.map(f => this[f.gen](n));
+            const count = Math.min(...posArrays.map(a => a.length));
+            const nodeCount = Math.min(this.nodes.length, count);
+            for (let i = 0; i < nodeCount; i++) {
+                this.nodes[i].pos = posArrays.map(arr => arr[i]);
+            }
+            this.nodes.length = nodeCount;
+            this.fromIdx = 0;
+            this.toIdx = 0;
+            this.morphProgress = 0;
+        },
+
         /* ---------- ANIMATION LOOP ---------- */
         animate() {
             this.ctx.clearRect(0, 0, this.width, this.height);
@@ -798,6 +832,11 @@
                     group.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
                     const panel = group.querySelector('#' + target);
                     if (panel) panel.classList.add('active');
+
+                    // Switch Living Network formations for tab-aware pages
+                    if (NeuralBackground.canvas && NeuralBackground._tabFormations && NeuralBackground._tabFormations[target]) {
+                        NeuralBackground.switchFormations(NeuralBackground._tabFormations[target]);
+                    }
                 });
             });
         }
