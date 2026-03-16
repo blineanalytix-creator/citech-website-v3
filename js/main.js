@@ -882,6 +882,9 @@
             this.overlay.setAttribute('aria-hidden', 'true');
 
             const brandSub = this.isEN ? 'AI Training & Consulting' : 'KI-Weiterbildung & Beratung';
+            const tagline = this.isEN
+                ? '<span style="color:var(--color-primary-400)">Accessible</span>, offline & <span style="color:var(--color-primary-400)">low-code</span> AI'
+                : '<span style="color:var(--color-primary-400)">Niederschwellig</span>, offline & <span style="color:var(--color-primary-400)">Low-Code</span> KI';
             const skipLabel = this.isEN ? 'Skip' : '\u00dcberspringen';
 
             // Use the actual CITECH logo SVG (symbol + wordmark + AI)
@@ -909,6 +912,7 @@
                     '<div class="intro-symbol" id="intro-symbol">' + logoSvg + '</div>' +
                     '<div class="intro-brand" id="intro-brand">' +
                         '<span class="intro-brand-sub">' + brandSub + '</span>' +
+                        '<span class="intro-brand-tagline">' + tagline + '</span>' +
                     '</div>' +
                 '</div>' +
                 '<button class="intro-skip" id="intro-skip">' + skipLabel + '</button>';

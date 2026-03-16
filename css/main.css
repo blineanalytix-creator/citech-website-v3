@@ -2063,6 +2063,15 @@ p {
     text-transform: uppercase;
 }
 
+.intro-brand-tagline {
+    display: block;
+    margin-top: var(--space-4);
+    font-size: clamp(0.75rem, 1.3vw, 0.9rem);
+    font-weight: 300;
+    color: var(--color-text-secondary);
+    letter-spacing: var(--letter-spacing-wide);
+}
+
 /* Skip button */
 .intro-skip {
     position: absolute;
