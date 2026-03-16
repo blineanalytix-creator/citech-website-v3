@@ -270,10 +270,8 @@
         /* ---------- INIT ---------- */
         init() {
             this.canvas = document.getElementById('neural-bg-canvas');
-            if (!this.canvas || window.innerWidth <= 768) {
-                if (this.canvas) this.canvas.style.display = 'none';
-                return;
-            }
+            if (!this.canvas) return;
+            this.isMobile = window.innerWidth <= 768;
             this.ctx = this.canvas.getContext('2d');
             this.updateColors();
             this.resize();
@@ -303,12 +301,7 @@
         },
 
         handleResize() {
-            if (window.innerWidth <= 768) {
-                this.canvas.style.display = 'none';
-                if (this.animationId) cancelAnimationFrame(this.animationId);
-                return;
-            }
-            this.canvas.style.display = '';
+            this.isMobile = window.innerWidth <= 768;
             this.resize();
             this.nodes = [];
             this.flashes = [];
@@ -620,7 +613,7 @@
 
         /* ---------- NODE CREATION ---------- */
         createNodes() {
-            const n = this.config.nodeCount;
+            const n = this.isMobile ? 200 : this.config.nodeCount;
             const posArrays = this.formations.map(f => this[f.gen](n));
             const count = Math.min(...posArrays.map(a => a.length));
 
