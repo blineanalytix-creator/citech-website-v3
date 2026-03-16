@@ -369,7 +369,7 @@
                 ];
             }
             // Beratung page – § → AI → ✓
-            if (document.querySelector('.tab-wrapper')) {
+            if (document.querySelector('#tab-beratung')) {
                 return [
                     { section: '.page-hero',    gen: 'genHeroSymbol',   alpha: 0.50, flashRate: 0.014, connDist: 75, nodeR: 2.1, lineW: 0.65, digit: null },
                     { section: '#leistungen',   gen: 'genTextParagraph',alpha: 0.45, flashRate: 0.012, connDist: 68, nodeR: 1.9, lineW: 0.55, digit: null },
