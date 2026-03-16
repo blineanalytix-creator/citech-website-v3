@@ -851,108 +851,7 @@
     };
 
     /* ========================================
-       9. INTRO ANIMATION
-       ======================================== */
-
-    const IntroAnimation = {
-        init() {
-            // Skip if already seen this session
-            if (sessionStorage.getItem('citech_intro_seen')) {
-                document.body.classList.add('page-entering');
-                return;
-            }
-
-            const isEN = window.location.pathname.includes('/en/');
-
-            // Create overlay
-            const overlay = document.createElement('div');
-            overlay.className = 'intro-overlay';
-            overlay.innerHTML = `
-                <svg class="intro-logo-symbol" viewBox="0 0 95 118" xmlns="http://www.w3.org/2000/svg">
-                    <path fill="var(--color-primary-400)" d="M60.38,83.55c-7.62-0.01-10.47-0.47-16.03-6.1-2.89-2.97-6.31-5.74-8.07-9.57-1.22-2.7-1.15-5.81-1.12-8.74,0.08-3.86-0.12-7.83,1.85-11.1,1.41-2.39,3.48-4.3,5.44-6.23,2.8-2.66,5.69-5.61,9.58-6.49,4.3-0.93,9.1,0.28,13.4-1.2,14.28-4.02,16.96-23.87,4.22-31.45-3.68-2.26-8.28-3.18-12.49-2.37-7.55,1.27-13.57,7.83-14.29,15.45-0.43,3.45-0.12,7.07-1.6,10.24-1.34,2.98-3.95,5.41-6.32,7.73-2.84,2.73-5.83,5.72-9.75,6.56-2.01,0.47-4.17,0.41-6.31,0.43-3.99-0.02-7.94,0.8-11.25,3.1-11.19,7.27-9.8,24.87,2.41,30.23,1.26,0.58,2.58,1.01,3.92,1.29,4,0.9,8.35,0.02,12.2,1.5,4.38,1.74,7.52,5.7,10.88,8.93,4.8,4.77,5.71,7.9,5.67,14.55-0.08,9.53,6.92,17.59,16.56,18.15,8.38,0.61,16.36-5.21,18.15-13.38,2.73-10.9-5.94-21.48-16.99-21.53h-0.05Z"/>
-                </svg>
-                <div class="intro-logo-text">CITECH <span>AI</span></div>
-                <div class="intro-tagline">${isEN ? 'AI Training & Consulting' : 'KI-Weiterbildung & Beratung'}</div>
-                <button class="intro-skip">${isEN ? 'Skip' : 'Überspringen'}</button>
-            `;
-
-            document.body.appendChild(overlay);
-
-            // Prevent scroll during intro
-            document.body.style.overflow = 'hidden';
-
-            // Start animation
-            requestAnimationFrame(() => {
-                requestAnimationFrame(() => {
-                    overlay.classList.add('active');
-                });
-            });
-
-            // Skip button
-            overlay.querySelector('.intro-skip').addEventListener('click', () => this.finish(overlay));
-
-            // Auto-finish after 3s
-            this._timer = setTimeout(() => this.finish(overlay), 3000);
-        },
-
-        finish(overlay) {
-            if (this._done) return;
-            this._done = true;
-            clearTimeout(this._timer);
-
-            sessionStorage.setItem('citech_intro_seen', 'true');
-            overlay.classList.add('fade-out');
-            document.body.style.overflow = '';
-            document.body.classList.add('page-entering');
-
-            setTimeout(() => overlay.remove(), 700);
-        }
-    };
-
-    /* ========================================
-       10. PAGE TRANSITIONS
-       ======================================== */
-
-    const PageTransitions = {
-        init() {
-            // Fade-in on load if coming from transition
-            if (sessionStorage.getItem('citech_page_transition')) {
-                sessionStorage.removeItem('citech_page_transition');
-                document.body.classList.add('page-entering');
-            }
-
-            // Intercept internal link clicks
-            document.addEventListener('click', (e) => {
-                const link = e.target.closest('a[href]');
-                if (!link) return;
-
-                const href = link.getAttribute('href');
-
-                // Skip external links, anchors, tel/mailto, new tabs
-                if (!href ||
-                    href.startsWith('#') ||
-                    href.startsWith('http') ||
-                    href.startsWith('tel:') ||
-                    href.startsWith('mailto:') ||
-                    link.target === '_blank' ||
-                    href.endsWith('.pdf')) return;
-
-                e.preventDefault();
-
-                // Fade out
-                document.body.classList.add('page-transitioning');
-                sessionStorage.setItem('citech_page_transition', 'true');
-
-                // Navigate after fade
-                setTimeout(() => {
-                    window.location.href = href;
-                }, 250);
-            });
-        }
-    };
-
-    /* ========================================
-       11. SMOOTH ANCHOR LINKS
+       9. SMOOTH ANCHOR LINKS
        ======================================== */
 
     const SmoothScroll = {
@@ -980,7 +879,6 @@
 
     const init = () => {
         ThemeManager.init();
-        IntroAnimation.init();
         Navigation.init();
         NeuralBackground.init();
         ScrollAnimations.init();
@@ -989,7 +887,6 @@
         ContactTab.init();
         CookieBanner.init();
         SmoothScroll.init();
-        PageTransitions.init();
     };
 
     if (document.readyState === 'loading') {
