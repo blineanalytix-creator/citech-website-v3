@@ -436,16 +436,21 @@
         /* ========== SHAPE GENERATORS: STARTPAGE ========== */
 
         genHeroSymbol(n) {
-            const s = (this.height * 0.55) / this.svgH;
-            return this._pathPts(n, s, this.width * 0.62, (this.height - this.svgH * s) / 2);
+            const mobile = this.isMobile;
+            const s = (this.height * (mobile ? 0.4 : 0.55)) / this.svgH;
+            const oX = mobile ? (this.width - this.svgW * s) / 2 : this.width * 0.62;
+            return this._pathPts(n, s, oX, (this.height - this.svgH * s) / 2);
         },
         genBrain(n) {
-            const cx = this.width * 0.5, cy = this.height * 0.5, rx = this.width * 0.22, ry = this.height * 0.26, p = [];
+            const m = this.isMobile;
+            const cx = this.width * 0.5, cy = this.height * 0.5;
+            const rx = this.width * (m ? 0.3 : 0.22), ry = this.height * (m ? 0.18 : 0.26), p = [];
             while (p.length < n) { const a = Math.random()*Math.PI*2, r = Math.sqrt(Math.random()); p.push({x: cx+Math.cos(a)*rx*r, y: cy+Math.sin(a)*ry*r}); }
             return p;
         },
         genShield(n) {
-            const cx = this.width*0.5, cy = this.height*0.46, w = this.height*0.32, h = this.height*0.42, p = [];
+            const m = this.isMobile;
+            const cx = this.width*0.5, cy = this.height*0.46, w = this.height*(m ? 0.22 : 0.32), h = this.height*(m ? 0.3 : 0.42), p = [];
             while (p.length < n) {
                 const x = cx+(Math.random()-0.5)*w, y = cy+(Math.random()-0.5)*h;
                 const nx = (x-cx)/(w*0.5), ny = (y-cy)/(h*0.5);
@@ -456,7 +461,8 @@
             return p;
         },
         genSteps(n) {
-            const tw = this.width*0.38, th = this.height*0.4, cx = this.width*0.5, by = this.height*0.5+th*0.4;
+            const m = this.isMobile;
+            const tw = this.width*(m ? 0.7 : 0.38), th = this.height*(m ? 0.25 : 0.4), cx = this.width*0.5, by = this.height*0.5+th*0.4;
             const sw = tw/4, g = sw*0.14, sx = cx-tw/2, p = [];
             while (p.length < n) {
                 const s = Math.floor(Math.random()*4), sH = th*(0.35+s*0.2);
@@ -465,7 +471,8 @@
             return p;
         },
         genEuro(n) {
-            const cx = this.width*0.5, cy = this.height*0.5, r = this.height*0.22, p = [];
+            const m = this.isMobile;
+            const cx = this.width*0.5, cy = this.height*0.5, r = this.height*(m ? 0.15 : 0.22), p = [];
             while (p.length < n) {
                 const x = cx+(Math.random()-0.5)*r*2.6, y = cy+(Math.random()-0.5)*r*2.6;
                 const dx = x-(cx+r*0.05), dy = y-cy, d = Math.sqrt(dx*dx+dy*dy), a = Math.atan2(dy, dx);
@@ -527,7 +534,7 @@
             octx.textAlign = 'center';
             octx.textBaseline = 'middle';
             octx.fillStyle = '#fff';
-            octx.fillText(text, this.width * 0.5, this.height * 0.47);
+            octx.fillText(text, this.width * 0.5, this.height * (this.isMobile ? 0.35 : 0.47));
 
             const imgData = octx.getImageData(0, 0, off.width, off.height).data;
             const pts = [];
@@ -562,7 +569,7 @@
             octx.textAlign = 'center';
             octx.textBaseline = 'middle';
             octx.fillStyle = '#fff';
-            octx.fillText(char, this.width * 0.72, this.height * 0.47);
+            octx.fillText(char, this.width * (this.isMobile ? 0.5 : 0.72), this.height * (this.isMobile ? 0.35 : 0.47));
             const imgData = octx.getImageData(0, 0, off.width, off.height).data;
             const pts = [];
             let att = 0;
