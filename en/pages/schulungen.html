@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Our Modules – AI Training | CITECH AI</title>
+    <meta name="description" content="CITECH AI training modules: AI User, AI Specialist, AI Project Manager, AI Manager. AZAV-certified, hands-on, eligible for funding.">
+
+    <link rel="canonical" href="https://www.citech-ai.de/en/pages/schulungen">
+    <link rel="alternate" hreflang="de" href="https://www.citech-ai.de/pages/schulungen">
+    <link rel="alternate" hreflang="en" href="https://www.citech-ai.de/en/pages/schulungen">
+
+    <meta property="og:title" content="Our Modules – AI Training | CITECH AI">
+    <meta property="og:description" content="4 modules, 429 teaching units, AZAV-certified. Hands-on AI training for businesses and individuals.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.citech-ai.de/en/pages/schulungen">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="CITECH AI">
+
+    <link rel="icon" type="image/png" href="../../favicon.png">
+    <link rel="preload" href="../../assets/fonts/Inter-VariableFont.woff2" as="font" type="font/woff2" crossorigin>
+    <style>
+        @font-face {
+            font-family: 'Inter';
+            src: url('../../assets/fonts/Inter-VariableFont.woff2') format('woff2');
+            font-weight: 100 900;
+            font-style: normal;
+            font-display: swap;
+        }
+    </style>
+    <link rel="stylesheet" href="../../css/main.css?v=4">
+    <link rel="stylesheet" href="../../css/mobile.css?v=4" media="(max-width: 1024px)">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "CITECH AI Training Program",
+        "description": "AZAV-certified AI training in 4 modules",
+        "itemListElement": [
+            { "@type": "Course", "position": 1, "name": "AI User", "description": "Understand and apply AI fundamentals. 121 teaching units.", "provider": {"@type": "Organization", "name": "CITECH AI GmbH"}, "hasCourseInstance": {"@type": "CourseInstance", "courseMode": "onsite", "duration": "P13D"}, "offers": {"@type": "Offer", "price": "2755", "priceCurrency": "EUR"} },
+            { "@type": "Course", "position": 2, "name": "AI Specialist", "description": "Technical AI development with Python, RAG systems. 187 teaching units.", "provider": {"@type": "Organization", "name": "CITECH AI GmbH"}, "hasCourseInstance": {"@type": "CourseInstance", "courseMode": "onsite", "duration": "P20D"}, "offers": {"@type": "Offer", "price": "4325", "priceCurrency": "EUR"} },
+            { "@type": "Course", "position": 3, "name": "AI Project Manager", "description": "Strategically lead AI projects, EU AI Act compliance. 121 teaching units.", "provider": {"@type": "Organization", "name": "CITECH AI GmbH"}, "hasCourseInstance": {"@type": "CourseInstance", "courseMode": "onsite", "duration": "P13D"}, "offers": {"@type": "Offer", "price": "2775", "priceCurrency": "EUR"} },
+            { "@type": "Course", "position": 4, "name": "AI Manager", "description": "Complete program: All 3 modules. 429 teaching units.", "provider": {"@type": "Organization", "name": "CITECH AI GmbH"}, "hasCourseInstance": {"@type": "CourseInstance", "courseMode": "onsite", "duration": "P46D"}, "offers": {"@type": "Offer", "price": "9925", "priceCurrency": "EUR"} }
+        ]
+    }
+    </script>
+</head>
+<body>
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <div class="ambient-bg" aria-hidden="true">
+        <div class="ambient-mesh">
+            <div class="mesh-gradient mesh-gradient-1"></div>
+            <div class="mesh-gradient mesh-gradient-2"></div>
+            <div class="mesh-gradient mesh-gradient-3"></div>
+        </div>
+        <canvas id="neural-bg-canvas"></canvas>
+    </div>
+
+    <!-- HEADER -->
+    <header class="header" role="banner">
+        <div class="container header-inner">
+            <a href="../../en/" class="header-logo" aria-label="CITECH AI Home">
+                <img src="../../assets/images/logo/citech-logo-white.svg" alt="CITECH AI" class="logo-dark" width="140" height="32">
+                <img src="../../assets/images/logo/Citech Logo klassisch weißer Hintergrund mit Schatten.jpg" alt="CITECH AI" class="logo-light" width="140" height="32">
+            </a>
+            <nav class="nav-desktop" role="navigation" aria-label="Main navigation">
+                <a href="../../en/" class="nav-link">Home</a>
+                <div class="nav-dropdown">
+                    <button class="nav-link nav-dropdown-toggle active" aria-expanded="false" aria-haspopup="true">
+                        Training
+                        <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M3 5l3 3 3-3"/></svg>
+                    </button>
+                    <div class="nav-dropdown-menu" role="menu">
+                        <a href="schulungen.html" role="menuitem">Module Overview</a>
+                        <a href="termine.html" role="menuitem">Schedule 2026</a>
+                        <a href="foerderung.html" role="menuitem">Funding</a>
+                    </div>
+                </div>
+                <a href="beratung.html" class="nav-link">Consulting</a>
+                <a href="tools.html" class="nav-link">Tools</a>
+                <a href="team.html" class="nav-link">About Us</a>
+                <a href="kontakt.html" class="nav-link">Contact</a>
+            </nav>
+            <div class="header-actions">
+                <a href="../../pages/schulungen.html" class="lang-toggle" aria-label="Zur deutschen Version wechseln">DE</a>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle color scheme">
+                    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                </button>
+                <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" aria-hidden="true">
+        <nav class="mobile-menu-nav" aria-label="Mobile Navigation">
+            <a href="../../en/" class="mobile-nav-link">Home</a>
+            <div class="mobile-dropdown open">
+                <button class="mobile-nav-link mobile-dropdown-toggle active" aria-expanded="true">Training</button>
+                <div class="mobile-dropdown-items">
+                    <a href="schulungen.html">Module Overview</a>
+                    <a href="termine.html">Schedule 2026</a>
+                    <a href="foerderung.html">Funding</a>
+                </div>
+            </div>
+            <a href="beratung.html" class="mobile-nav-link">Consulting</a>
+            <a href="tools.html" class="mobile-nav-link">Tools</a>
+            <a href="team.html" class="mobile-nav-link">About Us</a>
+            <a href="kontakt.html" class="mobile-nav-link">Contact</a>
+        </nav>
+    </div>
+
+    <!-- ==================== MAIN ==================== -->
+    <main id="main-content" role="main">
+
+        <!-- PAGE HERO -->
+        <section class="page-hero section">
+            <div class="container">
+                <span class="section-label reveal">Training Program</span>
+                <h1 class="reveal reveal-delay-1">AI Training<br><span class="gradient-text">From User to Expert</span></h1>
+                <p class="section-subtitle reveal reveal-delay-2">
+                    Each module builds on the previous one but can also be taken individually. All modules are AZAV-certified and eligible for funding.
+                </p>
+                <div class="badges-row reveal reveal-delay-3" style="margin-top: var(--space-8); justify-content: flex-start;">
+                    <span class="badge">AZAV-certified</span>
+                    <span class="badge">Eligible for funding</span>
+                    <span class="badge">Modular &middot; 429 teaching units</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- MODULE 1 -->
+        <section class="section" id="modul-1">
+            <div class="container">
+                <div class="module-detail-card reveal">
+                    <div class="module-detail-header">
+                        <span class="module-number">Module 1</span>
+                        <h3>AI User</h3>
+                        <p class="module-tagline">The perfect foundation – Understand AI and use it effectively</p>
+                        <div class="module-meta-bar">
+                            <div class="module-meta-item"><strong>13 days</strong> / 121 UE</div>
+                            <div class="module-meta-item"><strong>2,755 EUR</strong></div>
+                        </div>
+                    </div>
+                    <div class="module-detail-body">
+                        <div class="grid-2" style="gap: var(--space-6); margin-bottom: var(--space-6);">
+                            <div>
+                                <h4>Who is it for</h4>
+                                <p>Ideal for beginners with no prior knowledge. For anyone who wants to understand AI and use it effectively in their daily work – from administration to marketing to quality management.</p>
+                            </div>
+                            <div>
+                                <h4>What you will achieve</h4>
+                                <p>You will use AI tools confidently, formulate precise prompts, analyze documents with AI and independently deploy GPT-based solutions in your field.</p>
+                            </div>
+                        </div>
+                        <div class="module-columns">
+                            <div>
+                                <h4>Fundamentals &amp; Concepts</h4>
+                                <ul class="content-list">
+                                    <li>History and evolution of AI</li>
+                                    <li>Understanding neural networks</li>
+                                    <li>Large Language Models (LLMs)</li>
+                                    <li>Machine Learning basics</li>
+                                    <li>Prompt Engineering</li>
+                                    <li>AI tools comparison</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4>Practical Application</h4>
+                                <ul class="content-list">
+                                    <li>Using ChatGPT, Claude &amp; Gemini</li>
+                                    <li>Document analysis with AI</li>
+                                    <li>Image generation &amp; recognition</li>
+                                    <li>Text-to-Speech applications</li>
+                                    <li>AI in office applications</li>
+                                    <li>Ethics &amp; data protection</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="module-detail-footer">
+                        <button data-modal="modal-plan-1" class="btn btn-sm">Training Plan</button>
+                        <a href="../../assets/certificates/ki-anwender.pdf" target="_blank" class="btn btn-sm">Sample Certificate</a>
+                        <a href="kontakt.html" class="btn btn-sm">Get advice now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MODULE 2 -->
+        <section class="section" id="modul-2">
+            <div class="container">
+                <div class="module-detail-card reveal">
+                    <div class="module-detail-header">
+                        <span class="module-number">Module 2</span>
+                        <h3>AI Specialist</h3>
+                        <p class="module-tagline">Develop and implement – Become a technical expert</p>
+                        <div class="module-meta-bar">
+                            <div class="module-meta-item"><strong>20 days</strong> / 187 UE</div>
+                            <div class="module-meta-item"><strong>4,325 EUR</strong></div>
+                        </div>
+                    </div>
+                    <div class="module-detail-body">
+                        <div class="grid-2" style="gap: var(--space-6); margin-bottom: var(--space-6);">
+                            <div>
+                                <h4>Who is it for</h4>
+                                <p>For IT-savvy individuals with basic AI knowledge or after completing Module 1. Ideal for technical professionals who want to develop AI solutions themselves.</p>
+                            </div>
+                            <div>
+                                <h4>What you will achieve</h4>
+                                <p>You will program your own AI applications with Python, build RAG systems, develop chatbots and integrate AI into existing enterprise infrastructure.</p>
+                            </div>
+                        </div>
+                        <div class="module-columns">
+                            <div>
+                                <h4>Technical Skills</h4>
+                                <ul class="content-list">
+                                    <li>Python programming with LLMs</li>
+                                    <li>Workflow tools &amp; automation</li>
+                                    <li>APIs and webhooks</li>
+                                    <li>Data preparation &amp; conversion</li>
+                                    <li>Vector databases</li>
+                                    <li>CNN models &amp; image recognition</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4>Practical Projects</h4>
+                                <ul class="content-list">
+                                    <li>Building offline RAG systems</li>
+                                    <li>Chatbot development</li>
+                                    <li>Document processing (OCR to JSON)</li>
+                                    <li>Text-to-Speech / Speech-to-Text</li>
+                                    <li>Social media automation</li>
+                                    <li>AI integration projects</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="module-detail-footer">
+                        <button data-modal="modal-plan-2" class="btn btn-sm">Training Plan</button>
+                        <a href="../../assets/certificates/ki-spezialist.pdf" target="_blank" class="btn btn-sm">Sample Certificate</a>
+                        <a href="kontakt.html" class="btn btn-sm">Get advice now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MODULE 3 -->
+        <section class="section" id="modul-3">
+            <div class="container">
+                <div class="module-detail-card reveal">
+                    <div class="module-detail-header">
+                        <span class="module-number">Module 3</span>
+                        <h3>AI Project Manager</h3>
+                        <p class="module-tagline">Develop strategies and lead teams – Shape the AI future</p>
+                        <div class="module-meta-bar">
+                            <div class="module-meta-item"><strong>13 days</strong> / 121 UE</div>
+                            <div class="module-meta-item"><strong>2,775 EUR</strong></div>
+                        </div>
+                    </div>
+                    <div class="module-detail-body">
+                        <div class="grid-2" style="gap: var(--space-6); margin-bottom: var(--space-6);">
+                            <div>
+                                <h4>Who is it for</h4>
+                                <p>For executives, project managers and decision-makers who want to develop and implement AI strategies. Prior knowledge from Module 1 or 2 is recommended but not mandatory.</p>
+                            </div>
+                            <div>
+                                <h4>What you will achieve</h4>
+                                <p>You will lead AI projects strategically, ensure EU AI Act compliance, implement governance structures and make informed decisions about AI deployment in your organization.</p>
+                            </div>
+                        </div>
+                        <div class="module-columns">
+                            <div>
+                                <h4>Compliance &amp; Governance</h4>
+                                <ul class="content-list">
+                                    <li>Understanding the EU AI Act in full</li>
+                                    <li>Risk classes &amp; requirements</li>
+                                    <li>ISO/IEC standards (23053, 23894, 42001)</li>
+                                    <li>GDPR &amp; AI tension areas</li>
+                                    <li>CE marking for AI</li>
+                                    <li>Documentation obligations</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4>Strategic Leadership</h4>
+                                <ul class="content-list">
+                                    <li>Developing AI strategies</li>
+                                    <li>Building governance structures</li>
+                                    <li>Leading AI committees</li>
+                                    <li>Implementing ethics frameworks</li>
+                                    <li>Organizational development with AI</li>
+                                    <li>Designing decision processes</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="module-detail-footer">
+                        <button data-modal="modal-plan-3" class="btn btn-sm">Training Plan</button>
+                        <a href="../../assets/certificates/ki-projektleiter.pdf" target="_blank" class="btn btn-sm">Sample Certificate</a>
+                        <a href="kontakt.html" class="btn btn-sm">Get advice now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MODULE 4 (Featured) -->
+        <section class="section" id="modul-4">
+            <div class="container">
+                <div class="module-detail-card featured reveal">
+                    <div class="module-detail-header">
+                        <span class="module-number">Module 4</span>
+                        <h3>AI Manager</h3>
+                        <p class="module-tagline">The complete program – From user to strategic AI expert</p>
+                        <div class="module-meta-bar">
+                            <div class="module-meta-item"><strong>46 days</strong> / 429 UE</div>
+                            <div class="module-meta-item"><strong>9,925 EUR</strong></div>
+                        </div>
+                    </div>
+                    <div class="module-detail-body">
+                        <div class="grid-2" style="gap: var(--space-6); margin-bottom: var(--space-6);">
+                            <div>
+                                <h4>Who is it for</h4>
+                                <p>For anyone who wants to build complete AI expertise – from fundamentals through technical implementation to strategic leadership. Ideal for career changers and ambitious professionals.</p>
+                            </div>
+                            <div>
+                                <h4>What you will achieve</h4>
+                                <p>You will master AI applications, develop your own solutions and lead AI projects strategically. You will be a certified AI Manager with comprehensive knowledge in technology, compliance and leadership.</p>
+                            </div>
+                        </div>
+                        <div class="module-columns">
+                            <div>
+                                <h4>Included Modules</h4>
+                                <ul class="content-list">
+                                    <li>Module 1: AI User (13 days)</li>
+                                    <li>Module 2: AI Specialist (20 days)</li>
+                                    <li>Module 3: AI Project Manager (13 days)</li>
+                                    <li>All training plans and certificates</li>
+                                    <li>Continuous mentoring</li>
+                                    <li>AI Manager completion certificate</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4>Your Benefits</h4>
+                                <ul class="content-list">
+                                    <li>Complete AI competency spectrum</li>
+                                    <li>Seamless learning path without interruption</li>
+                                    <li>All three individual certificates included</li>
+                                    <li>Additional AI Manager certificate</li>
+                                    <li>Eligible for funding via education voucher</li>
+                                    <li>Optimal preparation for the AI job market</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="module-detail-footer">
+                        <a href="termine.html" class="btn btn-sm">View schedule</a>
+                        <a href="kontakt.html" class="btn btn-sm">Get advice now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FUNDING NOTICE -->
+        <section class="section">
+            <div class="container">
+                <div class="cta-banner reveal">
+                    <span class="section-label">Funding</span>
+                    <h2>All modules are eligible for funding</h2>
+                    <p>Our training programs are <a href="../../assets/certificates/citech-azav-zertifikat.pdf" target="_blank" style="color: var(--color-primary-400); text-decoration: underline;">AZAV-certified by TÜV NORD</a>. The amount of potential funding depends on your individual situation. We provide honest and personal advice on which funding options are realistic for you.</p>
+                    <div class="hero-buttons">
+                        <a href="foerderung.html" class="btn btn-primary">View funding options <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+                        <a href="kontakt.html" class="btn btn-secondary">Request funding consultation</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MISSION STATEMENT -->
+        <section class="section" id="leitbild">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-label">Our Mission</span>
+                    <h2 class="section-title">What We Stand For</h2>
+                    <p class="section-subtitle">CITECH AI GmbH empowers people and businesses to productively use hands-on, data-sovereign and regulation-compliant AI.</p>
+                </div>
+                <div class="policy-list">
+                    <div class="policy-item reveal"><h4><span>01</span> Labor Market &amp; Customer Orientation</h4><p>Training content aligned with current and foreseeable qualification needs in SMEs and regional labor markets.</p></div>
+                    <div class="policy-item reveal"><h4><span>02</span> Compliance</h4><p>We fulfill our certification requirements (AZAV). Accreditations are renewed on time.</p></div>
+                    <div class="policy-item reveal"><h4><span>03</span> Participant Protection &amp; Transparency</h4><p>Clear information before enrollment: objectives, content, duration, costs, prerequisites, examination formats.</p></div>
+                    <div class="policy-item reveal"><h4><span>04</span> Data Protection &amp; Information Security</h4><p>Offline-first design and data minimization. Processing of personal data in accordance with GDPR/BDSG.</p></div>
+                    <div class="policy-item reveal"><h4><span>05</span> AI Compliance &amp; Ethics</h4><p>Guidelines for responsible AI use: transparency, traceability, bias prevention.</p></div>
+                    <div class="policy-item reveal"><h4><span>06</span> Didactics &amp; Accessibility</h4><p>Adult education standards, clear learning objectives, accessible materials, equal opportunities.</p></div>
+                    <div class="policy-item reveal"><h4><span>07</span> Instructor Qualification</h4><p>Proven professional and adult education competence, regular continuing education.</p></div>
+                    <div class="policy-item reveal"><h4><span>08</span> Partnerships &amp; Placement</h4><p>Active network with SMEs, chambers and associations. Matching of practical projects and positions.</p></div>
+                    <div class="policy-item reveal"><h4><span>09</span> Environment &amp; Sustainability</h4><p>Preference for energy-efficient, local computing resources. Digital materials, responsible resource use.</p></div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="../../assets/images/logo/citech-logo-white.svg" alt="CITECH AI" class="logo-dark" width="120" height="28">
+                    <img src="../../assets/images/logo/Citech Logo klassisch weißer Hintergrund mit Schatten.jpg" alt="CITECH AI" class="logo-light" width="120" height="28">
+                    <p>AZAV-certified AI training provider from Essen, Germany. Training, consulting and implementation – hands-on and GDPR-compliant.</p>
+                </div>
+                <div><h4 class="footer-heading">Offer</h4><ul class="footer-links"><li><a href="schulungen.html">Training</a></li><li><a href="termine.html">Schedule</a></li><li><a href="beratung.html">Consulting</a></li><li><a href="tools.html">AI Tools</a></li><li><a href="foerderung.html">Funding</a></li></ul></div>
+                <div><h4 class="footer-heading">Company</h4><ul class="footer-links"><li><a href="team.html">About Us</a></li><li><a href="newsletter.html">AI Radar Newsletter</a></li><li><a href="kontakt.html">Contact</a></li></ul></div>
+                <div><h4 class="footer-heading">Legal</h4><ul class="footer-links"><li><a href="impressum.html">Imprint</a></li><li><a href="datenschutz.html">Privacy Policy</a></li><li><a href="agb.html">Terms &amp; Conditions</a></li><li><a href="ki-transparenz.html">AI Transparency</a></li></ul></div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2025–2026 CITECH AI GmbH. All rights reserved.</span>
+                <span>Design: <a href="https://www.b-line-graphix.de" target="_blank" rel="noopener">B_Line Graphix</a></span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie Banner -->
+    <div class="cookie-banner" role="dialog" aria-label="Cookie settings">
+        <h4>We respect your privacy</h4>
+        <p>This website only uses technically necessary cookies. No analytics, no tracking.</p>
+        <div class="cookie-buttons">
+            <button id="cookie-accept" class="btn btn-primary btn-sm">Understood</button>
+            <a href="datenschutz.html" class="btn btn-secondary btn-sm">Privacy Policy</a>
+        </div>
+    </div>
+
+    <!-- ==================== MODALS ==================== -->
+
+    <!-- Training Plan Module 1 -->
+    <div id="modal-plan-1" class="modal-overlay" aria-hidden="true" role="dialog" aria-label="Training Plan AI User">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close">&times;</button>
+            <span class="module-number">Module 1</span>
+            <h3>Training Plan: AI User</h3>
+            <p class="module-tagline">13 days of intensive training &middot; Mon–Fri 08:00–16:35</p>
+            <table class="schedule-table">
+                <thead><tr><th>Day</th><th>Morning (08:00–12:30)</th><th>Afternoon (13:30–16:35)</th></tr></thead>
+                <tbody>
+                    <tr class="week-header"><td colspan="3">Week 1: Fundamentals &amp; First Practice</td></tr>
+                    <tr><td class="day-label">Day 1</td><td>Introduction &amp; course objectives / History and evolution of AI</td><td>Basic terminology (AI, NN, ML, DL) / Current developments</td></tr>
+                    <tr><td class="day-label">Day 2</td><td>Technical architecture of LLMs / Introduction to Prompt Engineering</td><td>GPT in different styles / AI-powered information research</td></tr>
+                    <tr><td class="day-label">Day 3</td><td>Document analysis with GPT (RAG simulation) / Evaluating AI outputs</td><td>Fact-checking with GPT / GPT for text editing</td></tr>
+                    <tr><td class="day-label">Day 4</td><td>Data quality &amp; error sources / Bias &amp; discrimination</td><td>Recognizing discriminatory examples / Bias avoidance in prompts</td></tr>
+                    <tr><td class="day-label">Day 5</td><td>Neural network fundamentals / CNN basics and image recognition</td><td>Image classification systems / Image fakes &amp; deepfakes</td></tr>
+                    <tr class="week-header"><td colspan="3">Week 2: Deep Dive &amp; Applications</td></tr>
+                    <tr><td class="day-label">Day 6</td><td>Text-to-Speech fundamentals / AI in presentations</td><td>PowerPoint with narrated text / Video &amp; audio deepfakes</td></tr>
+                    <tr><td class="day-label">Day 7</td><td>Overview of AI platforms / Open source vs. proprietary</td><td>Low-code programming with AI / API integration</td></tr>
+                    <tr><td class="day-label">Day 8</td><td>AI in administration, accounting / AI in marketing and sales</td><td>Social media posts with GPT / AI in production and logistics</td></tr>
+                    <tr><td class="day-label">Day 9</td><td>AI in quality management / AI in continuing education</td><td>Quiz generation with GPT / AI in research and development</td></tr>
+                    <tr><td class="day-label">Day 10</td><td>AI governance and compliance / Data protection and copyright</td><td>Data protection checklist for AI / EU AI Act overview</td></tr>
+                    <tr class="week-header"><td colspan="3">Week 3: Project Work &amp; Examination</td></tr>
+                    <tr><td class="day-label">Day 11</td><td>Transparency and explainability of AI / Responsibility and liability</td><td>Case study discussion / Critical evaluation of AI outputs</td></tr>
+                    <tr><td class="day-label">Day 12</td><td>Project 1: AI for business processes</td><td>Project 2: AI chatbot – concept and implementation</td></tr>
+                    <tr><td class="day-label">Day 13</td><td>AI chatbot (continued) / Knowledge assessment: Theory (MC)</td><td>Examination: Project work / AI application for process automation</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Training Plan Module 2 -->
+    <div id="modal-plan-2" class="modal-overlay" aria-hidden="true" role="dialog" aria-label="Training Plan AI Specialist">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close">&times;</button>
+            <span class="module-number">Module 2</span>
+            <h3>Training Plan: AI Specialist</h3>
+            <p class="module-tagline">20 days of intensive technical training &middot; Mon–Fri 08:00–16:35</p>
+            <table class="schedule-table">
+                <thead><tr><th>Day</th><th>Morning (08:00–12:30)</th><th>Afternoon (13:30–16:35)</th></tr></thead>
+                <tbody>
+                    <tr class="week-header"><td colspan="3">Week 1: Python &amp; Workflow Tools</td></tr>
+                    <tr><td class="day-label">Day 1</td><td>Python basics / Code generation with LLMs</td><td>Programming examples in Jupyter Notebook / Test and evaluation</td></tr>
+                    <tr><td class="day-label">Day 2</td><td>Coding with workflow tools – fundamentals</td><td>Python and workflow tools / Test and evaluation</td></tr>
+                    <tr><td class="day-label">Day 3</td><td>Coding with workflow tools – applications</td><td>Python and workflow tools / Test and evaluation</td></tr>
+                    <tr><td class="day-label">Day 4</td><td>Data preparation and data cleansing</td><td>Practical data cleansing / Test and evaluation</td></tr>
+                    <tr><td class="day-label">Day 5</td><td>Data processing: PDF to OCR to JSON</td><td>From PDF via OCR to JSON / Test and evaluation</td></tr>
+                    <tr class="week-header"><td colspan="3">Week 2: RAG Systems &amp; Vector Databases</td></tr>
+                    <tr><td class="day-label">Day 6</td><td>Understanding chunking &amp; vectorizing</td><td>Practical embeddings / Test and evaluation</td></tr>
+                    <tr><td class="day-label">Day 7</td><td>Building a simple offline LLM</td><td>Programming and operating an offline LLM</td></tr>
+                    <tr><td class="day-label">Day 8</td><td>Building and using vector databases</td><td>Practical similarity search / Test and evaluation</td></tr>
+                    <tr><td class="day-label">Day 9</td><td>Building a simple offline RAG model</td><td>Retrieving knowledge locally / Test and evaluation</td></tr>
+                    <tr><td class="day-label">Day 10</td><td>Offline RAGs in enterprise processes</td><td>Answers from internal documents</td></tr>
+                    <tr class="week-header"><td colspan="3">Week 3: Chatbots &amp; Image Recognition</td></tr>
+                    <tr><td class="day-label">Day 11</td><td>Building a chatbot with offline RAG</td><td>Workflow tools for chatbots / Test and evaluation</td></tr>
+                    <tr><td class="day-label">Day 12</td><td>APIs and webhooks in action</td><td>Automating orders / Test and evaluation</td></tr>
+                    <tr><td class="day-label">Day 13</td><td>Symbolic AI / Rule-based decisions</td><td>Internal IT helpdesk with AI / Test and evaluation</td></tr>
+                    <tr><td class="day-label">Day 14</td><td>Image recognition with CNN models – fundamentals</td><td>From shape to label / Test and evaluation</td></tr>
+                    <tr><td class="day-label">Day 15</td><td>Image recognition with CNN – applications</td><td>Combining CNN and workflow / Test and evaluation</td></tr>
+                    <tr class="week-header"><td colspan="3">Week 4: Integration &amp; Automation</td></tr>
+                    <tr><td class="day-label">Day 16</td><td>TTS applications – Slides-to-Voice</td><td>Practical Text-to-Speech / Test and evaluation</td></tr>
+                    <tr><td class="day-label">Day 17</td><td>STT applications – Voice-to-Report</td><td>Speech-to-Text for quality assurance</td></tr>
+                    <tr><td class="day-label">Day 18</td><td>APIs and social networks</td><td>Posting to Facebook &amp; Co.</td></tr>
+                    <tr><td class="day-label">Day 19</td><td>API security and data encryption</td><td>Practical secure API development</td></tr>
+                    <tr><td class="day-label">Day 20</td><td>AI integration project: Marketing automation</td><td>Connecting campaign platforms / Evaluation</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Training Plan Module 3 -->
+    <div id="modal-plan-3" class="modal-overlay" aria-hidden="true" role="dialog" aria-label="Training Plan AI Project Manager">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close">&times;</button>
+            <span class="module-number">Module 3</span>
+            <h3>Training Plan: AI Project Manager</h3>
+            <p class="module-tagline">13 days of management and compliance training &middot; Mon–Fri 08:00–16:35</p>
+            <table class="schedule-table">
+                <thead><tr><th>Day</th><th>Morning (08:00–12:30)</th><th>Afternoon (13:30–16:35)</th></tr></thead>
+                <tbody>
+                    <tr class="week-header"><td colspan="3">Week 1: Project Management Fundamentals</td></tr>
+                    <tr><td class="day-label">Day 1</td><td>Project management fundamentals with AI focus</td><td>Stakeholder analysis / Project organization</td></tr>
+                    <tr><td class="day-label">Day 2</td><td>Project phases &amp; milestones / WBS</td><td>Work package descriptions / Creating templates</td></tr>
+                    <tr><td class="day-label">Day 3</td><td>Reporting &amp; documentation</td><td>Communication matrix / Leadership methods</td></tr>
+                    <tr><td class="day-label">Day 4</td><td>Risk management &amp; risk matrix</td><td>Benefit management / Value orientation</td></tr>
+                    <tr><td class="day-label">Day 5</td><td>Portfolio management &amp; prioritization</td><td>AI-relevant laws, standards / EU AI Act overview</td></tr>
+                    <tr class="week-header"><td colspan="3">Week 2: EU AI Act &amp; Compliance</td></tr>
+                    <tr><td class="day-label">Day 6</td><td>EU AI Act risk classes / High-risk AI</td><td>Case study HR AI / Conformity assessment &amp; CE</td></tr>
+                    <tr><td class="day-label">Day 7</td><td>Simulating the conformity process</td><td>ISO/IEC 23053 / ISO/IEC 23894</td></tr>
+                    <tr><td class="day-label">Day 8</td><td>ISO/IEC 42001 / DIN SPEC 92001</td><td>Governance structures / Human oversight, GDPR</td></tr>
+                    <tr><td class="day-label">Day 9</td><td>Role play: Project manager vs. compliance</td><td>Social impact assessment / Ethics frameworks</td></tr>
+                    <tr><td class="day-label">Day 10</td><td>Data security &amp; Privacy by Design</td><td>Developing AI strategy / AI roadmap</td></tr>
+                    <tr class="week-header"><td colspan="3">Week 3: Strategy &amp; Conclusion</td></tr>
+                    <tr><td class="day-label">Day 11</td><td>KPIs &amp; success measurement / Change management</td><td>Building AI acceptance / Review &amp; transfer</td></tr>
+                    <tr><td class="day-label">Day 12</td><td>Best practices &amp; case studies / Legal special topics</td><td>Compliance &amp; audit / Audit simulation</td></tr>
+                    <tr><td class="day-label">Day 13</td><td>Knowledge assessment: Theory (MC) / Practice (case study)</td><td>Group work / Presentation &amp; expert discussion</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="../../js/main.js?v=4"></script>
+</body>
+</html>

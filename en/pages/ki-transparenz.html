@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Transparency – CITECH AI</title>
+    <meta name="description" content="AI Transparency at CITECH AI – Full disclosure of our AI usage. EU AI Act compliant, VERIFY process, updated quarterly.">
+
+    <link rel="canonical" href="https://www.citech-ai.de/en/pages/ki-transparenz">
+    <link rel="alternate" hreflang="de" href="https://www.citech-ai.de/pages/ki-transparenz">
+    <link rel="alternate" hreflang="en" href="https://www.citech-ai.de/en/pages/ki-transparenz">
+
+    <meta property="og:title" content="AI Transparency – CITECH AI">
+    <meta property="og:description" content="Full disclosure of our AI usage. EU AI Act compliant.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.citech-ai.de/en/pages/ki-transparenz">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="CITECH AI">
+
+    <link rel="icon" type="image/png" href="../../favicon.png">
+    <link rel="preload" href="../../assets/fonts/Inter-VariableFont.woff2" as="font" type="font/woff2" crossorigin>
+    <style>
+        @font-face {
+            font-family: 'Inter';
+            src: url('../../assets/fonts/Inter-VariableFont.woff2') format('woff2');
+            font-weight: 100 900;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        /* Transparency Table */
+        .transparency-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: var(--space-6) 0;
+            font-size: var(--font-sm);
+        }
+        .transparency-table th {
+            background: var(--color-bg-tertiary);
+            color: var(--color-text-primary);
+            padding: var(--space-3) var(--space-4);
+            text-align: left;
+            font-weight: 600;
+            font-size: var(--font-xs);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            border-bottom: 2px solid var(--color-primary-500);
+        }
+        .transparency-table td {
+            padding: var(--space-3) var(--space-4);
+            border-bottom: 1px solid var(--glass-border);
+            color: var(--color-text-secondary);
+            line-height: var(--line-height-relaxed);
+        }
+        .transparency-table td strong {
+            color: var(--color-text-primary);
+        }
+        .transparency-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* Info Callout */
+        .info-callout {
+            padding: var(--space-4) var(--space-5);
+            border-left: 3px solid var(--color-primary-400);
+            background: var(--color-bg-tertiary);
+            border-radius: 0 var(--radius-md) var(--radius-md) 0;
+            margin: var(--space-6) 0;
+            font-size: var(--font-sm);
+            color: var(--color-text-secondary);
+            line-height: var(--line-height-relaxed);
+        }
+        .info-callout strong {
+            color: var(--color-primary-400);
+        }
+        .info-callout.warning {
+            border-left-color: #f5a623;
+        }
+        .info-callout.warning strong {
+            color: #f5a623;
+        }
+
+        /* Section Heading inside accent-cards */
+        .section-number {
+            font-size: var(--font-xs);
+            color: var(--color-primary-400);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-weight: 600;
+            margin-bottom: var(--space-2);
+        }
+    </style>
+    <link rel="stylesheet" href="../../css/main.css?v=4">
+    <link rel="stylesheet" href="../../css/mobile.css?v=4" media="(max-width: 1024px)">
+</head>
+<body>
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <div class="ambient-bg" aria-hidden="true">
+        <div class="ambient-mesh">
+            <div class="mesh-gradient mesh-gradient-1"></div>
+            <div class="mesh-gradient mesh-gradient-2"></div>
+            <div class="mesh-gradient mesh-gradient-3"></div>
+        </div>
+        <canvas id="neural-bg-canvas"></canvas>
+    </div>
+
+    <!-- HEADER -->
+    <header class="header" role="banner">
+        <div class="container header-inner">
+            <a href="../../en/" class="header-logo" aria-label="CITECH AI Homepage">
+                <img src="../../assets/images/logo/citech-logo-white.svg" alt="CITECH AI" class="logo-dark" width="140" height="32">
+                <img src="../../assets/images/logo/Citech Logo klassisch weißer Hintergrund mit Schatten.jpg" alt="CITECH AI" class="logo-light" width="140" height="32">
+            </a>
+            <nav class="nav-desktop" role="navigation" aria-label="Main navigation">
+                <a href="../../en/" class="nav-link">Home</a>
+                <div class="nav-dropdown">
+                    <button class="nav-link nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+                        Training
+                        <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M3 5l3 3 3-3"/></svg>
+                    </button>
+                    <div class="nav-dropdown-menu" role="menu">
+                        <a href="schulungen.html" role="menuitem">Module Overview</a>
+                        <a href="termine.html" role="menuitem">Schedule 2026</a>
+                        <a href="foerderung.html" role="menuitem">Funding</a>
+                    </div>
+                </div>
+                <a href="beratung.html" class="nav-link">Consulting</a>
+                <a href="tools.html" class="nav-link">Tools</a>
+                <a href="team.html" class="nav-link">About Us</a>
+                <a href="kontakt.html" class="nav-link">Contact</a>
+            </nav>
+            <div class="header-actions">
+                <a href="../../pages/ki-transparenz.html" class="lang-toggle" aria-label="Zur deutschen Version wechseln">DE</a>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle color scheme">
+                    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                </button>
+                <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" aria-hidden="true">
+        <nav class="mobile-menu-nav" aria-label="Mobile Navigation">
+            <a href="../../en/" class="mobile-nav-link">Home</a>
+            <div class="mobile-dropdown">
+                <button class="mobile-nav-link mobile-dropdown-toggle" aria-expanded="false">Training</button>
+                <div class="mobile-dropdown-items">
+                    <a href="schulungen.html">Module Overview</a>
+                    <a href="termine.html">Schedule 2026</a>
+                    <a href="foerderung.html">Funding</a>
+                </div>
+            </div>
+            <a href="beratung.html" class="mobile-nav-link">Consulting</a>
+            <a href="tools.html" class="mobile-nav-link">Tools</a>
+            <a href="team.html" class="mobile-nav-link">About Us</a>
+            <a href="kontakt.html" class="mobile-nav-link">Contact</a>
+        </nav>
+    </div>
+
+    <!-- ==================== MAIN ==================== -->
+    <main id="main-content" role="main">
+
+        <!-- PAGE HERO -->
+        <section class="page-hero section">
+            <div class="container">
+                <span class="section-label reveal">AI Transparency</span>
+                <h1 class="reveal reveal-delay-1">Our Approach to<br><span class="gradient-text">Artificial Intelligence</span></h1>
+                <p class="section-subtitle reveal reveal-delay-2">
+                    As an education provider for Artificial Intelligence, we practice what we teach:
+                    Transparent, responsible, and ethical AI usage. This statement
+                    fully documents where and how we use AI.
+                </p>
+                <div class="badges-row reveal reveal-delay-3" style="margin-top: var(--space-8); justify-content: flex-start;">
+                    <span class="badge">EU AI Act Compliant</span>
+                    <span class="badge">VERIFY Process</span>
+                    <span class="badge">Updated Quarterly</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 1: AI Usage on the Website -->
+        <section class="section" id="website">
+            <div class="container">
+                <div class="section-number reveal">01 — Website & Platform</div>
+                <h2 class="section-title reveal">AI Usage on Our Website</h2>
+                <p class="section-subtitle reveal reveal-delay-1">
+                    This website was significantly developed with the support of AI systems.
+                    We transparently disclose which areas were created with AI assistance.
+                </p>
+
+                <div class="glass-card reveal reveal-delay-2">
+                    <div class="glass-card-inner">
+                        <table class="transparency-table">
+                            <thead>
+                                <tr>
+                                    <th>Area</th>
+                                    <th>AI System</th>
+                                    <th>AI Assistance</th>
+                                    <th>Quality Assurance</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Website Structure</strong></td>
+                                    <td>Claude AI (Anthropic)</td>
+                                    <td>Substantial</td>
+                                    <td>Human Design & Testing</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>HTML/CSS Code</strong></td>
+                                    <td>Claude AI</td>
+                                    <td>Heavily Assisted</td>
+                                    <td>Code Review & Adjustments</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>JavaScript Functions</strong></td>
+                                    <td>Claude AI</td>
+                                    <td>Assisted</td>
+                                    <td>Testing & Debugging by Team</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Text Content</strong></td>
+                                    <td>Claude AI / GPT-4</td>
+                                    <td>Partial</td>
+                                    <td>Expert Review & Adaptation</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Design Concept</strong></td>
+                                    <td>Claude AI</td>
+                                    <td>Contributing</td>
+                                    <td>Human Design Decisions</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Visual Elements</strong></td>
+                                    <td>Various (see Section 02)</td>
+                                    <td>Variable</td>
+                                    <td>Selection & Editing by Team</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>AI Radar Newsletter</strong></td>
+                                    <td>Claude AI (Anthropic)</td>
+                                    <td>Substantial</td>
+                                    <td>Editorial Review & Approval</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="info-callout">
+                            <strong>This AI Transparency Page:</strong> Created with support from Claude AI
+                            (structure, text, code). Expert review and approval by Marcel Batur.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CIRA Chatbot -->
+                <div class="glass-card reveal" style="margin-top: var(--space-8);">
+                    <div class="glass-card-inner">
+                        <h3 style="font-size: var(--font-xl); margin-bottom: var(--space-4);">CIRA - Our AI Chat Assistant</h3>
+                        <p style="font-size: var(--font-sm); color: var(--color-text-secondary); line-height: var(--line-height-relaxed); margin-bottom: var(--space-4);">
+                            On our website, CIRA (CITECH Intelligent Response Assistant) is available to you as a chat assistant.
+                        </p>
+                        <div class="module-columns">
+                            <div class="accent-card">
+                                <h4 style="font-size: var(--font-base); margin-bottom: var(--space-2);">Technical Foundation</h4>
+                                <p style="font-size: var(--font-sm); color: var(--color-text-secondary);">Claude API (Anthropic) with RAG system (Retrieval Augmented Generation)</p>
+                            </div>
+                            <div class="accent-card">
+                                <h4 style="font-size: var(--font-base); margin-bottom: var(--space-2);">How It Works</h4>
+                                <p style="font-size: var(--font-sm); color: var(--color-text-secondary);">CIRA searches our website content and generates responses based on current information. All responses are AI-generated.</p>
+                            </div>
+                            <div class="accent-card">
+                                <h4 style="font-size: var(--font-base); margin-bottom: var(--space-2);">Data Privacy</h4>
+                                <p style="font-size: var(--font-sm); color: var(--color-text-secondary);">Your queries are processed via the Claude API. No conversation data is used for training purposes (Zero Data Retention Policy).</p>
+                            </div>
+                        </div>
+                        <div class="info-callout warning" style="margin-top: var(--space-6);">
+                            <strong>Important Notice:</strong> CIRA is an AI system and may make errors. For binding information,
+                            please contact us personally at m.batur@citech-ai.de
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: Visual Content -->
+        <section class="section" id="visuals">
+            <div class="container">
+                <div class="section-number reveal">02 — Visual Content</div>
+                <h2 class="section-title reveal">AI-Generated Images and Graphics</h2>
+                <p class="section-subtitle reveal reveal-delay-1">
+                    We use AI tools for creating and editing visual content.
+                </p>
+
+                <div class="glass-card reveal reveal-delay-2">
+                    <div class="glass-card-inner">
+                        <table class="transparency-table">
+                            <thead>
+                                <tr>
+                                    <th>Element</th>
+                                    <th>Tool Used</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Profile Image Marcel Batur</strong></td>
+                                    <td>AI Image Generator</td>
+                                    <td>Fully AI-generated</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Website Animations</strong></td>
+                                    <td>CSS/JavaScript (Claude AI)</td>
+                                    <td>AI-programmed, Human-tested</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Icons & Symbols</strong></td>
+                                    <td>Standard Libraries / Unicode</td>
+                                    <td>Not AI-generated</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Graphic Elements</strong></td>
+                                    <td>Variable (AI tools as needed)</td>
+                                    <td>Varies by element</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="info-callout">
+                            <strong>Note:</strong> The profile image of Marcel Batur on the Team page is AI-generated.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: AI in Training -->
+        <section class="section" id="schulungen">
+            <div class="container">
+                <div class="section-number reveal">03 — AI in Training</div>
+                <h2 class="section-title reveal">AI as a Teaching Tool, Not the Teacher</h2>
+                <p class="section-subtitle reveal reveal-delay-1">
+                    In our training courses, we use AI systems exclusively as demonstration objects
+                    and practice tools. All content is delivered by certified instructors.
+                </p>
+
+                <!-- Systems Used -->
+                <div class="glass-card reveal reveal-delay-2">
+                    <div class="glass-card-inner">
+                        <h3 style="font-size: var(--font-lg); margin-bottom: var(--space-4);">Systems Used</h3>
+                        <table class="transparency-table">
+                            <thead>
+                                <tr>
+                                    <th>System</th>
+                                    <th>Purpose</th>
+                                    <th>Data Privacy</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Claude / ChatGPT</strong></td>
+                                    <td>Text generation, Prompt Engineering, Code assistance</td>
+                                    <td>Cloud-based, no data storage</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Stable Diffusion</strong></td>
+                                    <td>Image generation (local)</td>
+                                    <td>100% local, no cloud</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Ollama</strong></td>
+                                    <td>Local LLMs</td>
+                                    <td>100% offline, full data control</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>LangChain</strong></td>
+                                    <td>RAG systems, Chains</td>
+                                    <td>Framework, privacy depends on setup</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Python ML Libraries</strong></td>
+                                    <td>Scikit-learn, TensorFlow, PyTorch</td>
+                                    <td>100% local</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="info-callout warning">
+                            <strong>Cloud Services in Training:</strong> For demonstration purposes, we use cloud services (OpenAI, Anthropic).
+                            All exercise data is completely deleted after the course ends. Participants are
+                            instructed not to use sensitive data.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Training Content -->
+                <div class="glass-card reveal" style="margin-top: var(--space-8);">
+                    <div class="glass-card-inner">
+                        <h3 style="font-size: var(--font-lg); margin-bottom: var(--space-4);">Training Content</h3>
+                        <p style="font-size: var(--font-sm); color: var(--color-text-secondary); line-height: var(--line-height-relaxed); margin-bottom: var(--space-4);">
+                            Our training materials (presentations, handouts, exercises) are partially
+                            created with AI support and subsequently undergo comprehensive expert review:
+                        </p>
+                        <ul class="content-list">
+                            <li>Presentation slides: AI-assisted, fully reviewed by experts and didactically adapted</li>
+                            <li>Exercises: Partially AI-generated, pedagogically validated and aligned with learning objectives</li>
+                            <li>Code examples: Developed with AI assistance, all tested and documented</li>
+                            <li>Handouts: AI-assisted creation, validated by experts and kept up to date</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: VERIFY Process -->
+        <section class="section" id="verify-process">
+            <div class="container">
+                <div class="section-number reveal">04 — Quality Assurance</div>
+                <h2 class="section-title reveal">VERIFY Process for AI Content</h2>
+                <p class="section-subtitle reveal reveal-delay-1">
+                    Every AI-generated piece of content goes through our structured quality process.
+                </p>
+
+                <div class="process-timeline reveal reveal-delay-2">
+                    <div class="process-step">
+                        <div class="process-number">1</div>
+                        <div class="process-body">
+                            <h4>V — Validate</h4>
+                            <p>Expert review by qualified specialists. All AI outputs are checked for accuracy, relevance, and quality.</p>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="process-number">2</div>
+                        <div class="process-body">
+                            <h4>E — Edit</h4>
+                            <p>Adaptation to target audience, corporate language, and didactic requirements. Removal of errors or inaccuracies.</p>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="process-number">3</div>
+                        <div class="process-body">
+                            <h4>R — Review</h4>
+                            <p>Second review by an independent reviewer. Four-eyes principle for critical content.</p>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="process-number">4</div>
+                        <div class="process-body">
+                            <h4>I — Integrate</h4>
+                            <p>Integration into existing structures with consideration for consistency and corporate identity.</p>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="process-number">5</div>
+                        <div class="process-body">
+                            <h4>F — Finalize</h4>
+                            <p>Final approval by management. Last quality check before publication.</p>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="process-number">6</div>
+                        <div class="process-body">
+                            <h4>Y — Yield</h4>
+                            <p>Publication with clear AI labeling and continuous quality monitoring in live operation.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-callout reveal" style="max-width: 800px; margin: var(--space-8) auto 0;">
+                    <strong>Principle:</strong> No AI-generated content is published without human review and approval. Human-in-the-Loop is our standard.
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: Risk Classification / EU AI Act -->
+        <section class="section" id="eu-ai-act">
+            <div class="container">
+                <div class="section-number reveal">05 — EU AI Act Compliance</div>
+                <h2 class="section-title reveal">Regulatory Classification</h2>
+                <p class="section-subtitle reveal reveal-delay-1">
+                    According to the EU AI Act, our AI systems fall into the following categories.
+                </p>
+
+                <div class="glass-card reveal reveal-delay-2">
+                    <div class="glass-card-inner">
+                        <table class="transparency-table">
+                            <thead>
+                                <tr>
+                                    <th>System</th>
+                                    <th>Risk Class</th>
+                                    <th>Compliance Measures</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Website (Claude AI)</strong></td>
+                                    <td>Minimal Risk</td>
+                                    <td>Voluntary transparency statement (this page)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>CIRA Chatbot</strong></td>
+                                    <td>Limited Risk</td>
+                                    <td>Transparency obligation fulfilled, labeling in place</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Training AI</strong></td>
+                                    <td>Minimal Risk</td>
+                                    <td>Demonstration purpose, no critical application</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>AI Radar Newsletter</strong></td>
+                                    <td>Minimal Risk</td>
+                                    <td>AI-assisted content creation, editorial final review, transparency notice in newsletter</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="info-callout" style="margin-bottom: 0;">
+                            <strong>No High-Risk Systems:</strong> CITECH does not operate any AI systems
+                            in the high-risk category. All deployed systems serve a supportive role,
+                            not automated decision-making.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 6: Your Rights / Transparency & Accountability -->
+        <section class="section" id="rechte">
+            <div class="container">
+                <div class="section-number reveal">06 — Your Rights</div>
+                <h2 class="section-title reveal">Transparency & Accountability</h2>
+                <p class="section-subtitle reveal reveal-delay-1">
+                    You have the right to full information about our use of AI.
+                </p>
+
+                <div class="module-columns reveal reveal-delay-2">
+                    <div class="accent-card">
+                        <h4 style="font-size: var(--font-base); margin-bottom: var(--space-2);">Information</h4>
+                        <p style="font-size: var(--font-sm); color: var(--color-text-secondary);">Upon request, we will inform you whether and how AI was used in the creation of specific content.</p>
+                    </div>
+                    <div class="accent-card">
+                        <h4 style="font-size: var(--font-base); margin-bottom: var(--space-2);">Labeling</h4>
+                        <p style="font-size: var(--font-sm); color: var(--color-text-secondary);">We label AI-generated content wherever possible and appropriate.</p>
+                    </div>
+                    <div class="accent-card">
+                        <h4 style="font-size: var(--font-base); margin-bottom: var(--space-2);">Quality Guarantee</h4>
+                        <p style="font-size: var(--font-sm); color: var(--color-text-secondary);">In the event of errors in AI-generated content, we take full responsibility and correct them promptly.</p>
+                    </div>
+                    <div class="accent-card">
+                        <h4 style="font-size: var(--font-base); margin-bottom: var(--space-2);">Data Privacy</h4>
+                        <p style="font-size: var(--font-sm); color: var(--color-text-secondary);">Your data is processed in accordance with GDPR, including during AI interactions.</p>
+                    </div>
+                    <div class="accent-card">
+                        <h4 style="font-size: var(--font-base); margin-bottom: var(--space-2);">Feedback</h4>
+                        <p style="font-size: var(--font-sm); color: var(--color-text-secondary);">Report quality issues or concerns regarding AI content to us.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 7: Sustainability -->
+        <section class="section" id="nachhaltigkeit">
+            <div class="container">
+                <div class="section-number reveal">07 — Sustainability</div>
+                <h2 class="section-title reveal">Responsible AI Usage</h2>
+                <p class="section-subtitle reveal reveal-delay-1">
+                    We are aware of the environmental impact of AI systems and make conscious decisions to conserve resources.
+                </p>
+
+                <div class="module-columns reveal reveal-delay-2">
+                    <div class="accent-card">
+                        <h4 style="font-size: var(--font-base); margin-bottom: var(--space-2);">Energy Efficiency</h4>
+                        <p style="font-size: var(--font-sm); color: var(--color-text-secondary);">Preference for smaller, more efficient models where possible. Use of local systems (Ollama, Stable Diffusion) reduces data center load.</p>
+                    </div>
+                    <div class="accent-card">
+                        <h4 style="font-size: var(--font-base); margin-bottom: var(--space-2);">Resource Conservation</h4>
+                        <p style="font-size: var(--font-sm); color: var(--color-text-secondary);">Avoidance of unnecessary AI requests. Caching of results. Deliberate use instead of automated mass production.</p>
+                    </div>
+                    <div class="accent-card">
+                        <h4 style="font-size: var(--font-base); margin-bottom: var(--space-2);">Education & Awareness</h4>
+                        <p style="font-size: var(--font-sm); color: var(--color-text-secondary);">Training our clients in energy-efficient AI usage. Addressing sustainability aspects in all courses.</p>
+                    </div>
+                    <div class="accent-card">
+                        <h4 style="font-size: var(--font-base); margin-bottom: var(--space-2);">Local Alternatives</h4>
+                        <p style="font-size: var(--font-sm); color: var(--color-text-secondary);">Where possible, we use local AI systems (Ollama, Local LLMs) instead of cloud services. This reduces data transfer and server load.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 8: External Partners -->
+        <section class="section" id="partner">
+            <div class="container">
+                <div class="section-number reveal">08 — External Partners</div>
+                <h2 class="section-title reveal">Creative Collaboration</h2>
+                <p class="section-subtitle reveal reveal-delay-1">
+                    Transparency also means making our partners visible.
+                </p>
+
+                <div class="glass-card reveal reveal-delay-2">
+                    <div class="glass-card-inner">
+                        <ul class="content-list">
+                            <li><strong>Corporate Design & Web Design:</strong>
+                            <a href="https://www.b-line-graphix.de" target="_blank" rel="noopener" style="color: var(--color-primary-400);">B_Line Graphix</a> —
+                            Development of the visual identity, logo design, and creative conception of the website</li>
+                        </ul>
+                        <p style="font-size: var(--font-sm); color: var(--color-text-tertiary); margin-top: var(--space-4);">
+                            This collaboration does not involve AI usage on the part of the partners in the design area.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 9: Vision -->
+        <section class="section" id="vision">
+            <div class="container">
+                <div class="section-number reveal">09 — Our Vision</div>
+                <h2 class="section-title reveal">Pioneers for AI Transparency</h2>
+                <p class="section-subtitle reveal reveal-delay-1">
+                    We continuously work on setting standards for AI transparency.
+                </p>
+
+                <div class="glass-card reveal reveal-delay-2">
+                    <div class="glass-card-inner">
+                        <ul class="content-list">
+                            <li><strong>Industry Standard:</strong> Development of an AI Transparency seal for education providers</li>
+                            <li><strong>Open Source:</strong> Sharing our findings and best practices with the community</li>
+                            <li><strong>Research:</strong> Collaboration with universities on AI ethics and transparency</li>
+                            <li><strong>Education Initiative:</strong> Free workshops on responsible AI usage</li>
+                            <li><strong>Continuous Improvement:</strong> Quarterly review and update of this statement</li>
+                        </ul>
+                        <p style="margin-top: var(--space-6); font-style: italic; color: var(--color-text-secondary); text-align: center; font-size: var(--font-base); line-height: var(--line-height-relaxed);">
+                            Transparency is not a competitive disadvantage, but the foundation for trust in the AI era. We lead the way.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 10: AI Transparency Officer -->
+        <section class="section" id="kontakt-transparenz">
+            <div class="container">
+                <div class="section-number reveal">10 — Contact</div>
+                <h2 class="section-title reveal">AI Transparency Officer</h2>
+
+                <div class="glass-card reveal reveal-delay-1" style="max-width: 600px; margin: 0 auto;">
+                    <div class="glass-card-inner" style="text-align: center;">
+                        <h3 style="font-size: var(--font-xl); margin-bottom: var(--space-2);">Marcel Batur</h3>
+                        <p style="font-size: var(--font-sm); color: var(--color-primary-400); margin-bottom: var(--space-4);">Managing Director & AI Officer</p>
+                        <p style="font-size: var(--font-sm); color: var(--color-text-secondary); margin-bottom: var(--space-6);">
+                            For questions about AI transparency, information requests, or feedback on AI-generated content.
+                        </p>
+                        <a href="mailto:m.batur@citech-ai.de" class="btn btn-primary">m.batur@citech-ai.de</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CHANGELOG -->
+        <section class="section" id="changelog">
+            <div class="container">
+                <div class="section-number reveal">Changelog</div>
+                <h2 class="section-title reveal">Version History</h2>
+
+                <div class="glass-card reveal reveal-delay-1" style="max-width: 800px; margin: 0 auto;">
+                    <div class="glass-card-inner">
+                        <table class="transparency-table">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Version</th>
+                                    <th>Change</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>17.02.2026</td>
+                                    <td>2.1</td>
+                                    <td>Addition: AI Radar Newsletter as AI system in Sections 01 and 07</td>
+                                </tr>
+                                <tr>
+                                    <td>27.10.2025</td>
+                                    <td>2.0</td>
+                                    <td>Complete redesign: Structured documentation per compliance standard, full disclosure of all AI systems, VERIFY process added</td>
+                                </tr>
+                                <tr>
+                                    <td>27.09.2025</td>
+                                    <td>1.1</td>
+                                    <td>Addition: CIRA Chat Assistant with Claude API and RAG system</td>
+                                </tr>
+                                <tr>
+                                    <td>01.09.2025</td>
+                                    <td>1.0</td>
+                                    <td>Initial publication of the AI Transparency Statement</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="info-callout" style="margin-bottom: 0;">
+                            This statement is reviewed and updated quarterly.<br>
+                            <strong>Last Review:</strong> February 2026 | <strong>Next Review:</strong> May 2026
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="section cta-banner" id="transparenz-cta">
+            <div class="container" style="text-align: center;">
+                <h2 class="section-title reveal">Questions About AI Transparency?</h2>
+                <p class="section-subtitle reveal reveal-delay-1">
+                    We are happy to answer all questions about our use of Artificial Intelligence.
+                </p>
+                <div class="hero-buttons reveal reveal-delay-2">
+                    <a href="kontakt.html" class="btn btn-primary">Get in Touch</a>
+                    <a href="schulungen.html" class="btn btn-secondary">View Training Courses</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="../../assets/images/logo/citech-logo-white.svg" alt="CITECH AI" class="logo-dark" width="120" height="28">
+                    <img src="../../assets/images/logo/Citech Logo klassisch weißer Hintergrund mit Schatten.jpg" alt="CITECH AI" class="logo-light" width="120" height="28">
+                    <p>AZAV-certified AI education provider from Essen. Training, consulting, and implementation – practical and GDPR-compliant.</p>
+                </div>
+                <div><h4 class="footer-heading">Offer</h4><ul class="footer-links"><li><a href="schulungen.html">Training</a></li><li><a href="termine.html">Schedule</a></li><li><a href="beratung.html">Consulting</a></li><li><a href="tools.html">AI Tools</a></li><li><a href="foerderung.html">Funding</a></li></ul></div>
+                <div><h4 class="footer-heading">Company</h4><ul class="footer-links"><li><a href="team.html">About Us</a></li><li><a href="newsletter.html">AI Radar Newsletter</a></li><li><a href="kontakt.html">Contact</a></li></ul></div>
+                <div><h4 class="footer-heading">Legal</h4><ul class="footer-links"><li><a href="impressum.html">Legal Notice</a></li><li><a href="datenschutz.html">Privacy Policy</a></li><li><a href="agb.html">Terms & Conditions</a></li><li><a href="ki-transparenz.html">AI Transparency</a></li></ul></div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2025–2026 CITECH AI GmbH. All rights reserved.</span>
+                <span>Design: <a href="https://www.b-line-graphix.de" target="_blank" rel="noopener">B_Line Graphix</a></span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie Banner -->
+    <div class="cookie-banner" role="dialog" aria-label="Cookie Settings">
+        <h4>We Respect Your Privacy</h4>
+        <p>This website uses only technically necessary cookies. No analytics tools, no tracking.</p>
+        <div class="cookie-buttons">
+            <button id="cookie-accept" class="btn btn-primary btn-sm">Understood</button>
+            <a href="datenschutz.html" class="btn btn-secondary btn-sm">Read Privacy Policy</a>
+        </div>
+    </div>
+
+    <script src="../../js/main.js?v=4"></script>
+</body>
+</html>

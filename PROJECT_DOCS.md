@@ -439,33 +439,48 @@ Optional Dropdown unter "Schulungen": Module 1-4, Termine
 
 ### Offene Punkte (Priorisiert)
 
+#### Erledigt
+- [x] Startseite Hero überarbeitet (3 Säulen: Schulung/Beratung/Tools)
+- [x] Kontakt-Slide global (JS-injiziert auf allen Seiten)
+- [x] .htaccess (CSP, HSTS, Clean URLs, Caching, Bot-Blocking, GZIP)
+- [x] robots.txt + sitemap.xml (13 Seiten, Clean URLs)
+- [x] Fonts TTF → WOFF2 (59% kleiner, DSGVO-sicher)
+- [x] contact-handler.php (CORS, CSRF, Rate Limiting, Honeypot)
+- [x] SEO-Audit + Fixes (Title Tags, Meta Descriptions)
+- [x] Tracking-Entscheidung: Kein GA, kein Cookiebot (passt zum DSGVO-Image)
+- [x] Bild Ingo Poschmann zentriert
+- [x] Git-Repo + GitHub Pages live
+- [x] Mobile Living Network aktiviert (200 Nodes, zentriert)
+- [x] Mobile Grids, Tabellen, Footer, Contact-Tab fixes
+
 #### P0 – Kritisch (vor Launch)
-- [ ] **Startseite überarbeiten** – Hero-Bereich klarer strukturieren: Schulung, Beratung, Tools sofort erkennbar. DSGVO-konform, On-Premise, Niederschwellige KI-Lösungen hervorheben
-- [ ] **Kontakt-Slide auf allen Seiten** – Wie im V1-Original: Fester Kontakt-Tab am Seitenrand (auf alle Seiten übertragen)
-- [ ] **Leitbild bei Schulungen prüfen** – Sicherstellen dass Leitbild-Sektion auf Schulungen-Seite vollständig ist
-- [ ] **.htaccess Sicherheitskonzept** – Mindestens so stark wie V1: CSP, HSTS, X-Frame-Options, X-Content-Type, Referrer-Policy, Permissions-Policy, Bot-Blocking, Clean URLs, Caching, GZIP, Sensitive Files Protection
-- [ ] **robots.txt** – Korrekte Syntax (kein Regex wie in V1)
-- [ ] **sitemap.xml** – Alle 13 Seiten mit Priorität und hreflang
-- [ ] **Font DSGVO-Sicherheit** – TTF → WOFF2 konvertieren, sicherstellen keine externen Font-Requests
-- [ ] **Kontaktformular Backend** – contact-handler.php aus V1 übernehmen/anpassen (CORS, CSRF, Rate Limiting)
+- [ ] **Englische Version** – Komplette EN-Übersetzung aller 13 Seiten (Toggle existiert, nicht funktional)
+- [ ] **Intro-Animation** – Einleitungsanimation beim ersten Seitenbesuch (wie Wegweiser), mit Skip-Button, sessionStorage für "bereits gesehen"
+- [ ] **Page-Transition** – Smooth Übergangsanimation beim Seitenwechsel
+- [ ] **Barrierefreiheit prüfen** – WCAG 2.1 AA: Kontraste, Keyboard-Navigation, Screen Reader, Focus-Management, aria-live für dynamische Inhalte
+- [ ] **Leitbild bei Schulungen** prüfen – vollständig?
+- [ ] **Mobile Feinschliff:**
+  - Hero-Badge "AZAV" abgeschnitten (border-radius/overflow)
+  - Hamburger → X nicht sichtbar (z-index Stacking Context Header vs Mobile Menu)
+  - Light Mode mobil testen
 
 #### P1 – Wichtig (zeitnah nach Launch)
-- [ ] **Englische Version** – Komplette EN-Übersetzung aller Seiten (Toggle existiert, aber nicht funktional)
-- [ ] **Mobile Ansicht testen** – Erst mit allen Features (Living Network) probieren, dann ggf. abspecken
-- [ ] **Light Mode** auf allen Seiten durchgehen und visuell prüfen
-- [ ] **SEO Feinschliff** – Title Tags Länge prüfen, Meta Descriptions optimieren, Alt-Texte auf allen Bildern
-- [ ] **Google Analytics / Tracking** – Entscheidung: Kein Tracking (wie V1) ODER Cookiebot + GA (wie Wegweiser). Falls GA: Cookiebot einbinden, Datenschutzerklärung anpassen
-- [ ] **Indexierung vorbereiten** – Google Search Console, sitemap einreichen, Canonical URLs prüfen
-- [ ] **Bild Ingo Poschmann** – Auf Team-Seite zentrieren (aktuell zu weit rechts)
-- [ ] **404-Seite** – Custom Error Page erstellen
-- [ ] **Danke-Seite** nach Kontaktformular-Absendung
+- [ ] **404-Seite** + **Danke-Seite** nach Formular
+- [ ] **Cross-Browser-Test** (Safari, Firefox, Edge)
+- [ ] **Lighthouse Performance** (Ziel: >90)
+- [ ] **Bilder optimieren** (WebP/AVIF, lazy loading)
+- [ ] **Indexierung** – Google Search Console, sitemap einreichen
+- [ ] **Clean URLs testen** auf echtem Strato-Server
+- [ ] **contact-handler.php testen** (PHP + mail() auf Server)
+- [ ] **SSL-Zertifikat** prüfen
+- [ ] **DNS-Umstellung** planen
 
 #### P2 – Nice-to-Have
 - [ ] Chatbot CIRA (später aktivierbar)
 - [ ] Testimonials/Referenzen-Bereich
 - [ ] FAQ-Section mit Schema.org
+- [ ] Schema.org auf restlichen Seiten (8 Seiten ohne JSON-LD)
 - [ ] Breadcrumb-Navigation
-- [ ] Cookiebot evaluieren (Pro: Rechtssicherheit bei Tracking / Contra: Overhead wenn kein Tracking)
 
 ---
 

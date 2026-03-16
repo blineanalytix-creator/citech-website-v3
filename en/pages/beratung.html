@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Consulting – EU AI Act Compliance & AI Governance | CITECH AI</title>
+    <meta name="description" content="EU AI Act consulting: risk classification, gap analysis, technical documentation, and audit preparation. CITECH AI guides you to AI compliance.">
+
+    <link rel="canonical" href="https://www.citech-ai.de/en/pages/beratung">
+    <link rel="alternate" hreflang="de" href="https://www.citech-ai.de/pages/beratung">
+    <link rel="alternate" hreflang="en" href="https://www.citech-ai.de/en/pages/beratung">
+
+    <meta property="og:title" content="Consulting – EU AI Act Compliance & AI Governance | CITECH AI">
+    <meta property="og:description" content="Risk classification, gap analysis, documentation, and audit preparation for EU AI Act compliance.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.citech-ai.de/en/pages/beratung">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="CITECH AI">
+
+    <link rel="icon" type="image/png" href="../../favicon.png">
+    <link rel="preload" href="../../assets/fonts/Inter-VariableFont.woff2" as="font" type="font/woff2" crossorigin>
+    <style>
+        @font-face {
+            font-family: 'Inter';
+            src: url('../../assets/fonts/Inter-VariableFont.woff2') format('woff2');
+            font-weight: 100 900;
+            font-style: normal;
+            font-display: swap;
+        }
+    </style>
+    <link rel="stylesheet" href="../../css/main.css?v=4">
+    <link rel="stylesheet" href="../../css/mobile.css?v=4" media="(max-width: 1024px)">
+</head>
+<body>
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <div class="ambient-bg" aria-hidden="true">
+        <div class="ambient-mesh">
+            <div class="mesh-gradient mesh-gradient-1"></div>
+            <div class="mesh-gradient mesh-gradient-2"></div>
+            <div class="mesh-gradient mesh-gradient-3"></div>
+        </div>
+        <canvas id="neural-bg-canvas"></canvas>
+    </div>
+
+    <!-- HEADER -->
+    <header class="header" role="banner">
+        <div class="container header-inner">
+            <a href="../../en/" class="header-logo" aria-label="CITECH AI Homepage">
+                <img src="../../assets/images/logo/citech-logo-white.svg" alt="CITECH AI" class="logo-dark" width="140" height="32">
+                <img src="../../assets/images/logo/Citech Logo klassisch weißer Hintergrund mit Schatten.jpg" alt="CITECH AI" class="logo-light" width="140" height="32">
+            </a>
+            <nav class="nav-desktop" role="navigation" aria-label="Main navigation">
+                <a href="../../en/" class="nav-link">Home</a>
+                <div class="nav-dropdown">
+                    <button class="nav-link nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+                        Training
+                        <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M3 5l3 3 3-3"/></svg>
+                    </button>
+                    <div class="nav-dropdown-menu" role="menu">
+                        <a href="schulungen.html" role="menuitem">Module Overview</a>
+                        <a href="termine.html" role="menuitem">Schedule 2026</a>
+                        <a href="foerderung.html" role="menuitem">Funding</a>
+                    </div>
+                </div>
+                <a href="beratung.html" class="nav-link active">Consulting</a>
+                <a href="tools.html" class="nav-link">Tools</a>
+                <a href="team.html" class="nav-link">About Us</a>
+                <a href="kontakt.html" class="nav-link">Contact</a>
+            </nav>
+            <div class="header-actions">
+                <a href="../../pages/beratung.html" class="lang-toggle" aria-label="Zur deutschen Version wechseln">DE</a>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle color scheme">
+                    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                </button>
+                <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" aria-hidden="true">
+        <nav class="mobile-menu-nav" aria-label="Mobile navigation">
+            <a href="../../en/" class="mobile-nav-link">Home</a>
+            <div class="mobile-dropdown">
+                <button class="mobile-nav-link mobile-dropdown-toggle" aria-expanded="false">Training</button>
+                <div class="mobile-dropdown-items">
+                    <a href="schulungen.html">Module Overview</a>
+                    <a href="termine.html">Schedule 2026</a>
+                    <a href="foerderung.html">Funding</a>
+                </div>
+            </div>
+            <a href="beratung.html" class="mobile-nav-link active">Consulting</a>
+            <a href="tools.html" class="mobile-nav-link">Tools</a>
+            <a href="team.html" class="mobile-nav-link">About Us</a>
+            <a href="kontakt.html" class="mobile-nav-link">Contact</a>
+        </nav>
+    </div>
+
+    <!-- ==================== MAIN ==================== -->
+    <main id="main-content" role="main">
+
+        <!-- PAGE HERO -->
+        <section class="page-hero section">
+            <div class="container">
+                <span class="section-label reveal">Consulting</span>
+                <h1 class="reveal reveal-delay-1">Compliance is not an obstacle<br><span class="gradient-text">to innovation</span></h1>
+                <p class="section-subtitle reveal reveal-delay-2">
+                    It is the foundation for sustainable success with AI. We guide you from risk classification to certification — practical and legally sound.
+                </p>
+                <div class="badges-row reveal reveal-delay-3" style="margin-top: var(--space-8); justify-content: flex-start;">
+                    <span class="badge">EU AI Act</span>
+                    <span class="badge">ISO/IEC 42001</span>
+                    <span class="badge">GDPR-compliant</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB SYSTEM -->
+        <section class="section" id="leistungen">
+            <div class="container tab-wrapper">
+
+                <!-- Tab Navigation -->
+                <div class="tab-nav reveal">
+                    <button class="tab-btn active" data-tab="tab-beratung">Our Consulting</button>
+                    <button class="tab-btn" data-tab="tab-leitbild">Our Mission</button>
+                </div>
+
+                <!-- ======== TAB 1: OUR CONSULTING ======== -->
+                <div class="tab-content active" id="tab-beratung">
+
+                    <!-- Services as Accent-Cards -->
+                    <div class="section-header reveal">
+                        <span class="section-label">Our Services</span>
+                        <h2 class="section-title">Compliance Consulting at a Glance</h2>
+                    </div>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); margin-bottom: var(--space-16);">
+                        <div class="accent-card reveal">
+                            <h4>AI System Classification</h4>
+                            <p>Systematic categorization according to the EU AI Act with clear recommendations for each risk level.</p>
+                        </div>
+                        <div class="accent-card reveal">
+                            <h4>Gap Analysis</h4>
+                            <p>Identification of gaps between the current state and regulatory requirements.</p>
+                        </div>
+                        <div class="accent-card reveal">
+                            <h4>Technical Documentation</h4>
+                            <p>Risk management system, data quality evidence, transparency reports.</p>
+                        </div>
+                        <div class="accent-card reveal">
+                            <h4>Audit &amp; Conformity Preparation</h4>
+                            <p>Simulation of audit scenarios and establishment of internal review routines.</p>
+                        </div>
+                        <div class="accent-card reveal">
+                            <h4>CE Marking Guidance</h4>
+                            <p>Support throughout the entire conformity assessment procedure.</p>
+                        </div>
+                        <div class="accent-card reveal">
+                            <h4>Employee Training</h4>
+                            <p>Compliance training for teams working with AI systems.</p>
+                        </div>
+                    </div>
+
+                    <!-- Risk Classes -->
+                    <div class="section-header reveal" id="risikoklassen">
+                        <span class="section-label">EU AI Act</span>
+                        <h2 class="section-title">The Four Risk Classes</h2>
+                        <p class="section-subtitle">Violations can result in fines of up to EUR 35 million or 7% of annual global turnover.</p>
+                    </div>
+                    <div class="services-grid" style="margin-bottom: var(--space-16);">
+                        <div class="glass-card reveal reveal-delay-1">
+                            <div class="glass-card-inner">
+                                <span style="display:inline-block; width:10px; height:10px; border-radius:50%; background:#22c55e; margin-bottom: var(--space-4);"></span>
+                                <h3>Minimal Risk</h3>
+                                <p style="margin-bottom: var(--space-4);"><strong>Voluntary codes of conduct</strong></p>
+                                <ul class="content-list"><li>Spam filters</li><li>AI in video games</li><li>Recommendation systems</li><li>Automatic spell check</li></ul>
+                            </div>
+                        </div>
+                        <div class="glass-card reveal reveal-delay-2">
+                            <div class="glass-card-inner">
+                                <span style="display:inline-block; width:10px; height:10px; border-radius:50%; background:var(--color-primary-400); margin-bottom: var(--space-4);"></span>
+                                <h3>Limited Risk</h3>
+                                <p style="margin-bottom: var(--space-4);"><strong>Transparency obligations</strong></p>
+                                <ul class="content-list"><li>Chatbots and conversational AI</li><li>Emotion recognition</li><li>Deepfake generation</li><li>AI-generated content</li></ul>
+                            </div>
+                        </div>
+                        <div class="glass-card reveal reveal-delay-3">
+                            <div class="glass-card-inner">
+                                <span style="display:inline-block; width:10px; height:10px; border-radius:50%; background:#f59e0b; margin-bottom: var(--space-4);"></span>
+                                <h3>High Risk</h3>
+                                <p style="margin-bottom: var(--space-4);"><strong>Strict requirements &amp; CE marking</strong></p>
+                                <ul class="content-list"><li>AI in human resources</li><li>Biometric identification</li><li>Critical infrastructure</li><li>Credit scoring</li></ul>
+                            </div>
+                        </div>
+                        <div class="glass-card reveal reveal-delay-4">
+                            <div class="glass-card-inner">
+                                <span style="display:inline-block; width:10px; height:10px; border-radius:50%; background:#ef4444; margin-bottom: var(--space-4);"></span>
+                                <h3>Unacceptable Risk</h3>
+                                <p style="margin-bottom: var(--space-4);"><strong>Prohibited applications</strong></p>
+                                <ul class="content-list"><li>Social scoring by public authorities</li><li>Subliminal manipulation</li><li>Exploitation of vulnerable groups</li><li>Real-time remote biometric identification</li></ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 5-Phase Timeline -->
+                    <div class="section-header reveal">
+                        <span class="section-label">Our Approach</span>
+                        <h2 class="section-title">5 Phases to Compliance</h2>
+                    </div>
+                    <div class="process-timeline" style="margin-bottom: var(--space-16);">
+                        <div class="process-step reveal">
+                            <div class="process-number">1</div>
+                            <div class="process-body">
+                                <h4>Analysis &amp; Inventory</h4>
+                                <p>Identification of all AI systems, document analysis, stakeholder interviews to determine the current state.</p>
+                            </div>
+                        </div>
+                        <div class="process-step reveal">
+                            <div class="process-number">2</div>
+                            <div class="process-body">
+                                <h4>Risk Assessment &amp; Classification</h4>
+                                <p>Systematic categorization according to the EU AI Act. Identification of compliance gaps and critical areas.</p>
+                            </div>
+                        </div>
+                        <div class="process-step reveal">
+                            <div class="process-number">3</div>
+                            <div class="process-body">
+                                <h4>Action Plan Design</h4>
+                                <p>Individual implementation plan with prioritized recommendations and defined milestones.</p>
+                            </div>
+                        </div>
+                        <div class="process-step reveal">
+                            <div class="process-number">4</div>
+                            <div class="process-body">
+                                <h4>Implementation</h4>
+                                <p>Document creation, process adaptation, risk management system setup, employee training.</p>
+                            </div>
+                        </div>
+                        <div class="process-step reveal">
+                            <div class="process-number">5</div>
+                            <div class="process-body">
+                                <h4>Certification &amp; Audit</h4>
+                                <p>Audit preparation, internal simulation, certification process support, regulatory evidence management.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Package Comparison -->
+                    <div class="section-header reveal" id="pakete">
+                        <span class="section-label">Consulting Packages</span>
+                        <h2 class="section-title">The Right Package</h2>
+                    </div>
+                    <div class="glass-card reveal" style="overflow-x: auto; margin-bottom: var(--space-16);">
+                        <div class="glass-card-inner">
+                            <table class="schedule-table">
+                                <thead><tr><th style="min-width:160px;">Service</th><th>Quick Check</th><th>Compliance Package</th><th>Enterprise</th></tr></thead>
+                                <tbody>
+                                    <tr><td class="day-label">Scope</td><td>1-day workshop</td><td>Full-service support</td><td>Enterprise-wide solution</td></tr>
+                                    <tr><td class="day-label">Current-state analysis</td><td>Overview</td><td>Detailed</td><td>Multi-system</td></tr>
+                                    <tr><td class="day-label">Gap analysis</td><td style="color:var(--color-primary-400);">&#10003;</td><td style="color:var(--color-primary-400);">&#10003;</td><td style="color:var(--color-primary-400);">&#10003;</td></tr>
+                                    <tr><td class="day-label">Documentation</td><td>Management summary</td><td>Comprehensive</td><td>International</td></tr>
+                                    <tr><td class="day-label">Training</td><td style="color:var(--color-text-muted);">&mdash;</td><td>Included</td><td>Comprehensive</td></tr>
+                                    <tr><td class="day-label">Support</td><td style="color:var(--color-text-muted);">&mdash;</td><td>3 months</td><td>Ongoing</td></tr>
+                                    <tr><td class="day-label">Audit preparation</td><td style="color:var(--color-text-muted);">&mdash;</td><td style="color:var(--color-primary-400);">&#10003;</td><td style="color:var(--color-primary-400);">&#10003;</td></tr>
+                                    <tr><td class="day-label">Price</td><td>On request</td><td>On request</td><td>On request</td></tr>
+                                </tbody>
+                            </table>
+                            <div style="display:flex; justify-content:center; margin-top:var(--space-6);"><a href="kontakt.html" class="btn btn-sm">Request consulting</a></div>
+                        </div>
+                    </div>
+
+                    <!-- Standards -->
+                    <div class="section-header reveal">
+                        <span class="section-label">Reference Framework</span>
+                        <h2 class="section-title">Standards &amp; Norms</h2>
+                    </div>
+                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-4);">
+                        <div class="accent-card reveal" style="text-align: center;"><h4>ISO/IEC 42001</h4><p>AI Management Systems</p></div>
+                        <div class="accent-card reveal" style="text-align: center;"><h4>ISO 9001</h4><p>QM Integration</p></div>
+                        <div class="accent-card reveal" style="text-align: center;"><h4>GDPR</h4><p>Data Protection Law</p></div>
+                    </div>
+
+                </div>
+
+                <!-- ======== TAB 2: OUR MISSION ======== -->
+                <div class="tab-content" id="tab-leitbild">
+
+                    <!-- Core Statement -->
+                    <div class="section-header reveal">
+                        <span class="section-label">Our Mission</span>
+                        <h2 class="section-title">Compliance Consulting</h2>
+                        <p class="section-subtitle">We guide organizations toward legally sound and ethically responsible use of AI — with a clear focus on pragmatic implementation rather than excessive bureaucracy.</p>
+                    </div>
+                    <div class="accent-card reveal" style="margin-bottom: var(--space-16);">
+                        <p style="font-size: var(--font-base); color: var(--color-text-secondary); line-height: var(--line-height-relaxed);">Regulatory requirements should not stifle AI innovation, but place it on a secure foundation.</p>
+                    </div>
+
+                    <!-- 5 Consulting Principles as Timeline -->
+                    <div class="section-header reveal">
+                        <h3 class="section-title" style="font-size: var(--font-2xl);">Our 5 Principles</h3>
+                    </div>
+                    <div class="process-timeline" style="margin-bottom: var(--space-16);">
+                        <div class="process-step reveal">
+                            <div class="process-number">1</div>
+                            <div class="process-body">
+                                <h4>Listen Before Judging</h4>
+                                <p>We understand your business processes before imposing compliance requirements.</p>
+                            </div>
+                        </div>
+                        <div class="process-step reveal">
+                            <div class="process-number">2</div>
+                            <div class="process-body">
+                                <h4>Iterative, Not Big Bang</h4>
+                                <p>Step-by-step implementation with quick wins, not multi-year mega-projects.</p>
+                            </div>
+                        </div>
+                        <div class="process-step reveal">
+                            <div class="process-number">3</div>
+                            <div class="process-body">
+                                <h4>Empower, Not Patronize</h4>
+                                <p>We train your teams so you can increasingly operate independently.</p>
+                            </div>
+                        </div>
+                        <div class="process-step reveal">
+                            <div class="process-number">4</div>
+                            <div class="process-body">
+                                <h4>Document With Measure</h4>
+                                <p>As much as necessary, as little as possible — compliance documentation should help, not paralyze.</p>
+                            </div>
+                        </div>
+                        <div class="process-step reveal">
+                            <div class="process-number">5</div>
+                            <div class="process-body">
+                                <h4>Long-Term Partnership</h4>
+                                <p>Compliance is not a one-time project. We stay by your side as regulations or your AI landscape evolve.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- What We Do NOT Do -->
+                    <div class="section-header reveal">
+                        <h3 class="section-title" style="font-size: var(--font-2xl);">What We Do Not Do</h3>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: var(--space-4); margin-bottom: var(--space-16);">
+                        <div class="accent-card reveal">
+                            <h4>Spread Fear</h4>
+                            <p>We do not rely on panic rhetoric — we work with objective risk assessment.</p>
+                        </div>
+                        <div class="accent-card reveal">
+                            <h4>Overcomplicate</h4>
+                            <p>No bloated compliance frameworks that create more administrative overhead than value.</p>
+                        </div>
+                        <div class="accent-card reveal">
+                            <h4>Substitute Legal Counsel</h4>
+                            <p>We are consultants, not attorneys. For sensitive legal questions, we refer you to specialized law firms.</p>
+                        </div>
+                        <div class="accent-card reveal">
+                            <h4>Remain Technology-Agnostic</h4>
+                            <p>We understand the AI systems we advise on — we reject superficial compliance checks without technical understanding.</p>
+                        </div>
+                        <div class="accent-card reveal">
+                            <h4>Sell Off-the-Shelf Solutions</h4>
+                            <p>Every organization is different. Copy-paste compliance does not work.</p>
+                        </div>
+                    </div>
+
+                    <!-- Our Promise -->
+                    <div class="section-header reveal">
+                        <h3 class="section-title" style="font-size: var(--font-2xl);">Our Promise</h3>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: var(--space-4); margin-bottom: var(--space-16);">
+                        <div class="accent-card reveal">
+                            <h4>Honest Advice</h4>
+                            <p>We tell you what you need to hear, not what you want to hear.</p>
+                        </div>
+                        <div class="accent-card reveal">
+                            <h4>Confidentiality</h4>
+                            <p>Your data, processes, and compliance gaps remain under strict confidentiality.</p>
+                        </div>
+                        <div class="accent-card reveal">
+                            <h4>Up-to-Date Expertise</h4>
+                            <p>Our recommendations are based on the latest legislation and best practices.</p>
+                        </div>
+                        <div class="accent-card reveal">
+                            <h4>Traceability</h4>
+                            <p>Every compliance requirement we recommend is justified by the underlying legal norm or risk.</p>
+                        </div>
+                        <div class="accent-card reveal">
+                            <h4>Partnerships</h4>
+                            <p>We collaborate with specialized law firms, certification bodies, and technical experts — for holistic solutions.</p>
+                        </div>
+                    </div>
+
+                    <!-- Compliance Checklist -->
+                    <div class="section-header reveal">
+                        <h3 class="section-title" style="font-size: var(--font-2xl);">Compliance Checklist</h3>
+                        <p class="section-subtitle">Assess your current status — the more items remain open, the more urgently you need consulting.</p>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: var(--space-3);">
+                        <div class="accent-card reveal"><p style="display: flex; align-items: center; gap: var(--space-3);">&#9744; All deployed AI systems are identified and documented</p></div>
+                        <div class="accent-card reveal"><p style="display: flex; align-items: center; gap: var(--space-3);">&#9744; The risk class of each AI application is known and classified</p></div>
+                        <div class="accent-card reveal"><p style="display: flex; align-items: center; gap: var(--space-3);">&#9744; Technical documentation is complete</p></div>
+                        <div class="accent-card reveal"><p style="display: flex; align-items: center; gap: var(--space-3);">&#9744; A systematic AI risk management process is in place</p></div>
+                        <div class="accent-card reveal"><p style="display: flex; align-items: center; gap: var(--space-3);">&#9744; Transparency requirements are met</p></div>
+                        <div class="accent-card reveal"><p style="display: flex; align-items: center; gap: var(--space-3);">&#9744; Human oversight is ensured (human-in-the-loop)</p></div>
+                        <div class="accent-card reveal"><p style="display: flex; align-items: center; gap: var(--space-3);">&#9744; A data protection impact assessment has been conducted</p></div>
+                        <div class="accent-card reveal"><p style="display: flex; align-items: center; gap: var(--space-3);">&#9744; Employees are trained in the use of AI systems</p></div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="section" id="beratung-cta">
+            <div class="container">
+                <div class="cta-banner reveal">
+                    <span class="section-label">Next Step</span>
+                    <h2>Start with an Initial Consultation</h2>
+                    <p>The EU AI Act is in force — transition periods are running. Let us assess where your organization stands and which steps should take priority now.</p>
+                    <div class="hero-buttons">
+                        <a href="kontakt.html" class="btn btn-primary">
+                            Request consulting
+                            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+                        </a>
+                        <a href="schulungen.html" class="btn btn-secondary">View training programs</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="../../assets/images/logo/citech-logo-white.svg" alt="CITECH AI" class="logo-dark" width="120" height="28">
+                    <img src="../../assets/images/logo/Citech Logo klassisch weißer Hintergrund mit Schatten.jpg" alt="CITECH AI" class="logo-light" width="120" height="28">
+                    <p>AZAV-certified AI training provider based in Essen, Germany. Training, consulting, and implementation — practical and GDPR-compliant.</p>
+                </div>
+                <div><h4 class="footer-heading">Offer</h4><ul class="footer-links"><li><a href="schulungen.html">Training</a></li><li><a href="termine.html">Schedule</a></li><li><a href="beratung.html">Consulting</a></li><li><a href="tools.html">AI Tools</a></li><li><a href="foerderung.html">Funding</a></li></ul></div>
+                <div><h4 class="footer-heading">Company</h4><ul class="footer-links"><li><a href="team.html">About Us</a></li><li><a href="newsletter.html">KI-Radar Newsletter</a></li><li><a href="kontakt.html">Contact</a></li></ul></div>
+                <div><h4 class="footer-heading">Legal</h4><ul class="footer-links"><li><a href="impressum.html">Imprint</a></li><li><a href="datenschutz.html">Privacy Policy</a></li><li><a href="agb.html">Terms &amp; Conditions</a></li><li><a href="ki-transparenz.html">AI Transparency</a></li></ul></div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2025–2026 CITECH AI GmbH. All rights reserved.</span>
+                <span>Design: <a href="https://www.b-line-graphix.de" target="_blank" rel="noopener">B_Line Graphix</a></span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie Banner -->
+    <div class="cookie-banner" role="dialog" aria-label="Cookie settings">
+        <h4>We respect your privacy</h4>
+        <p>This website uses only technically necessary cookies. No analytics tools, no tracking.</p>
+        <div class="cookie-buttons">
+            <button id="cookie-accept" class="btn btn-primary btn-sm">Understood</button>
+            <a href="datenschutz.html" class="btn btn-secondary btn-sm">Read privacy policy</a>
+        </div>
+    </div>
+
+    <script src="../../js/main.js?v=4"></script>
+</body>
+</html>

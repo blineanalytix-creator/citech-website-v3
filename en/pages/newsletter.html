@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>KI-Radar Newsletter | CITECH AI – Weekly AI News for Decision-Makers</title>
+    <meta name="description" content="KI-Radar: Free weekly AI newsletter. Every Sunday — AI news, practical tips, and regulatory updates from CITECH AI.">
+
+    <link rel="canonical" href="https://www.citech-ai.de/en/pages/newsletter">
+    <link rel="alternate" hreflang="de" href="https://www.citech-ai.de/pages/newsletter">
+    <link rel="alternate" hreflang="en" href="https://www.citech-ai.de/en/pages/newsletter">
+
+    <meta property="og:title" content="KI-Radar Newsletter | CITECH AI – Weekly AI News for Decision-Makers">
+    <meta property="og:description" content="KI-Radar: The free weekly AI newsletter from CITECH AI. Every Sunday — the most important AI news, practical tips, and regulatory updates.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.citech-ai.de/en/pages/newsletter">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="CITECH AI">
+
+    <link rel="icon" type="image/png" href="../../favicon.png">
+    <link rel="preload" href="../../assets/fonts/Inter-VariableFont.woff2" as="font" type="font/woff2" crossorigin>
+    <style>
+        @font-face {
+            font-family: 'Inter';
+            src: url('../../assets/fonts/Inter-VariableFont.woff2') format('woff2');
+            font-weight: 100 900;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        /* Form Styles (matching kontakt.html) */
+        .form-group {
+            margin-bottom: var(--space-5);
+        }
+        .form-group label {
+            font-size: var(--font-sm);
+            color: var(--color-text-secondary);
+            margin-bottom: var(--space-2);
+            display: block;
+        }
+        .form-group input {
+            background: var(--color-bg-tertiary);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius-md);
+            padding: var(--space-3) var(--space-4);
+            color: var(--color-text-primary);
+            font-family: inherit;
+            font-size: var(--font-sm);
+            width: 100%;
+        }
+        .form-group input:focus {
+            border-color: var(--color-primary-400);
+            outline: none;
+        }
+        .checkbox-wrapper {
+            display: flex;
+            gap: var(--space-3);
+            align-items: flex-start;
+        }
+        .checkbox-wrapper input[type="checkbox"] {
+            width: auto;
+            margin-top: 0.25em;
+            accent-color: var(--color-primary-400);
+        }
+
+        /* Promise Grid */
+        .promise-grid {
+            display: flex;
+            justify-content: center;
+            gap: var(--space-5);
+            flex-wrap: wrap;
+        }
+        .promise-item {
+            text-align: center;
+            padding: var(--space-6) var(--space-5);
+            border-radius: var(--radius-lg);
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border-hover);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            width: 180px;
+        }
+        .promise-icon {
+            width: 48px;
+            height: 48px;
+            margin: 0 auto var(--space-4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: var(--radius-lg);
+            background: var(--color-glow);
+            border: 1px solid var(--color-border);
+            color: var(--color-primary-400);
+        }
+        .promise-icon svg {
+            width: 22px;
+            height: 22px;
+            flex-shrink: 0;
+        }
+        .promise-item h4 {
+            font-size: var(--font-sm);
+            color: var(--color-text-primary);
+            margin-bottom: var(--space-1);
+        }
+        .promise-item p {
+            font-size: var(--font-xs);
+            color: var(--color-text-tertiary);
+            margin: 0;
+        }
+        @media (max-width: 768px) {
+            .promise-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 480px) {
+            .promise-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Rubrik Cards 2-column grid */
+        .rubrik-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--space-5);
+        }
+        @media (max-width: 768px) {
+            .rubrik-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Quote */
+        .quote-block {
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .quote-block blockquote {
+            font-size: var(--font-base);
+            font-style: italic;
+            line-height: var(--line-height-relaxed);
+            color: var(--color-text-secondary);
+            padding: var(--space-6);
+            border-left: 3px solid var(--color-primary-400);
+            text-align: left;
+            margin: 0 0 var(--space-4) 0;
+        }
+        .quote-block cite {
+            font-size: var(--font-sm);
+            color: var(--color-text-tertiary);
+            font-style: normal;
+        }
+    </style>
+    <link rel="stylesheet" href="../../css/main.css?v=4">
+    <link rel="stylesheet" href="../../css/mobile.css?v=4" media="(max-width: 1024px)">
+</head>
+<body>
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <div class="ambient-bg" aria-hidden="true">
+        <div class="ambient-mesh">
+            <div class="mesh-gradient mesh-gradient-1"></div>
+            <div class="mesh-gradient mesh-gradient-2"></div>
+            <div class="mesh-gradient mesh-gradient-3"></div>
+        </div>
+        <canvas id="neural-bg-canvas"></canvas>
+    </div>
+
+    <!-- HEADER -->
+    <header class="header" role="banner">
+        <div class="container header-inner">
+            <a href="../../en/" class="header-logo" aria-label="CITECH AI Homepage">
+                <img src="../../assets/images/logo/citech-logo-white.svg" alt="CITECH AI" class="logo-dark" width="140" height="32">
+                <img src="../../assets/images/logo/Citech Logo klassisch weißer Hintergrund mit Schatten.jpg" alt="CITECH AI" class="logo-light" width="140" height="32">
+            </a>
+            <nav class="nav-desktop" role="navigation" aria-label="Main navigation">
+                <a href="../../en/" class="nav-link">Home</a>
+                <div class="nav-dropdown">
+                    <button class="nav-link nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+                        Training
+                        <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M3 5l3 3 3-3"/></svg>
+                    </button>
+                    <div class="nav-dropdown-menu" role="menu">
+                        <a href="schulungen.html" role="menuitem">Module Overview</a>
+                        <a href="termine.html" role="menuitem">Schedule 2026</a>
+                        <a href="foerderung.html" role="menuitem">Funding</a>
+                    </div>
+                </div>
+                <a href="beratung.html" class="nav-link">Consulting</a>
+                <a href="tools.html" class="nav-link">Tools</a>
+                <a href="team.html" class="nav-link">About Us</a>
+                <a href="kontakt.html" class="nav-link">Contact</a>
+            </nav>
+            <div class="header-actions">
+                <a href="../../pages/newsletter.html" class="lang-toggle" aria-label="Zur deutschen Version wechseln">DE</a>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle color scheme">
+                    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                </button>
+                <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" aria-hidden="true">
+        <nav class="mobile-menu-nav" aria-label="Mobile navigation">
+            <a href="../../en/" class="mobile-nav-link">Home</a>
+            <div class="mobile-dropdown">
+                <button class="mobile-nav-link mobile-dropdown-toggle" aria-expanded="false">Training</button>
+                <div class="mobile-dropdown-items">
+                    <a href="schulungen.html">Module Overview</a>
+                    <a href="termine.html">Schedule 2026</a>
+                    <a href="foerderung.html">Funding</a>
+                </div>
+            </div>
+            <a href="beratung.html" class="mobile-nav-link">Consulting</a>
+            <a href="tools.html" class="mobile-nav-link">Tools</a>
+            <a href="team.html" class="mobile-nav-link">About Us</a>
+            <a href="kontakt.html" class="mobile-nav-link">Contact</a>
+        </nav>
+    </div>
+
+    <!-- ==================== MAIN ==================== -->
+    <main id="main-content" role="main">
+
+        <!-- PAGE HERO -->
+        <section class="page-hero section">
+            <div class="container">
+                <span class="section-label reveal">KI-Radar</span>
+                <h1 class="reveal reveal-delay-1">Your Weekly<br><span class="gradient-text">AI Compass</span></h1>
+                <p class="section-subtitle reveal reveal-delay-2">
+                    Every Sunday, we curate the most important developments from the AI world —
+                    practically prepared, legally contextualized, and straight to the point.
+                    By experts, for decision-makers.
+                </p>
+                <div class="badges-row reveal reveal-delay-3" style="margin-top: var(--space-8); justify-content: flex-start;">
+                    <span class="badge">Weekly</span>
+                    <span class="badge">Free</span>
+                    <span class="badge">GDPR-compliant</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTIONS -->
+        <section class="section" id="rubriken">
+            <div class="container">
+                <h2 class="section-title reveal">What to Expect</h2>
+                <p class="section-subtitle reveal reveal-delay-1">
+                    Five sections, one goal: bring you up to speed in under 5 minutes.
+                </p>
+
+                <div class="rubrik-grid reveal reveal-delay-2">
+                    <div class="accent-card">
+                        <h4 style="font-size: var(--font-lg); margin-bottom: var(--space-2);">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 20px; height: 20px; vertical-align: middle; margin-right: var(--space-2); color: var(--color-primary-400);"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+                            High-End
+                        </h4>
+                        <p style="font-size: var(--font-sm); color: var(--color-text-secondary);">Technical deep dives for advanced users and developers</p>
+                    </div>
+
+                    <div class="accent-card">
+                        <h4 style="font-size: var(--font-lg); margin-bottom: var(--space-2);">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 20px; height: 20px; vertical-align: middle; margin-right: var(--space-2); color: var(--color-primary-400);"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                            Basics
+                        </h4>
+                        <p style="font-size: var(--font-sm); color: var(--color-text-secondary);">One AI concept per week, explained clearly</p>
+                    </div>
+
+                    <div class="accent-card">
+                        <h4 style="font-size: var(--font-lg); margin-bottom: var(--space-2);">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 20px; height: 20px; vertical-align: middle; margin-right: var(--space-2); color: var(--color-primary-400);"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                            Regulation
+                        </h4>
+                        <p style="font-size: var(--font-sm); color: var(--color-text-secondary);">EU AI Act, GDPR, and regulatory updates</p>
+                    </div>
+
+                    <div class="accent-card">
+                        <h4 style="font-size: var(--font-lg); margin-bottom: var(--space-2);">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 20px; height: 20px; vertical-align: middle; margin-right: var(--space-2); color: var(--color-primary-400);"><polyline points="20 6 9 17 4 12"/></svg>
+                            Practical Tips
+                        </h4>
+                        <p style="font-size: var(--font-sm); color: var(--color-text-secondary);">Tools, prompts, and workflows you can apply immediately</p>
+                    </div>
+
+                    <div class="accent-card" style="grid-column: 1 / -1; max-width: 50%; justify-self: center;">
+                        <h4 style="font-size: var(--font-lg); margin-bottom: var(--space-2);">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 20px; height: 20px; vertical-align: middle; margin-right: var(--space-2); color: var(--color-primary-400);"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                            Outlook
+                        </h4>
+                        <p style="font-size: var(--font-sm); color: var(--color-text-secondary);">Trends and developments you should be aware of</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SIGNUP FORM -->
+        <section class="section" id="newsletter-form">
+            <div class="container">
+                <div class="glass-card reveal" style="max-width: 560px; margin: 0 auto;">
+                    <div class="glass-card-inner">
+                        <h2 style="font-size: var(--font-xl); text-align: center; margin-bottom: var(--space-2);">Subscribe Now</h2>
+                        <p style="font-size: var(--font-sm); color: var(--color-text-tertiary); text-align: center; margin-bottom: var(--space-8);">Free. Every Sunday. Cancel anytime.</p>
+
+                        <form action="https://newsletter.citech-ai.de/subscribe" method="POST">
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" placeholder="your@email.com" required autocomplete="email">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="name">Name (optional)</label>
+                                <input type="text" id="name" name="name" placeholder="Your name" autocomplete="name">
+                            </div>
+
+                            <div class="form-group">
+                                <div class="checkbox-wrapper">
+                                    <input type="checkbox" id="gdpr_consent" name="gdpr_consent" value="true" required>
+                                    <label for="gdpr_consent" style="margin-bottom: 0; font-size: var(--font-xs); line-height: var(--line-height-relaxed);">
+                                        I consent to my data being processed to send the newsletter.
+                                        More information in our
+                                        <a href="datenschutz.html" style="color: var(--color-primary-400); text-decoration: underline;">privacy policy</a>.
+                                    </label>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">Subscribe for free</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TRUST BADGES -->
+        <section class="section" id="versprechen">
+            <div class="container">
+                <div class="promise-grid reveal">
+                    <div class="promise-item">
+                        <div class="promise-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                        </div>
+                        <h4>Weekly</h4>
+                        <p>Every Sunday in your inbox</p>
+                    </div>
+                    <div class="promise-item">
+                        <div class="promise-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M15 9.35a4 4 0 0 0-3-1.35c-2.21 0-4 1.79-4 4s1.79 4 4 4a4 4 0 0 0 3-1.35"/><line x1="7" y1="12" x2="15" y2="12"/><line x1="7" y1="9.5" x2="13" y2="9.5"/></svg>
+                        </div>
+                        <h4>Free</h4>
+                        <p>100% free, no hidden costs</p>
+                    </div>
+                    <div class="promise-item">
+                        <div class="promise-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        </div>
+                        <h4>GDPR-compliant</h4>
+                        <p>Servers in Germany, no tracking</p>
+                    </div>
+                    <div class="promise-item">
+                        <div class="promise-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <h4>Spam-free</h4>
+                        <p>No spam, cancel anytime</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- QUOTE -->
+        <section class="section">
+            <div class="container">
+                <div class="quote-block reveal">
+                    <blockquote>
+                        AI evolves faster than any other technology before it.
+                        If you don't stay on top of it weekly, you miss opportunities — or
+                        overlook risks. That is exactly why we created the KI-Radar.
+                    </blockquote>
+                    <cite>Marcel Batur, Managing Director CITECH AI</cite>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="section cta-banner">
+            <div class="container" style="text-align: center;">
+                <h2 class="section-title reveal">Want Even More AI Knowledge?</h2>
+                <p class="section-subtitle reveal reveal-delay-1">
+                    Discover our AZAV-certified AI training programs or speak with us directly.
+                </p>
+                <div class="hero-buttons reveal reveal-delay-2">
+                    <a href="schulungen.html" class="btn btn-primary">View modules</a>
+                    <a href="kontakt.html" class="btn btn-secondary">Get in touch</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="../../assets/images/logo/citech-logo-white.svg" alt="CITECH AI" class="logo-dark" width="120" height="28">
+                    <img src="../../assets/images/logo/Citech Logo klassisch weißer Hintergrund mit Schatten.jpg" alt="CITECH AI" class="logo-light" width="120" height="28">
+                    <p>AZAV-certified AI training provider based in Essen, Germany. Training, consulting, and implementation — practical and GDPR-compliant.</p>
+                </div>
+                <div><h4 class="footer-heading">Offer</h4><ul class="footer-links"><li><a href="schulungen.html">Training</a></li><li><a href="termine.html">Schedule</a></li><li><a href="beratung.html">Consulting</a></li><li><a href="tools.html">AI Tools</a></li><li><a href="foerderung.html">Funding</a></li></ul></div>
+                <div><h4 class="footer-heading">Company</h4><ul class="footer-links"><li><a href="team.html">About Us</a></li><li><a href="newsletter.html">KI-Radar Newsletter</a></li><li><a href="kontakt.html">Contact</a></li></ul></div>
+                <div><h4 class="footer-heading">Legal</h4><ul class="footer-links"><li><a href="impressum.html">Imprint</a></li><li><a href="datenschutz.html">Privacy Policy</a></li><li><a href="agb.html">Terms &amp; Conditions</a></li><li><a href="ki-transparenz.html">AI Transparency</a></li></ul></div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2025–2026 CITECH AI GmbH. All rights reserved.</span>
+                <span>Design: <a href="https://www.b-line-graphix.de" target="_blank" rel="noopener">B_Line Graphix</a></span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie Banner -->
+    <div class="cookie-banner" role="dialog" aria-label="Cookie settings">
+        <h4>We respect your privacy</h4>
+        <p>This website uses only technically necessary cookies. No analytics tools, no tracking.</p>
+        <div class="cookie-buttons">
+            <button id="cookie-accept" class="btn btn-primary btn-sm">Understood</button>
+            <a href="datenschutz.html" class="btn btn-secondary btn-sm">Read privacy policy</a>
+        </div>
+    </div>
+
+    <script src="../../js/main.js?v=4"></script>
+</body>
+</html>
