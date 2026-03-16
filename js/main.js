@@ -371,9 +371,9 @@
             // Beratung page – § → AI → ✓
             if (document.querySelector('.tab-wrapper')) {
                 return [
-                    { section: '.page-hero',    gen: 'genHeroSymbol',   alpha: 0.50, flashRate: 0.012, connDist: 72, nodeR: 2.0, lineW: 0.6, digit: null },
-                    { section: '#leistungen',   gen: 'genTextParagraph',alpha: 0.32, flashRate: 0.006, connDist: 58, nodeR: 1.6, lineW: 0.42, digit: null },
-                    { section: '#beratung-cta',  gen: 'genTextCheck',   alpha: 0.35, flashRate: 0.010, connDist: 62, nodeR: 1.8, lineW: 0.45, digit: null }
+                    { section: '.page-hero',    gen: 'genHeroSymbol',   alpha: 0.50, flashRate: 0.014, connDist: 75, nodeR: 2.1, lineW: 0.65, digit: null },
+                    { section: '#leistungen',   gen: 'genTextParagraph',alpha: 0.45, flashRate: 0.012, connDist: 68, nodeR: 1.9, lineW: 0.55, digit: null },
+                    { section: '#beratung-cta',  gen: 'genTextCheck',   alpha: 0.45, flashRate: 0.012, connDist: 68, nodeR: 1.9, lineW: 0.55, digit: null }
                 ];
             }
             // Termine page – Symbol → Q2 → Q3 → Q4 → Symbol
