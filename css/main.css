@@ -1968,3 +1968,60 @@ p {
 .text-center { text-align: center; }
 .text-left { text-align: left; }
 .text-right { text-align: right; }
+
+/* ============================================
+   CRITICAL MOBILE OVERRIDES (in main.css for cache reliability)
+   ============================================ */
+@media (max-width: 768px) {
+    /* Force single column for ALL grids */
+    [style*="grid-template-columns"] {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* Tables scrollable */
+    .schedule-table,
+    .transparency-table {
+        display: block;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        min-width: 480px;
+    }
+
+    /* Glass cards with tables: allow scroll */
+    .glass-card {
+        overflow-x: auto;
+    }
+
+    /* Contact tab hidden */
+    .contact-tab {
+        display: none !important;
+    }
+
+    /* Hero badge no cutoff */
+    .hero-badge {
+        font-size: var(--font-xs);
+        white-space: normal;
+        text-align: center;
+    }
+
+    /* Badges smaller */
+    .badge {
+        font-size: 0.65rem;
+    }
+
+    /* Skill pills centered */
+    .skill-pills {
+        justify-content: center;
+    }
+
+    /* Footer solid */
+    .footer {
+        background: var(--color-bg-secondary) !important;
+        backdrop-filter: none !important;
+    }
+
+    /* Accent cards full width */
+    .accent-card {
+        width: 100% !important;
+    }
+}
