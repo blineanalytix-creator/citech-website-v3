@@ -2,108 +2,290 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
-    <!-- Startseite -->
+    <!-- Startseite (DE) -->
     <url>
         <loc>https://www.citech-ai.de/</loc>
         <lastmod>2026-03-16</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.citech-ai.de/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.citech-ai.de/en/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.citech-ai.de/"/>
     </url>
 
-    <!-- Schulungen -->
+    <!-- Startseite (EN) -->
+    <url>
+        <loc>https://www.citech-ai.de/en/</loc>
+        <lastmod>2026-03-16</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.citech-ai.de/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.citech-ai.de/en/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.citech-ai.de/"/>
+    </url>
+
+    <!-- Schulungen (DE) -->
     <url>
         <loc>https://www.citech-ai.de/pages/schulungen</loc>
         <lastmod>2026-03-16</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.citech-ai.de/pages/schulungen"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.citech-ai.de/en/pages/schulungen"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.citech-ai.de/pages/schulungen"/>
     </url>
 
-    <!-- Termine -->
+    <!-- Schulungen (EN) -->
+    <url>
+        <loc>https://www.citech-ai.de/en/pages/schulungen</loc>
+        <lastmod>2026-03-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.citech-ai.de/pages/schulungen"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.citech-ai.de/en/pages/schulungen"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.citech-ai.de/pages/schulungen"/>
+    </url>
+
+    <!-- Termine (DE) -->
     <url>
         <loc>https://www.citech-ai.de/pages/termine</loc>
         <lastmod>2026-03-16</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.citech-ai.de/pages/termine"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.citech-ai.de/en/pages/termine"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.citech-ai.de/pages/termine"/>
     </url>
 
-    <!-- Beratung -->
+    <!-- Termine (EN) -->
+    <url>
+        <loc>https://www.citech-ai.de/en/pages/termine</loc>
+        <lastmod>2026-03-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.citech-ai.de/pages/termine"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.citech-ai.de/en/pages/termine"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.citech-ai.de/pages/termine"/>
+    </url>
+
+    <!-- Beratung (DE) -->
     <url>
         <loc>https://www.citech-ai.de/pages/beratung</loc>
         <lastmod>2026-03-16</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.citech-ai.de/pages/beratung"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.citech-ai.de/en/pages/beratung"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.citech-ai.de/pages/beratung"/>
     </url>
 
-    <!-- Tools -->
+    <!-- Beratung (EN) -->
+    <url>
+        <loc>https://www.citech-ai.de/en/pages/beratung</loc>
+        <lastmod>2026-03-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.citech-ai.de/pages/beratung"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.citech-ai.de/en/pages/beratung"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.citech-ai.de/pages/beratung"/>
+    </url>
+
+    <!-- Tools (DE) -->
     <url>
         <loc>https://www.citech-ai.de/pages/tools</loc>
         <lastmod>2026-03-16</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.citech-ai.de/pages/tools"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.citech-ai.de/en/pages/tools"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.citech-ai.de/pages/tools"/>
     </url>
 
-    <!-- Förderung -->
+    <!-- Tools (EN) -->
+    <url>
+        <loc>https://www.citech-ai.de/en/pages/tools</loc>
+        <lastmod>2026-03-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.citech-ai.de/pages/tools"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.citech-ai.de/en/pages/tools"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.citech-ai.de/pages/tools"/>
+    </url>
+
+    <!-- Förderung (DE) -->
     <url>
         <loc>https://www.citech-ai.de/pages/foerderung</loc>
         <lastmod>2026-03-16</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.citech-ai.de/pages/foerderung"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.citech-ai.de/en/pages/foerderung"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.citech-ai.de/pages/foerderung"/>
     </url>
 
-    <!-- Team -->
+    <!-- Förderung (EN) -->
+    <url>
+        <loc>https://www.citech-ai.de/en/pages/foerderung</loc>
+        <lastmod>2026-03-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.citech-ai.de/pages/foerderung"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.citech-ai.de/en/pages/foerderung"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.citech-ai.de/pages/foerderung"/>
+    </url>
+
+    <!-- Team (DE) -->
     <url>
         <loc>https://www.citech-ai.de/pages/team</loc>
         <lastmod>2026-03-16</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.citech-ai.de/pages/team"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.citech-ai.de/en/pages/team"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.citech-ai.de/pages/team"/>
     </url>
 
-    <!-- Kontakt -->
+    <!-- Team (EN) -->
+    <url>
+        <loc>https://www.citech-ai.de/en/pages/team</loc>
+        <lastmod>2026-03-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.citech-ai.de/pages/team"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.citech-ai.de/en/pages/team"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.citech-ai.de/pages/team"/>
+    </url>
+
+    <!-- Kontakt (DE) -->
     <url>
         <loc>https://www.citech-ai.de/pages/kontakt</loc>
         <lastmod>2026-03-16</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.citech-ai.de/pages/kontakt"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.citech-ai.de/en/pages/kontakt"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.citech-ai.de/pages/kontakt"/>
     </url>
 
-    <!-- Newsletter -->
+    <!-- Kontakt (EN) -->
+    <url>
+        <loc>https://www.citech-ai.de/en/pages/kontakt</loc>
+        <lastmod>2026-03-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.citech-ai.de/pages/kontakt"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.citech-ai.de/en/pages/kontakt"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.citech-ai.de/pages/kontakt"/>
+    </url>
+
+    <!-- Newsletter (DE) -->
     <url>
         <loc>https://www.citech-ai.de/pages/newsletter</loc>
         <lastmod>2026-03-16</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.citech-ai.de/pages/newsletter"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.citech-ai.de/en/pages/newsletter"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.citech-ai.de/pages/newsletter"/>
     </url>
 
-    <!-- KI-Transparenz -->
+    <!-- Newsletter (EN) -->
+    <url>
+        <loc>https://www.citech-ai.de/en/pages/newsletter</loc>
+        <lastmod>2026-03-16</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.citech-ai.de/pages/newsletter"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.citech-ai.de/en/pages/newsletter"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.citech-ai.de/pages/newsletter"/>
+    </url>
+
+    <!-- KI-Transparenz (DE) -->
     <url>
         <loc>https://www.citech-ai.de/pages/ki-transparenz</loc>
         <lastmod>2026-03-16</lastmod>
         <changefreq>quarterly</changefreq>
         <priority>0.6</priority>
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.citech-ai.de/pages/ki-transparenz"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.citech-ai.de/en/pages/ki-transparenz"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.citech-ai.de/pages/ki-transparenz"/>
     </url>
 
-    <!-- Impressum -->
+    <!-- KI-Transparenz (EN) -->
+    <url>
+        <loc>https://www.citech-ai.de/en/pages/ki-transparenz</loc>
+        <lastmod>2026-03-16</lastmod>
+        <changefreq>quarterly</changefreq>
+        <priority>0.6</priority>
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.citech-ai.de/pages/ki-transparenz"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.citech-ai.de/en/pages/ki-transparenz"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.citech-ai.de/pages/ki-transparenz"/>
+    </url>
+
+    <!-- Impressum (DE) -->
     <url>
         <loc>https://www.citech-ai.de/pages/impressum</loc>
         <lastmod>2026-03-16</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.3</priority>
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.citech-ai.de/pages/impressum"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.citech-ai.de/en/pages/impressum"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.citech-ai.de/pages/impressum"/>
     </url>
 
-    <!-- Datenschutz -->
+    <!-- Impressum (EN) -->
+    <url>
+        <loc>https://www.citech-ai.de/en/pages/impressum</loc>
+        <lastmod>2026-03-16</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.citech-ai.de/pages/impressum"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.citech-ai.de/en/pages/impressum"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.citech-ai.de/pages/impressum"/>
+    </url>
+
+    <!-- Datenschutz (DE) -->
     <url>
         <loc>https://www.citech-ai.de/pages/datenschutz</loc>
         <lastmod>2026-03-16</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.3</priority>
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.citech-ai.de/pages/datenschutz"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.citech-ai.de/en/pages/datenschutz"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.citech-ai.de/pages/datenschutz"/>
     </url>
 
-    <!-- AGB -->
+    <!-- Datenschutz (EN) -->
+    <url>
+        <loc>https://www.citech-ai.de/en/pages/datenschutz</loc>
+        <lastmod>2026-03-16</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.citech-ai.de/pages/datenschutz"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.citech-ai.de/en/pages/datenschutz"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.citech-ai.de/pages/datenschutz"/>
+    </url>
+
+    <!-- AGB (DE) -->
     <url>
         <loc>https://www.citech-ai.de/pages/agb</loc>
         <lastmod>2026-03-16</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.3</priority>
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.citech-ai.de/pages/agb"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.citech-ai.de/en/pages/agb"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.citech-ai.de/pages/agb"/>
+    </url>
+
+    <!-- AGB (EN) -->
+    <url>
+        <loc>https://www.citech-ai.de/en/pages/agb</loc>
+        <lastmod>2026-03-16</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.citech-ai.de/pages/agb"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.citech-ai.de/en/pages/agb"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.citech-ai.de/pages/agb"/>
     </url>
 
 </urlset>
