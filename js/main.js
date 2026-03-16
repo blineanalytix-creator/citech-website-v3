@@ -25,9 +25,8 @@
             const saved = localStorage.getItem('citech_theme');
             if (saved === 'light' || saved === 'dark') {
                 this.theme = saved;
-            } else if (window.matchMedia('(prefers-color-scheme: light)').matches) {
-                this.theme = 'light';
             }
+            // Default bleibt 'dark' – kein OS-Override
 
             this.apply();
             this.attachEvents();
