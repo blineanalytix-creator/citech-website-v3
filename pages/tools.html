@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="de" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>KI-Lösungen – Offline RAG-Systeme & Implementierung | CITECH AI</title>
+    <meta name="description" content="DSGVO-konforme KI-Lösungen: Offline RAG-Systeme, Chatbots, Prozessautomatisierung. 100% on-premise, volle Datenhoheit, kein Cloud-Zwang. Made in Germany.">
+
+    <link rel="canonical" href="https://www.citech-ai.de/pages/tools">
+    <link rel="alternate" hreflang="de" href="https://www.citech-ai.de/pages/tools">
+    <link rel="alternate" hreflang="en" href="https://www.citech-ai.de/en/pages/tools">
+
+    <meta property="og:title" content="KI-Lösungen – Offline RAG-Systeme | CITECH AI">
+    <meta property="og:description" content="DSGVO-konforme KI: Offline RAG, Chatbots, Automatisierung. On-premise, volle Datenhoheit.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.citech-ai.de/pages/tools">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="CITECH AI">
+
+    <link rel="icon" type="image/png" href="../favicon.png">
+    <link rel="preload" href="../assets/fonts/Inter-VariableFont.woff2" as="font" type="font/woff2" crossorigin>
+    <style>
+        @font-face {
+            font-family: 'Inter';
+            src: url('../assets/fonts/Inter-VariableFont.woff2') format('woff2');
+            font-weight: 100 900;
+            font-style: normal;
+            font-display: swap;
+        }
+    </style>
+    <link rel="stylesheet" href="../css/main.css?v=1">
+    <link rel="stylesheet" href="../css/mobile.css?v=1" media="(max-width: 1024px)">
+</head>
+<body>
+
+    <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
+
+    <div class="ambient-bg" aria-hidden="true">
+        <div class="ambient-mesh">
+            <div class="mesh-gradient mesh-gradient-1"></div>
+            <div class="mesh-gradient mesh-gradient-2"></div>
+            <div class="mesh-gradient mesh-gradient-3"></div>
+        </div>
+        <canvas id="neural-bg-canvas"></canvas>
+    </div>
+
+    <!-- HEADER -->
+    <header class="header" role="banner">
+        <div class="container header-inner">
+            <a href="../" class="header-logo" aria-label="CITECH AI Startseite">
+                <img src="../assets/images/logo/citech-logo-white.svg" alt="CITECH AI" class="logo-dark" width="140" height="32">
+                <img src="../assets/images/logo/Citech Logo klassisch weißer Hintergrund mit Schatten.jpg" alt="CITECH AI" class="logo-light" width="140" height="32">
+            </a>
+            <nav class="nav-desktop" role="navigation" aria-label="Hauptnavigation">
+                <a href="../" class="nav-link">Startseite</a>
+                <div class="nav-dropdown">
+                    <button class="nav-link nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+                        Schulungen
+                        <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M3 5l3 3 3-3"/></svg>
+                    </button>
+                    <div class="nav-dropdown-menu" role="menu">
+                        <a href="schulungen" role="menuitem">Modulübersicht</a>
+                        <a href="termine" role="menuitem">Termine 2026</a>
+                        <a href="foerderung" role="menuitem">Förderung</a>
+                    </div>
+                </div>
+                <a href="beratung" class="nav-link">Beratung</a>
+                <a href="tools" class="nav-link active">Tools</a>
+                <a href="team" class="nav-link">Über uns</a>
+                <a href="kontakt" class="nav-link">Kontakt</a>
+            </nav>
+            <div class="header-actions">
+                <a href="../en/pages/tools" class="lang-toggle" aria-label="Switch to English">EN</a>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Farbschema wechseln">
+                    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                </button>
+                <button class="mobile-menu-toggle" aria-label="Menü öffnen" aria-expanded="false"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" aria-hidden="true">
+        <nav class="mobile-menu-nav" aria-label="Mobile Navigation">
+            <a href="../" class="mobile-nav-link">Startseite</a>
+            <div class="mobile-dropdown">
+                <button class="mobile-nav-link mobile-dropdown-toggle" aria-expanded="false">Schulungen</button>
+                <div class="mobile-dropdown-items">
+                    <a href="schulungen">Modulübersicht</a>
+                    <a href="termine">Termine 2026</a>
+                    <a href="foerderung">Förderung</a>
+                </div>
+            </div>
+            <a href="beratung" class="mobile-nav-link">Beratung</a>
+            <a href="tools" class="mobile-nav-link active">Tools</a>
+            <a href="team" class="mobile-nav-link">Über uns</a>
+            <a href="kontakt" class="mobile-nav-link">Kontakt</a>
+        </nav>
+    </div>
+
+    <!-- ==================== MAIN ==================== -->
+    <main id="main-content" role="main">
+
+        <!-- PAGE HERO -->
+        <section class="page-hero section">
+            <div class="container">
+                <span class="section-label reveal">KI-Implementierung</span>
+                <h1 class="reveal reveal-delay-1">Ihr Firmenwissen nutzbar machen<br><span class="gradient-text">offline, sicher, auf Ihrer Infrastruktur</span></h1>
+                <p class="section-subtitle reveal reveal-delay-2">
+                    DSGVO-konforme KI-Lösungen, die in Ihrem Netzwerk laufen. Sensible Dokumente verlassen niemals Ihr Unternehmen. Keine Cloud, kein Vendor Lock-in.
+                </p>
+                <div class="badges-row reveal reveal-delay-3" style="margin-top: var(--space-8); justify-content: flex-start;">
+                    <span class="badge">100 % Offline</span>
+                    <span class="badge">DSGVO-konform</span>
+                    <span class="badge">Made in Germany</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======== RAG: DER STAR ======== -->
+        <section class="section" id="rag-section">
+            <div class="container">
+
+                <!-- RAG Intro -->
+                <div class="section-header reveal">
+                    <span class="section-label">Unser Kernprodukt</span>
+                    <h2 class="section-title">Offline RAG-Systeme</h2>
+                    <p class="section-subtitle">Retrieval-Augmented Generation verbindet Ihre vorhandenen Dokumente mit einem KI-Sprachmodell – komplett lokal, ohne Internet, auf Ihrer Hardware.</p>
+                </div>
+
+                <!-- Was RAG kann – Accent-Cards -->
+                <div class="accent-card reveal" style="margin-bottom: var(--space-6);">
+                    <h4 style="margin-bottom: var(--space-3);">Was bedeutet das konkret?</h4>
+                    <p>Stellen Sie Ihrem Firmenwissen Fragen in natürlicher Sprache – und erhalten präzise Antworten mit Quellenangabe. PDFs, Word-Dokumente, Wikis, Datenbanken: alles durchsuchbar, alles offline.</p>
+                </div>
+
+                <!-- RAG Pipeline als Timeline -->
+                <div class="section-header reveal" style="margin-top: var(--space-12);">
+                    <h3 class="section-title" style="font-size: var(--font-2xl);">So funktioniert die RAG-Pipeline</h3>
+                </div>
+                <div class="process-timeline" style="margin-bottom: var(--space-16);">
+                    <div class="process-step reveal">
+                        <div class="process-number">1</div>
+                        <div class="process-body">
+                            <h4>Dokumente einlesen</h4>
+                            <p>PDFs, Word-Dateien, Wikis, E-Mails, Datenbanken – Ihre bestehenden Datenquellen werden automatisch erfasst und verarbeitet.</p>
+                        </div>
+                    </div>
+                    <div class="process-step reveal">
+                        <div class="process-number">2</div>
+                        <div class="process-body">
+                            <h4>Wissen strukturieren</h4>
+                            <p>Die Inhalte werden semantisch indexiert, in Chunks aufgeteilt und als Vektoren in einer lokalen Datenbank gespeichert.</p>
+                        </div>
+                    </div>
+                    <div class="process-step reveal">
+                        <div class="process-number">3</div>
+                        <div class="process-body">
+                            <h4>Fragen stellen</h4>
+                            <p>Mitarbeitende stellen Fragen in natürlicher Sprache – so einfach wie eine Google-Suche, aber auf Ihren eigenen Daten.</p>
+                        </div>
+                    </div>
+                    <div class="process-step reveal">
+                        <div class="process-number">4</div>
+                        <div class="process-body">
+                            <h4>Präzise Antworten</h4>
+                            <p>Das System findet die relevanten Passagen und generiert eine fundierte Antwort – immer mit Quellenangabe und nachvollziehbar.</p>
+                        </div>
+                    </div>
+                    <div class="process-step reveal">
+                        <div class="process-number">5</div>
+                        <div class="process-body">
+                            <h4>Alles auf Ihrer Infrastruktur</h4>
+                            <p>Kein Byte verlässt Ihr Netzwerk. Keine Cloud, kein externer API-Call. Volle Datenhoheit, volle Kontrolle.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Warum RAG? Kernargumente -->
+                <div class="section-header reveal">
+                    <h3 class="section-title" style="font-size: var(--font-2xl);">Warum Unternehmen jetzt auf RAG setzen</h3>
+                </div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); margin-bottom: var(--space-16);">
+                    <div class="accent-card reveal">
+                        <h4>DSGVO ohne Kompromisse</h4>
+                        <p>Personenbezogene Daten, Verträge, interne Kommunikation – alles bleibt in Ihrem Netzwerk. Kein Risiko durch Cloud-Anbieter.</p>
+                    </div>
+                    <div class="accent-card reveal">
+                        <h4>Sofort produktiv</h4>
+                        <p>Mitarbeitende finden Antworten in Sekunden statt Stunden. Onboarding, Compliance-Fragen, technische Dokumentation – alles sofort zugänglich.</p>
+                    </div>
+                    <div class="accent-card reveal">
+                        <h4>Kein Vendor Lock-in</h4>
+                        <p>Open-Source-Technologie, vollständiger Quellcode, keine laufenden Lizenzkosten. Sie besitzen Ihr System komplett.</p>
+                    </div>
+                    <div class="accent-card reveal">
+                        <h4>Skalierbar &amp; erweiterbar</h4>
+                        <p>Vom Proof-of-Concept bis zum unternehmensweiten Rollout. Neue Datenquellen und Abteilungen jederzeit integrierbar.</p>
+                    </div>
+                </div>
+
+                <!-- CITECH-Box -->
+                <div class="section-header reveal">
+                    <h3 class="section-title" style="font-size: var(--font-2xl);">CITECH-Box – Hardware inklusive</h3>
+                    <p class="section-subtitle">Sie brauchen keine eigene KI-Infrastruktur. Wir liefern Ihnen eine fertig konfigurierte Box – individuell auf Ihre Anforderungen zugeschnitten.</p>
+                </div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); margin-bottom: var(--space-16);">
+                    <div class="accent-card reveal">
+                        <h4>Individuell konfiguriert</h4>
+                        <p>Von der GPU-Auswahl bis zum Speicher – exakt auf Ihr Datenvolumen und Ihre Nutzerzahl abgestimmt.</p>
+                    </div>
+                    <div class="accent-card reveal">
+                        <h4>Plug &amp; Play</h4>
+                        <p>Aufstellen, anschließen, loslegen. Ihre RAG-Lösung ist vorinstalliert und sofort einsatzbereit.</p>
+                    </div>
+                    <div class="accent-card reveal">
+                        <h4>Kein IT-Projekt nötig</h4>
+                        <p>Keine aufwendige Integration in bestehende Serverlandschaften. Die Box arbeitet eigenständig in Ihrem Netzwerk.</p>
+                    </div>
+                    <div class="accent-card reveal">
+                        <h4>Alles aus einer Hand</h4>
+                        <p>Hardware, Software, Einrichtung, Schulung und Wartung – ein Ansprechpartner für alles.</p>
+                    </div>
+                </div>
+
+                <!-- Anwendungsbereiche -->
+                <div class="section-header reveal">
+                    <h3 class="section-title" style="font-size: var(--font-2xl);">Anwendungsbereiche</h3>
+                </div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: var(--space-4); margin-bottom: var(--space-8);">
+                    <div class="accent-card reveal">
+                        <h4>Recht &amp; Compliance</h4>
+                        <p>Vorschriften und Audit-Dokumentation durchsuchen mit exakter Quellenangabe.</p>
+                    </div>
+                    <div class="accent-card reveal">
+                        <h4>Bildung</h4>
+                        <p>Kursunterlagen und Lehrpläne zentral zugänglich, integriert in Lernplattformen.</p>
+                    </div>
+                    <div class="accent-card reveal">
+                        <h4>Produktion</h4>
+                        <p>Technische Dokumentation in natürlicher Sprache durchsuchen.</p>
+                    </div>
+                    <div class="accent-card reveal">
+                        <h4>Kundenservice</h4>
+                        <p>Service-Mitarbeiter finden Antworten aus Wissensdatenbanken in Sekunden.</p>
+                    </div>
+                    <div class="accent-card reveal">
+                        <h4>Vertragsmanagement</h4>
+                        <p>Archive intelligent durchsuchen, Klauseln vergleichen, Fristen überwachen.</p>
+                    </div>
+                    <div class="accent-card reveal">
+                        <h4>Wissensmanagement</h4>
+                        <p>Firmen-Wikis, Prozessdokumentation, HR-Richtlinien – alles an einem Ort.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======== WEITERE LÖSUNGEN ======== -->
+        <section class="section" id="weitere">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-label">Weitere Lösungen</span>
+                    <h2 class="section-title">Über RAG hinaus</h2>
+                </div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-6);">
+                    <div class="accent-card reveal">
+                        <h4>Intelligente Chatbots</h4>
+                        <p>Kundenservice-Automatisierung, HR-Support, mehrsprachig. Angebunden an Ihre bestehenden Wissensdatenbanken – selbstverständlich offline.</p>
+                    </div>
+                    <div class="accent-card reveal">
+                        <h4>KI-Integration</h4>
+                        <p>Anbindung an ERP, CRM, LMS, SharePoint. Daten aus verschiedenen Systemen intelligent zusammenführen.</p>
+                    </div>
+                    <div class="accent-card reveal">
+                        <h4>Prozessautomatisierung</h4>
+                        <p>Dokumentenverarbeitung, OCR, Klassifizierung, Datenanalyse, Computer Vision. Workflows mit n8n und Make.</p>
+                    </div>
+                    <div class="accent-card reveal">
+                        <h4>Individuelle Lösungen</h4>
+                        <p>Spezifische Use Cases, Prototypen, Skalierung. On-Premise oder deutsche Server – immer nach Ihrem Bedarf.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======== UNSER PROZESS ======== -->
+        <section class="section" id="prozess">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-label">Unser Vorgehen</span>
+                    <h2 class="section-title">In 4 Schritten zu Ihrer KI-Lösung</h2>
+                </div>
+                <div class="process-timeline">
+                    <div class="process-step reveal">
+                        <div class="process-number">1</div>
+                        <div class="process-body">
+                            <h4>Verstehen</h4>
+                            <p>Analyse Ihrer Dokumente, Systeme und Anforderungen. Was soll die KI können? Welche Daten sind vorhanden?</p>
+                        </div>
+                    </div>
+                    <div class="process-step reveal">
+                        <div class="process-number">2</div>
+                        <div class="process-body">
+                            <h4>Prüfen</h4>
+                            <p>Proof-of-Concept mit Ihren echten Daten. Sie sehen innerhalb weniger Tage, was möglich ist – bevor Sie investieren.</p>
+                        </div>
+                    </div>
+                    <div class="process-step reveal">
+                        <div class="process-number">3</div>
+                        <div class="process-body">
+                            <h4>Aufbauen</h4>
+                            <p>Iterative Entwicklung auf Ihrer Infrastruktur mit regelmäßigem Feedback. Kein Überraschungsmoment beim Go-Live.</p>
+                        </div>
+                    </div>
+                    <div class="process-step reveal">
+                        <div class="process-number">4</div>
+                        <div class="process-body">
+                            <h4>Begleiten</h4>
+                            <p>Go-Live, Schulung Ihrer Teams, langfristiger Support. Wissenstransfer, damit Sie zunehmend selbstständig agieren können.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======== TECHNOLOGIE & PHILOSOPHIE ======== -->
+        <section class="section" id="tech">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-label">Technologie</span>
+                    <h2 class="section-title">Unser Stack &amp; unsere Prinzipien</h2>
+                </div>
+                <div class="glass-card reveal" style="margin-bottom: var(--space-8);">
+                    <div class="glass-card-inner">
+                        <div class="module-columns">
+                            <div>
+                                <h4 style="margin-bottom: var(--space-4);">Technologie-Stack</h4>
+                                <ul class="content-list">
+                                    <li>Open-Source LLMs (Llama, Mistral u.a.)</li>
+                                    <li>Ollama / LocalAI</li>
+                                    <li>LangChain &amp; LlamaIndex</li>
+                                    <li>Vektordatenbanken (ChromaDB, Qdrant)</li>
+                                    <li>Python / FastAPI</li>
+                                    <li>Docker &amp; On-Premise Deployment</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 style="margin-bottom: var(--space-4);">Unsere Prinzipien</h4>
+                                <ul class="content-list">
+                                    <li>100 % Datenhoheit – vollständig offline betreibbar</li>
+                                    <li>Made in Germany – Entwicklung, Hosting, Support</li>
+                                    <li>DSGVO-Konformität als Standard, nicht als Option</li>
+                                    <li>Open Source bevorzugt – Transparenz, kein Lock-in</li>
+                                    <li>Low-Code und erweiterbar</li>
+                                    <li>Produktionsreife Systeme, nicht Prototypen</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Versprechen -->
+                <div class="promise-grid">
+                    <div class="promise-item reveal">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                        <p>Volle Datenhoheit</p>
+                    </div>
+                    <div class="promise-item reveal">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                        <p>Vollständiger Quellcode</p>
+                    </div>
+                    <div class="promise-item reveal">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M15 9.35a4 4 0 0 0-3-1.35c-2.21 0-4 1.79-4 4s1.79 4 4 4a4 4 0 0 0 3-1.35"/><line x1="7" y1="12" x2="15" y2="12"/></svg>
+                        <p>Transparente Preise</p>
+                    </div>
+                    <div class="promise-item reveal">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                        <p>Wissenstransfer</p>
+                    </div>
+                    <div class="promise-item reveal">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        <p>Kein Vendor Lock-in</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="section" id="tools-cta">
+            <div class="container">
+                <div class="cta-banner reveal">
+                    <span class="section-label">Nächster Schritt</span>
+                    <h2>Lassen Sie uns über Ihre Daten sprechen</h2>
+                    <p>In einem kostenlosen Erstgespräch prüfen wir, ob und wie ein RAG-System in Ihrem Unternehmen Mehrwert schaffen kann. Unverbindlich und technisch fundiert.</p>
+                    <div class="hero-buttons">
+                        <a href="kontakt" class="btn btn-primary">
+                            Erstgespräch vereinbaren
+                            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+                        </a>
+                        <a href="schulungen" class="btn btn-secondary">Schulungen entdecken</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="../assets/images/logo/citech-logo-white.svg" alt="CITECH AI" class="logo-dark" width="120" height="28">
+                    <img src="../assets/images/logo/Citech Logo klassisch weißer Hintergrund mit Schatten.jpg" alt="CITECH AI" class="logo-light" width="120" height="28">
+                    <p>AZAV-zertifizierter KI-Bildungsträger aus Essen. Schulungen, Beratung und Implementierung – praxisnah und DSGVO-konform.</p>
+                </div>
+                <div><h4 class="footer-heading">Angebot</h4><ul class="footer-links"><li><a href="schulungen">Schulungen</a></li><li><a href="termine">Termine</a></li><li><a href="beratung">Beratung</a></li><li><a href="tools">KI-Tools</a></li><li><a href="foerderung">Förderung</a></li></ul></div>
+                <div><h4 class="footer-heading">Unternehmen</h4><ul class="footer-links"><li><a href="team">Über uns</a></li><li><a href="newsletter">KI-Radar Newsletter</a></li><li><a href="kontakt">Kontakt</a></li></ul></div>
+                <div><h4 class="footer-heading">Rechtliches</h4><ul class="footer-links"><li><a href="impressum">Impressum</a></li><li><a href="datenschutz">Datenschutz</a></li><li><a href="agb">AGB</a></li><li><a href="ki-transparenz">KI-Transparenz</a></li></ul></div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2025–2026 CITECH AI GmbH. Alle Rechte vorbehalten.</span>
+                <span>Design: <a href="https://www.b-line-graphix.de" target="_blank" rel="noopener">B_Line Graphix</a></span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie Banner -->
+    <div class="cookie-banner" role="dialog" aria-label="Cookie-Einstellungen">
+        <h4>Wir respektieren Ihre Privatsphäre</h4>
+        <p>Diese Website verwendet ausschließlich technisch notwendige Cookies. Keine Analyse-Tools, kein Tracking.</p>
+        <div class="cookie-buttons">
+            <button id="cookie-accept" class="btn btn-primary btn-sm">Verstanden</button>
+            <a href="datenschutz" class="btn btn-secondary btn-sm">Datenschutz lesen</a>
+        </div>
+    </div>
+
+    <script src="../js/main.js?v=1"></script>
+</body>
+</html>

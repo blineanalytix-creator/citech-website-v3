@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="de" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Datenschutz – CITECH AI</title>
+    <meta name="description" content="Datenschutzerklärung der CITECH AI GmbH – DSGVO-konforme Datenverarbeitung, Ihre Rechte und Informationen zu eingesetzten Diensten.">
+
+    <link rel="canonical" href="https://www.citech-ai.de/pages/datenschutz">
+    <link rel="alternate" hreflang="de" href="https://www.citech-ai.de/pages/datenschutz">
+    <link rel="alternate" hreflang="en" href="https://www.citech-ai.de/en/pages/datenschutz">
+
+    <meta property="og:title" content="Datenschutz – CITECH AI">
+    <meta property="og:description" content="Datenschutzerklärung – DSGVO-konforme Datenverarbeitung bei CITECH AI.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.citech-ai.de/pages/datenschutz">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="CITECH AI">
+
+    <link rel="icon" type="image/png" href="../favicon.png">
+    <link rel="preload" href="../assets/fonts/Inter-VariableFont.woff2" as="font" type="font/woff2" crossorigin>
+    <style>
+        @font-face {
+            font-family: 'Inter';
+            src: url('../assets/fonts/Inter-VariableFont.woff2') format('woff2');
+            font-weight: 100 900;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        .legal-content { max-width: 800px; margin: 0 auto; padding-top: calc(80px + var(--space-12)); }
+        .legal-content h1 { margin-bottom: var(--space-8); color: var(--color-text-primary); }
+        .legal-content h2 { font-size: var(--font-xl); margin-top: var(--space-10); margin-bottom: var(--space-4); color: var(--color-primary-400); }
+        .legal-content h3 { font-size: var(--font-lg); margin-top: var(--space-6); margin-bottom: var(--space-3); color: var(--color-primary-400); }
+        .legal-content p { margin-bottom: var(--space-4); font-size: var(--font-sm); color: var(--color-text-secondary); line-height: var(--line-height-relaxed); }
+        .legal-content ul, .legal-content ol { margin-bottom: var(--space-4); padding-left: var(--space-6); }
+        .legal-content li { font-size: var(--font-sm); color: var(--color-text-secondary); line-height: var(--line-height-relaxed); margin-bottom: var(--space-2); }
+        .legal-content a { color: var(--color-primary-400); }
+    </style>
+    <link rel="stylesheet" href="../css/main.css?v=1">
+    <link rel="stylesheet" href="../css/mobile.css?v=1" media="(max-width: 1024px)">
+</head>
+<body>
+
+    <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
+
+    <div class="ambient-bg" aria-hidden="true">
+        <div class="ambient-mesh">
+            <div class="mesh-gradient mesh-gradient-1"></div>
+            <div class="mesh-gradient mesh-gradient-2"></div>
+            <div class="mesh-gradient mesh-gradient-3"></div>
+        </div>
+        <canvas id="neural-bg-canvas"></canvas>
+    </div>
+
+    <!-- HEADER -->
+    <header class="header" role="banner">
+        <div class="container header-inner">
+            <a href="../" class="header-logo" aria-label="CITECH AI Startseite">
+                <img src="../assets/images/logo/citech-logo-white.svg" alt="CITECH AI" class="logo-dark" width="140" height="32">
+                <img src="../assets/images/logo/Citech Logo klassisch weißer Hintergrund mit Schatten.jpg" alt="CITECH AI" class="logo-light" width="140" height="32">
+            </a>
+            <nav class="nav-desktop" role="navigation" aria-label="Hauptnavigation">
+                <a href="../" class="nav-link">Startseite</a>
+                <div class="nav-dropdown">
+                    <button class="nav-link nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+                        Schulungen
+                        <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M3 5l3 3 3-3"/></svg>
+                    </button>
+                    <div class="nav-dropdown-menu" role="menu">
+                        <a href="schulungen" role="menuitem">Modulübersicht</a>
+                        <a href="termine" role="menuitem">Termine 2026</a>
+                        <a href="foerderung" role="menuitem">Förderung</a>
+                    </div>
+                </div>
+                <a href="beratung" class="nav-link">Beratung</a>
+                <a href="tools" class="nav-link">Tools</a>
+                <a href="team" class="nav-link">Über uns</a>
+                <a href="kontakt" class="nav-link">Kontakt</a>
+            </nav>
+            <div class="header-actions">
+                <a href="../en/pages/datenschutz" class="lang-toggle" aria-label="Switch to English">EN</a>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Farbschema wechseln">
+                    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                </button>
+                <button class="mobile-menu-toggle" aria-label="Menü öffnen" aria-expanded="false"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" aria-hidden="true">
+        <nav class="mobile-menu-nav" aria-label="Mobile Navigation">
+            <a href="../" class="mobile-nav-link">Startseite</a>
+            <div class="mobile-dropdown">
+                <button class="mobile-nav-link mobile-dropdown-toggle" aria-expanded="false">Schulungen</button>
+                <div class="mobile-dropdown-items">
+                    <a href="schulungen">Modulübersicht</a>
+                    <a href="termine">Termine 2026</a>
+                    <a href="foerderung">Förderung</a>
+                </div>
+            </div>
+            <a href="beratung" class="mobile-nav-link">Beratung</a>
+            <a href="tools" class="mobile-nav-link">Tools</a>
+            <a href="team" class="mobile-nav-link">Über uns</a>
+            <a href="kontakt" class="mobile-nav-link">Kontakt</a>
+        </nav>
+    </div>
+
+    <!-- ==================== MAIN ==================== -->
+    <main id="main-content" role="main">
+
+        <section class="section">
+            <div class="container legal-content">
+
+                <h1>Datenschutzerklärung</h1>
+
+                <p>
+                    Wir nehmen den Schutz Ihrer persönlichen Daten sehr ernst und behandeln Ihre personenbezogenen Daten vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung.
+                </p>
+
+                <h2>1. Datenschutz auf einen Blick</h2>
+
+                <h3>Allgemeine Hinweise</h3>
+                <p>
+                    Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können.
+                </p>
+
+                <h3>Chatbot CIRA</h3>
+                <p>
+                    Unser KI-gestützter Chatbot CIRA verarbeitet Ihre Eingaben ausschließlich zur Beantwortung Ihrer Fragen. Es werden keine personenbezogenen Daten gespeichert. Die Konversation wird nur für die Dauer der Sitzung im Arbeitsspeicher gehalten und nach Beendigung automatisch gelöscht. Die Verarbeitung erfolgt auf Basis von Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an effizienter Kommunikation).
+                </p>
+
+                <h3>Datenerfassung auf dieser Website</h3>
+                <p>
+                    <strong>Wer ist verantwortlich für die Datenerfassung auf dieser Website?</strong><br>
+                    Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Dessen Kontaktdaten können Sie dem Impressum dieser Website entnehmen.
+                </p>
+                <p>
+                    <strong>Wie erfassen wir Ihre Daten?</strong><br>
+                    Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese mitteilen. Hierbei kann es sich z.B. um Daten handeln, die Sie in ein Kontaktformular eingeben.
+                </p>
+
+                <h2>2. Hosting</h2>
+                <p>
+                    Diese Website wird bei Strato gehostet. Der Anbieter ist die Strato AG, Pascalstraße 10, 10587 Berlin (nachfolgend „Strato").
+                </p>
+                <p>
+                    Details entnehmen Sie der Datenschutzerklärung von Strato:<br>
+                    <a href="https://www.strato.de/datenschutz/" target="_blank" rel="noopener">https://www.strato.de/datenschutz/</a>
+                </p>
+
+                <h2>3. Allgemeine Hinweise und Pflichtinformationen</h2>
+
+                <h3>Datenschutz</h3>
+                <p>
+                    Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung.
+                </p>
+
+                <h3>Hinweis zur verantwortlichen Stelle</h3>
+                <p>
+                    Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:<br><br>
+                    CITECH AI GmbH<br>
+                    Marcel Batur / Dr. Ingo Poschmann<br>
+                    Katernberger Str. 107<br>
+                    45327 Essen<br><br>
+                    E-Mail: m.batur@citech-ai.de
+                </p>
+
+                <h3>Speicherdauer</h3>
+                <p>
+                    Soweit innerhalb dieser Datenschutzerklärung keine speziellere Speicherdauer genannt wurde, verbleiben Ihre personenbezogenen Daten bei uns, bis der Zweck für die Datenverarbeitung entfällt.
+                </p>
+
+                <h2>4. Datenerfassung auf dieser Website</h2>
+
+                <h3>Cookies</h3>
+                <p>
+                    Unsere Website verwendet so genannte Cookies. Cookies sind kleine Textdateien und richten auf Ihrem Endgerät keinen Schaden an. Sie werden entweder vorübergehend für die Dauer einer Sitzung (Session-Cookies) oder dauerhaft (permanente Cookies) auf Ihrem Endgerät gespeichert.
+                </p>
+
+                <h3>Kontaktformular</h3>
+                <p>
+                    Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.
+                </p>
+                <p>
+                    <strong>Rechtsgrundlage:</strong> Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO (Vertragsanbahnung) bzw. Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Bearbeitung Ihrer Anfrage).
+                </p>
+
+                <h3>Anfrage per E-Mail oder Telefon</h3>
+                <p>
+                    Wenn Sie uns per E-Mail oder Telefon kontaktieren, wird Ihre Anfrage inklusive aller daraus hervorgehenden personenbezogenen Daten (Name, Anfrage) zum Zwecke der Bearbeitung Ihres Anliegens bei uns gespeichert und verarbeitet.
+                </p>
+                <p>
+                    <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO (Vertragsanbahnung) bzw. Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an effizienter Kommunikation).
+                </p>
+
+                <h2>5. Analyse-Tools und Werbung</h2>
+                <p>
+                    Wir verwenden auf dieser Website keine Analyse-Tools oder Tracking-Dienste. Es werden keine Cookies zu Werbezwecken eingesetzt.
+                </p>
+
+                <h2>6. Newsletter (KI-Radar)</h2>
+                <p>
+                    Wir bieten den kostenlosen Newsletter „KI-Radar" an, der wöchentlich über aktuelle Entwicklungen im Bereich Künstliche Intelligenz informiert.
+                </p>
+
+                <h3>Anmeldung und Double-Opt-In</h3>
+                <p>
+                    Die Anmeldung erfolgt über ein Formular auf unserer Website. Nach Eingabe Ihrer E-Mail-Adresse erhalten Sie eine Bestätigungs-E-Mail (Double-Opt-In). Erst nach Klick auf den Bestätigungslink werden Sie in den Verteiler aufgenommen.
+                </p>
+
+                <h3>Erhobene Daten</h3>
+                <ul>
+                    <li><strong>E-Mail-Adresse</strong> (Pflichtangabe)</li>
+                    <li><strong>Name</strong> (freiwillige Angabe)</li>
+                    <li><strong>IP-Adresse und User-Agent</strong> zum Zeitpunkt der Einwilligung (Nachweis der DSGVO-konformen Einwilligung)</li>
+                    <li><strong>Zeitpunkt der Anmeldung und Bestätigung</strong></li>
+                </ul>
+
+                <h3>E-Mail-Versanddienstleister</h3>
+                <p>
+                    Der Versand des Newsletters erfolgt über <strong>Brevo (ehemals Sendinblue)</strong>, Brevo SAS, 106 Boulevard Haussmann, 75008 Paris, Frankreich. Brevo ist ein DSGVO-konformer Dienstleister mit Servern in der EU. Datenschutzerklärung von Brevo:
+                    <a href="https://www.brevo.com/de/legal/privacypolicy/" target="_blank" rel="noopener">https://www.brevo.com/de/legal/privacypolicy/</a>
+                </p>
+
+                <h3>KI-generierte Inhalte</h3>
+                <p>
+                    Die Inhalte des Newsletters werden teilweise mit Unterstützung von KI-Systemen (Claude AI, Anthropic) erstellt und anschließend redaktionell geprüft und freigegeben. Weitere Details finden Sie in unserer <a href="ki-transparenz">KI-Transparenz-Erklärung</a>.
+                </p>
+
+                <h3>Rechtsgrundlage</h3>
+                <p>
+                    <strong>Art. 6 Abs. 1 lit. a DSGVO</strong> (Einwilligung). Sie können Ihre Einwilligung jederzeit widerrufen. In jeder Newsletter-Ausgabe befindet sich ein Abmelde-Link, über den Sie sich mit einem Klick abmelden können.
+                </p>
+
+                <h3>Abmeldung</h3>
+                <p>
+                    Sie können den Newsletter jederzeit über den Abmelde-Link in jeder E-Mail oder per Nachricht an m.batur@citech-ai.de abbestellen. Nach Abmeldung werden Ihre Daten unverzüglich aus dem Verteiler gelöscht.
+                </p>
+
+                <h2>7. Ihre Rechte</h2>
+                <p>Sie haben jederzeit das Recht:</p>
+                <ul>
+                    <li>Auskunft über Ihre bei uns gespeicherten Daten zu erhalten (Art. 15 DSGVO)</li>
+                    <li>Berichtigung unrichtiger personenbezogener Daten zu verlangen (Art. 16 DSGVO)</li>
+                    <li>Löschung Ihrer bei uns gespeicherten Daten zu verlangen (Art. 17 DSGVO)</li>
+                    <li>Einschränkung der Datenverarbeitung zu verlangen (Art. 18 DSGVO)</li>
+                    <li>Widerspruch gegen die Verarbeitung Ihrer Daten einzulegen (Art. 21 DSGVO)</li>
+                    <li>Datenübertragbarkeit zu verlangen (Art. 20 DSGVO)</li>
+                </ul>
+
+                <h3>Beschwerderecht bei der Aufsichtsbehörde</h3>
+                <p>
+                    Sie haben das Recht, sich bei einer Datenschutz-Aufsichtsbehörde über die Verarbeitung Ihrer personenbezogenen Daten durch uns zu beschweren. Die für uns zuständige Aufsichtsbehörde ist:
+                </p>
+                <p>
+                    <strong>Landesbeauftragte für Datenschutz und Informationsfreiheit Nordrhein-Westfalen</strong><br>
+                    Kavalleriestraße 2-4<br>
+                    40213 Düsseldorf<br>
+                    Telefon: 0211 38424-0<br>
+                    E-Mail: poststelle@ldi.nrw.de<br>
+                    Website: <a href="https://www.ldi.nrw.de" target="_blank" rel="noopener">www.ldi.nrw.de</a>
+                </p>
+
+                <h2>8. Widerspruch gegen Werbe-E-Mails</h2>
+                <p>
+                    Der Nutzung von im Rahmen der Impressumspflicht veröffentlichten Kontaktdaten zur Übersendung von nicht ausdrücklich angeforderter Werbung und Informationsmaterialien wird hiermit widersprochen.
+                </p>
+
+                <h2>Dokumentenhistorie</h2>
+                <p>
+                    <strong>17.02.2026 – Version 1.1:</strong> Ergänzung: Newsletter „KI-Radar" (Abschnitt 6) inkl. Versanddienstleister Brevo und KI-generierte Inhalte<br>
+                    <strong>07.12.2025 – Version 1.0:</strong> Erstveröffentlichung gemäß DSGVO und BDSG
+                </p>
+                <p>
+                    Diese Datenschutzerklärung wird bei Änderungen der Datenverarbeitung aktualisiert.<br>
+                    <strong>Letzte Prüfung:</strong> Februar 2026
+                </p>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="../assets/images/logo/citech-logo-white.svg" alt="CITECH AI" class="logo-dark" width="120" height="28">
+                    <img src="../assets/images/logo/Citech Logo klassisch weißer Hintergrund mit Schatten.jpg" alt="CITECH AI" class="logo-light" width="120" height="28">
+                    <p>AZAV-zertifizierter KI-Bildungsträger aus Essen. Schulungen, Beratung und Implementierung – praxisnah und DSGVO-konform.</p>
+                </div>
+                <div><h4 class="footer-heading">Angebot</h4><ul class="footer-links"><li><a href="schulungen">Schulungen</a></li><li><a href="termine">Termine</a></li><li><a href="beratung">Beratung</a></li><li><a href="tools">KI-Tools</a></li><li><a href="foerderung">Förderung</a></li></ul></div>
+                <div><h4 class="footer-heading">Unternehmen</h4><ul class="footer-links"><li><a href="team">Über uns</a></li><li><a href="newsletter">KI-Radar Newsletter</a></li><li><a href="kontakt">Kontakt</a></li></ul></div>
+                <div><h4 class="footer-heading">Rechtliches</h4><ul class="footer-links"><li><a href="impressum">Impressum</a></li><li><a href="datenschutz">Datenschutz</a></li><li><a href="agb">AGB</a></li><li><a href="ki-transparenz">KI-Transparenz</a></li></ul></div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2025–2026 CITECH AI GmbH. Alle Rechte vorbehalten.</span>
+                <span>Design: <a href="https://www.b-line-graphix.de" target="_blank" rel="noopener">B_Line Graphix</a></span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie Banner -->
+    <div class="cookie-banner" role="dialog" aria-label="Cookie-Einstellungen">
+        <h4>Wir respektieren Ihre Privatsphäre</h4>
+        <p>Diese Website verwendet ausschließlich technisch notwendige Cookies. Keine Analyse-Tools, kein Tracking.</p>
+        <div class="cookie-buttons">
+            <button id="cookie-accept" class="btn btn-primary btn-sm">Verstanden</button>
+            <a href="datenschutz" class="btn btn-secondary btn-sm">Datenschutz lesen</a>
+        </div>
+    </div>
+
+    <script src="../js/main.js?v=1"></script>
+</body>
+</html>

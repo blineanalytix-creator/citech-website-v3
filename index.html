@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="de" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CITECH AI – KI-Weiterbildung & Beratung | Essen</title>
+    <meta name="description" content="AZAV-zertifizierte KI-Schulungen, EU AI Act Beratung und DSGVO-konforme KI-Lösungen. Niederschwellig, praxisnah und on-premise.">
+    <meta name="keywords" content="KI Weiterbildung, KI Schulung, EU AI Act, AZAV, KI Beratung, Künstliche Intelligenz, DSGVO, Essen">
+
+    <!-- Canonical & Language -->
+    <link rel="canonical" href="https://www.citech-ai.de/">
+    <link rel="alternate" hreflang="de" href="https://www.citech-ai.de/">
+    <link rel="alternate" hreflang="en" href="https://www.citech-ai.de/en/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="CITECH AI – KI-Weiterbildung & Beratung für Unternehmen">
+    <meta property="og:description" content="AZAV-zertifizierte KI-Schulungen, EU AI Act Beratung und maßgeschneiderte KI-Lösungen. Praxisnah und DSGVO-konform.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.citech-ai.de/">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="CITECH AI">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <!-- Fonts (lokal, DSGVO-konform) -->
+    <link rel="preload" href="assets/fonts/Inter-VariableFont.woff2" as="font" type="font/woff2" crossorigin>
+    <style>
+        @font-face {
+            font-family: 'Inter';
+            src: url('assets/fonts/Inter-VariableFont.woff2') format('woff2');
+            font-weight: 100 900;
+            font-style: normal;
+            font-display: swap;
+        }
+    </style>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/main.css?v=1">
+    <link rel="stylesheet" href="css/mobile.css?v=1" media="(max-width: 1024px)">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": ["Organization", "EducationalOrganization"],
+        "name": "CITECH AI GmbH",
+        "url": "https://www.citech-ai.de",
+        "logo": "https://www.citech-ai.de/assets/images/logo/citech-logo-white.svg",
+        "description": "AZAV-zertifizierter KI-Bildungsträger für Unternehmen. Schulungen, Beratung und Implementierung.",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Katernberger Str. 107",
+            "addressLocality": "Essen",
+            "postalCode": "45327",
+            "addressCountry": "DE"
+        },
+        "email": "info@citech-ai.de",
+        "telephone": "+4920189096817",
+        "taxID": "HRB 37447",
+        "sameAs": [],
+        "hasCredential": {
+            "@type": "EducationalOccupationalCredential",
+            "credentialCategory": "AZAV-Zertifizierung",
+            "recognizedBy": {
+                "@type": "Organization",
+                "name": "TÜV NORD CERT"
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+
+    <!-- Skip Link (A11y) -->
+    <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
+
+    <!-- Ambient Background -->
+    <div class="ambient-bg" aria-hidden="true">
+        <div class="ambient-mesh">
+            <div class="mesh-gradient mesh-gradient-1"></div>
+            <div class="mesh-gradient mesh-gradient-2"></div>
+            <div class="mesh-gradient mesh-gradient-3"></div>
+        </div>
+        <!-- Neural Network Canvas (CITECH Symbol) -->
+        <canvas id="neural-bg-canvas"></canvas>
+    </div>
+
+    <!-- ==========================================
+         HEADER
+         ========================================== -->
+    <header class="header" role="banner">
+        <div class="container header-inner">
+
+            <!-- Logo -->
+            <a href="/" class="header-logo" aria-label="CITECH AI Startseite">
+                <img src="assets/images/logo/citech-logo-white.svg" alt="CITECH AI" class="logo-dark" width="140" height="32">
+                <img src="assets/images/logo/Citech Logo klassisch weißer Hintergrund mit Schatten.jpg" alt="CITECH AI" class="logo-light" width="140" height="32">
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="nav-desktop" role="navigation" aria-label="Hauptnavigation">
+                <a href="/" class="nav-link active">Startseite</a>
+
+                <div class="nav-dropdown">
+                    <button class="nav-link nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+                        Schulungen
+                        <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M3 5l3 3 3-3"/></svg>
+                    </button>
+                    <div class="nav-dropdown-menu" role="menu">
+                        <a href="pages/schulungen" role="menuitem">Modulübersicht</a>
+                        <a href="pages/termine" role="menuitem">Termine 2026</a>
+                        <a href="pages/foerderung" role="menuitem">Förderung</a>
+                    </div>
+                </div>
+
+                <a href="pages/beratung" class="nav-link">Beratung</a>
+                <a href="pages/tools" class="nav-link">Tools</a>
+                <a href="pages/team" class="nav-link">Über uns</a>
+                <a href="pages/kontakt" class="nav-link">Kontakt</a>
+            </nav>
+
+            <!-- Header Actions -->
+            <div class="header-actions">
+                <a href="en/" class="lang-toggle" aria-label="Switch to English">EN</a>
+
+                <button id="theme-toggle" class="theme-toggle" aria-label="Farbschema wechseln">
+                    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                    </svg>
+                    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                    </svg>
+                </button>
+
+                <button class="mobile-menu-toggle" aria-label="Menü öffnen" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" aria-hidden="true">
+        <nav class="mobile-menu-nav" aria-label="Mobile Navigation">
+            <a href="/" class="mobile-nav-link active">Startseite</a>
+
+            <div class="mobile-dropdown">
+                <button class="mobile-nav-link mobile-dropdown-toggle" aria-expanded="false">
+                    Schulungen
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" style="margin-left:auto"><path d="M3 5l3 3 3-3"/></svg>
+                </button>
+                <div class="mobile-dropdown-items">
+                    <a href="pages/schulungen">Modulübersicht</a>
+                    <a href="pages/termine">Termine 2026</a>
+                    <a href="pages/foerderung">Förderung</a>
+                </div>
+            </div>
+
+            <a href="pages/beratung" class="mobile-nav-link">Beratung</a>
+            <a href="pages/tools" class="mobile-nav-link">Tools</a>
+            <a href="pages/team" class="mobile-nav-link">Über uns</a>
+            <a href="pages/kontakt" class="mobile-nav-link">Kontakt</a>
+
+            <div style="margin-top: var(--space-8); padding-top: var(--space-6); border-top: 1px solid var(--color-border);">
+                <button id="theme-toggle-mobile" class="mobile-nav-link" style="width:100%; text-align:left;">
+                    Erscheinungsbild wechseln
+                </button>
+                <a href="en/" class="mobile-nav-link">English Version</a>
+            </div>
+        </nav>
+    </div>
+
+    <!-- ==========================================
+         MAIN CONTENT
+         ========================================== -->
+    <main id="main-content" role="main">
+
+        <!-- ======== HERO SECTION ======== -->
+        <section class="hero section">
+            <div class="container">
+                <div class="hero-content">
+
+                    <div class="hero-badge reveal">
+                        <span class="hero-badge-dot"></span>
+                        AZAV-zertifiziert · TÜV NORD
+                    </div>
+
+                    <h1 class="reveal reveal-delay-1">
+                        KI-Weiterbildung &amp;<br>Beratung <span class="gradient-text">für Unternehmen</span>
+                    </h1>
+
+                    <p class="hero-subtitle reveal reveal-delay-2">
+                        Niederschwellige, DSGVO-konforme KI – praxisnah, offline-fähig und on-premise.
+                        Von der Schulung über EU&nbsp;AI&nbsp;Act Beratung bis zur fertigen KI-Lösung.
+                    </p>
+
+                    <div class="hero-buttons reveal reveal-delay-3">
+                        <a href="pages/schulungen" class="btn btn-secondary">Schulungen</a>
+                        <a href="pages/beratung" class="btn btn-secondary">Beratung</a>
+                        <a href="pages/tools" class="btn btn-secondary">KI-Lösungen</a>
+                    </div>
+
+                    <div class="hero-stats reveal reveal-delay-4">
+                        <div class="hero-stat">
+                            <div class="hero-stat-value">Schulung</div>
+                            <div class="hero-stat-label">AZAV-zertifiziert &middot; Förderbar</div>
+                        </div>
+                        <div class="hero-stat">
+                            <div class="hero-stat-value">Beratung</div>
+                            <div class="hero-stat-label">EU AI Act &middot; Compliance</div>
+                        </div>
+                        <div class="hero-stat">
+                            <div class="hero-stat-value">Tools</div>
+                            <div class="hero-stat-label">On-Premise &middot; DSGVO-konform</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ======== SERVICES SECTION ======== -->
+        <section class="section" id="services">
+            <div class="container">
+
+                <div class="section-header reveal">
+                    <span class="section-label">Was wir tun</span>
+                    <h2 class="section-title">Vier Säulen für Ihren KI-Erfolg</h2>
+                    <p class="section-subtitle">Von der Weiterbildung bis zur fertigen Lösung – alles aus einer Hand.</p>
+                </div>
+
+                <div class="services-grid" style="align-items: stretch;">
+
+                    <div class="glass-card reveal reveal-delay-1" style="display: flex; flex-direction: column;">
+                        <div class="glass-card-inner" style="flex: 1; display: flex; flex-direction: column;">
+                            <div style="margin-bottom: var(--space-5);">
+                                <div class="card-icon" style="margin: 0;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.66 2.69 3 6 3s6-1.34 6-3v-5"/></svg></div>
+                            </div>
+                            <h3>Schulungen</h3>
+                            <p style="flex: 1;">Praxisnahe KI-Weiterbildung für alle Kenntnisstufen. Vom Anwender bis zum Manager – AZAV-zertifiziert und förderbar.</p>
+                            <a href="pages/schulungen" class="card-link">Module entdecken <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+                        </div>
+                    </div>
+
+                    <div class="glass-card reveal reveal-delay-2" style="display: flex; flex-direction: column;">
+                        <div class="glass-card-inner" style="flex: 1; display: flex; flex-direction: column;">
+                            <div style="margin-bottom: var(--space-5);">
+                                <div class="card-icon" style="margin: 0;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+                            </div>
+                            <h3>Technische Beratung</h3>
+                            <p style="flex: 1;">Strategische KI-Konzepte und maßgeschneiderte Lösungsansätze. Von der Analyse bis zur Roadmap.</p>
+                            <a href="pages/beratung" class="card-link">Mehr erfahren <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+                        </div>
+                    </div>
+
+                    <div class="glass-card reveal reveal-delay-3" style="display: flex; flex-direction: column;">
+                        <div class="glass-card-inner" style="flex: 1; display: flex; flex-direction: column;">
+                            <div style="margin-bottom: var(--space-5);">
+                                <div class="card-icon" style="margin: 0;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+                            </div>
+                            <h3>Regeltreue-Analyse</h3>
+                            <p style="flex: 1;">EU AI Act konform. Risikoklassifizierung, Dokumentation und Implementierung für Rechtssicherheit.</p>
+                            <a href="pages/beratung" class="card-link">Zur Beratung <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+                        </div>
+                    </div>
+
+                    <div class="glass-card reveal reveal-delay-4" style="display: flex; flex-direction: column;">
+                        <div class="glass-card-inner" style="flex: 1; display: flex; flex-direction: column;">
+                            <div style="margin-bottom: var(--space-5);">
+                                <div class="card-icon" style="margin: 0;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+                            </div>
+                            <h3>KI-Implementierung</h3>
+                            <p style="flex: 1;">Custom KI-Lösungen, 100 % offline und on-premise. DSGVO-konform mit voller Datenhoheit.</p>
+                            <a href="pages/tools" class="card-link">Lösungen ansehen <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ======== TRUST / WHY CITECH ======== -->
+        <section class="section" id="trust">
+            <div class="container">
+
+                <div class="section-header reveal">
+                    <span class="section-label">Warum CITECH</span>
+                    <h2 class="section-title">Was uns auszeichnet</h2>
+                </div>
+
+                <div class="trust-grid">
+                    <div class="trust-item reveal reveal-delay-1">
+                        <div class="trust-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/>
+                            </svg>
+                        </div>
+                        <h4>AZAV-zertifiziert</h4>
+                        <p>TÜV NORD geprüft. Förderfähig durch Bildungsgutschein.</p>
+                    </div>
+
+                    <div class="trust-item reveal reveal-delay-2">
+                        <div class="trust-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                            </svg>
+                        </div>
+                        <h4>100 % DSGVO</h4>
+                        <p>Alle Lösungen offline und on-premise. Ihre Daten verlassen niemals Ihr Unternehmen.</p>
+                    </div>
+
+                    <div class="trust-item reveal reveal-delay-3">
+                        <div class="trust-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                            </svg>
+                        </div>
+                        <h4>Praxisnah</h4>
+                        <p>Hands-on Schulungen mit echten Anwendungsfällen. Kein theoretisches Trockenschwimmen.</p>
+                    </div>
+
+                    <div class="trust-item reveal reveal-delay-4">
+                        <div class="trust-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/>
+                            </svg>
+                        </div>
+                        <h4>EU AI Act</h4>
+                        <p>Rechtssicherheit für Ihre KI-Projekte. Risikoklassifizierung und Compliance-Dokumentation.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ======== MODULES OVERVIEW ======== -->
+        <section class="section" id="modules">
+            <div class="container">
+
+                <div class="section-header reveal">
+                    <span class="section-label">Schulungsprogramm</span>
+                    <h2 class="section-title">Vier Module – ein Ziel</h2>
+                    <p class="section-subtitle">Vom KI-Einsteiger zum Experten. Jedes Modul einzeln buchbar oder als Komplettausbildung.</p>
+                </div>
+
+                <div class="modules-grid" style="align-items: stretch;">
+
+                    <div class="glass-card module-card reveal reveal-delay-1">
+                        <div class="glass-card-inner">
+                            <span class="module-level">Modul 1 &middot; KI-Anwender</span>
+                            <h3>Grundlagen &amp; Anwendung</h3>
+                            <p>KI verstehen und im Arbeitsalltag einsetzen. Der perfekte Einstieg für alle Kenntnisstufen.</p>
+                            <div class="module-meta">
+                                <span>121 UE</span>
+                                <span>13 Tage</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="glass-card module-card reveal reveal-delay-2">
+                        <div class="glass-card-inner">
+                            <span class="module-level">Modul 2 &middot; KI-Spezialist</span>
+                            <h3>Vertiefung &amp; Technik</h3>
+                            <p>Technisches Know-how für die eigenständige Arbeit mit KI-Systemen und Modellen.</p>
+                            <div class="module-meta">
+                                <span>187 UE</span>
+                                <span>20 Tage</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="glass-card module-card reveal reveal-delay-3">
+                        <div class="glass-card-inner">
+                            <span class="module-level">Modul 3 &middot; KI-Projektleiter</span>
+                            <h3>Planung &amp; Steuerung</h3>
+                            <p>KI-Projekte erfolgreich planen, steuern und im Unternehmen implementieren.</p>
+                            <div class="module-meta">
+                                <span>121 UE</span>
+                                <span>13 Tage</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="glass-card module-card reveal reveal-delay-4">
+                        <div class="glass-card-inner">
+                            <span class="module-level">Modul 4 &middot; KI-Manager</span>
+                            <h3>Strategie &amp; Führung</h3>
+                            <p>Die Komplettausbildung. Alle drei Module plus strategische Führungskompetenz.</p>
+                            <div class="module-meta">
+                                <span>429 UE</span>
+                                <span>46 Tage</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ======== FÖRDERUNG TEASER ======== -->
+        <section class="section" id="foerderung">
+            <div class="container">
+                <div class="cta-banner reveal">
+                    <span class="section-label">Förderung</span>
+                    <h2>Alle Module sind förderfähig</h2>
+                    <p>Unsere Weiterbildungen sind AZAV-zertifiziert durch den TÜV NORD. Die Förderhöhe hängt von Ihrer individuellen Situation ab. Wir beraten Sie ehrlich und persönlich.</p>
+                    <div class="hero-buttons">
+                        <a href="pages/foerderung" class="btn btn-primary">
+                            Fördermöglichkeiten ansehen
+                            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+                        </a>
+                        <a href="pages/kontakt" class="btn btn-secondary">Beratungsgespräch vereinbaren</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ==========================================
+         FOOTER
+         ========================================== -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="assets/images/logo/citech-logo-white.svg" alt="CITECH AI" class="logo-dark" width="120" height="28">
+                    <img src="assets/images/logo/Citech Logo klassisch weißer Hintergrund mit Schatten.jpg" alt="CITECH AI" class="logo-light" width="120" height="28">
+                    <p>AZAV-zertifizierter KI-Bildungsträger aus Essen. Schulungen, Beratung und Implementierung – praxisnah und DSGVO-konform.</p>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Angebot</h4>
+                    <ul class="footer-links">
+                        <li><a href="pages/schulungen">Schulungen</a></li>
+                        <li><a href="pages/termine">Termine</a></li>
+                        <li><a href="pages/beratung">Beratung</a></li>
+                        <li><a href="pages/tools">KI-Tools</a></li>
+                        <li><a href="pages/foerderung">Förderung</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Unternehmen</h4>
+                    <ul class="footer-links">
+                        <li><a href="pages/team">Über uns</a></li>
+                        <li><a href="pages/newsletter">KI-Radar Newsletter</a></li>
+                        <li><a href="pages/kontakt">Kontakt</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Rechtliches</h4>
+                    <ul class="footer-links">
+                        <li><a href="pages/impressum">Impressum</a></li>
+                        <li><a href="pages/datenschutz">Datenschutz</a></li>
+                        <li><a href="pages/agb">AGB</a></li>
+                        <li><a href="pages/ki-transparenz">KI-Transparenz</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span>&copy; 2025–2026 CITECH AI GmbH. Alle Rechte vorbehalten.</span>
+                <span>Design: <a href="https://www.b-line-graphix.de" target="_blank" rel="noopener">B_Line Graphix</a></span>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- Cookie Banner -->
+    <div class="cookie-banner" role="dialog" aria-label="Cookie-Einstellungen">
+        <h4>Wir respektieren Ihre Privatsphäre</h4>
+        <p>Diese Website verwendet ausschließlich technisch notwendige Cookies. Keine Analyse-Tools, kein Tracking.</p>
+        <div class="cookie-buttons">
+            <button id="cookie-accept" class="btn btn-primary btn-sm">Verstanden</button>
+            <a href="pages/datenschutz" class="btn btn-secondary btn-sm">Datenschutz lesen</a>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/main.js?v=1"></script>
+
+</body>
+</html>

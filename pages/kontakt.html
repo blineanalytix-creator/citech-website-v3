@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="de" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kontakt – CITECH AI</title>
+    <meta name="description" content="Kontaktieren Sie CITECH AI für KI-Schulungen, Beratung und individuelle Lösungen. Persönliche Beratung werktags innerhalb 12 Stunden.">
+
+    <link rel="canonical" href="https://www.citech-ai.de/pages/kontakt">
+    <link rel="alternate" hreflang="de" href="https://www.citech-ai.de/pages/kontakt">
+    <link rel="alternate" hreflang="en" href="https://www.citech-ai.de/en/pages/kontakt">
+
+    <meta property="og:title" content="Kontakt – CITECH AI">
+    <meta property="og:description" content="Lassen Sie uns über Ihre KI-Zukunft sprechen. Persönliche Beratung zu Schulungen, EU AI Act und KI-Implementierung.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.citech-ai.de/pages/kontakt">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="CITECH AI">
+
+    <link rel="icon" type="image/png" href="../favicon.png">
+    <link rel="preload" href="../assets/fonts/Inter-VariableFont.woff2" as="font" type="font/woff2" crossorigin>
+    <style>
+        @font-face {
+            font-family: 'Inter';
+            src: url('../assets/fonts/Inter-VariableFont.woff2') format('woff2');
+            font-weight: 100 900;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        /* Contact Form Styles */
+        .form-group {
+            margin-bottom: var(--space-5);
+        }
+        .form-group label {
+            font-size: var(--font-sm);
+            color: var(--color-text-secondary);
+            margin-bottom: var(--space-2);
+            display: block;
+        }
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            background: var(--color-bg-tertiary);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius-md);
+            padding: var(--space-3) var(--space-4);
+            color: var(--color-text-primary);
+            font-family: inherit;
+            font-size: var(--font-sm);
+            width: 100%;
+            transition: border-color 0.2s ease;
+        }
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--color-primary-400);
+            outline: none;
+        }
+        .form-group textarea {
+            min-height: 178px;
+            resize: vertical;
+        }
+        .form-group select {
+            cursor: pointer;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12' fill='none' stroke='%23888' stroke-width='1.5' stroke-linecap='round'%3E%3Cpath d='M3 5l3 3 3-3'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right var(--space-4) center;
+            padding-right: var(--space-8);
+        }
+        .checkbox-wrapper {
+            display: flex;
+            gap: var(--space-3);
+            align-items: flex-start;
+        }
+        .checkbox-wrapper input[type="checkbox"] {
+            width: auto;
+            margin-top: 0.25em;
+            accent-color: var(--color-primary-400);
+        }
+        .checkbox-wrapper label {
+            margin-bottom: 0;
+        }
+        .form-submit {
+            width: 100%;
+        }
+
+        /* Contact Info Cards */
+        .contact-info-item {
+            display: flex;
+            gap: var(--space-4);
+            align-items: flex-start;
+            padding: var(--space-5);
+            border-radius: var(--radius-md);
+            background: var(--color-bg-tertiary);
+            border: 1px solid var(--glass-border);
+            margin-bottom: var(--space-4);
+        }
+        .contact-info-item:last-child {
+            margin-bottom: 0;
+        }
+        .contact-info-icon {
+            flex-shrink: 0;
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: var(--radius-md);
+            background: var(--color-primary-500);
+            color: #fff;
+        }
+        .contact-info-icon svg {
+            width: 20px;
+            height: 20px;
+        }
+        .contact-info-text h4 {
+            font-size: var(--font-base);
+            color: var(--color-text-primary);
+            margin-bottom: var(--space-1);
+        }
+        .contact-info-text p {
+            font-size: var(--font-sm);
+            color: var(--color-text-secondary);
+            margin: 0;
+        }
+        .contact-info-text a {
+            color: var(--color-primary-400);
+            text-decoration: none;
+        }
+        .contact-info-text a:hover {
+            text-decoration: underline;
+        }
+
+        /* Team Cards */
+        .team-contact-card {
+            padding: var(--space-5);
+            border-radius: var(--radius-md);
+            background: var(--color-bg-tertiary);
+            border: 1px solid var(--glass-border);
+        }
+        .team-contact-card h4 {
+            font-size: var(--font-base);
+            color: var(--color-text-primary);
+            margin-bottom: var(--space-1);
+        }
+        .team-contact-card .role {
+            font-size: var(--font-sm);
+            color: var(--color-text-tertiary);
+            margin-bottom: var(--space-2);
+        }
+        .team-contact-card a {
+            font-size: var(--font-sm);
+            color: var(--color-primary-400);
+            text-decoration: none;
+        }
+        .team-contact-card a:hover {
+            text-decoration: underline;
+        }
+
+        /* Anfahrt */
+        .anfahrt-item {
+            display: flex;
+            gap: var(--space-3);
+            align-items: center;
+            padding: var(--space-3) 0;
+        }
+        .anfahrt-item svg {
+            width: 18px;
+            height: 18px;
+            flex-shrink: 0;
+            color: var(--color-primary-400);
+        }
+        .anfahrt-item span {
+            font-size: var(--font-sm);
+            color: var(--color-text-secondary);
+        }
+    </style>
+    <link rel="stylesheet" href="../css/main.css?v=1">
+    <link rel="stylesheet" href="../css/mobile.css?v=1" media="(max-width: 1024px)">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "CITECH AI GmbH",
+        "description": "AZAV-zertifizierter KI-Bildungsträger. Schulungen, Beratung und Implementierung.",
+        "url": "https://www.citech-ai.de",
+        "telephone": "+4920189096817",
+        "email": "info@citech-ai.de",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Katernberger Str. 107",
+            "addressLocality": "Essen",
+            "postalCode": "45327",
+            "addressCountry": "DE"
+        },
+        "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "09:00",
+            "closes": "17:00"
+        },
+        "contactPoint": [
+            {
+                "@type": "ContactPoint",
+                "contactType": "customer service",
+                "telephone": "+4920189096817",
+                "email": "info@citech-ai.de",
+                "availableLanguage": ["German", "English"]
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+
+    <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
+
+    <div class="ambient-bg" aria-hidden="true">
+        <div class="ambient-mesh">
+            <div class="mesh-gradient mesh-gradient-1"></div>
+            <div class="mesh-gradient mesh-gradient-2"></div>
+            <div class="mesh-gradient mesh-gradient-3"></div>
+        </div>
+        <canvas id="neural-bg-canvas"></canvas>
+    </div>
+
+    <!-- HEADER -->
+    <header class="header" role="banner">
+        <div class="container header-inner">
+            <a href="../" class="header-logo" aria-label="CITECH AI Startseite">
+                <img src="../assets/images/logo/citech-logo-white.svg" alt="CITECH AI" class="logo-dark" width="140" height="32">
+                <img src="../assets/images/logo/Citech Logo klassisch weißer Hintergrund mit Schatten.jpg" alt="CITECH AI" class="logo-light" width="140" height="32">
+            </a>
+            <nav class="nav-desktop" role="navigation" aria-label="Hauptnavigation">
+                <a href="../" class="nav-link">Startseite</a>
+                <div class="nav-dropdown">
+                    <button class="nav-link nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+                        Schulungen
+                        <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M3 5l3 3 3-3"/></svg>
+                    </button>
+                    <div class="nav-dropdown-menu" role="menu">
+                        <a href="schulungen" role="menuitem">Modulübersicht</a>
+                        <a href="termine" role="menuitem">Termine 2026</a>
+                        <a href="foerderung" role="menuitem">Förderung</a>
+                    </div>
+                </div>
+                <a href="beratung" class="nav-link">Beratung</a>
+                <a href="tools" class="nav-link">Tools</a>
+                <a href="team" class="nav-link">Über uns</a>
+                <a href="kontakt" class="nav-link active">Kontakt</a>
+            </nav>
+            <div class="header-actions">
+                <a href="../en/pages/kontakt" class="lang-toggle" aria-label="Switch to English">EN</a>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Farbschema wechseln">
+                    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                </button>
+                <button class="mobile-menu-toggle" aria-label="Menü öffnen" aria-expanded="false"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" aria-hidden="true">
+        <nav class="mobile-menu-nav" aria-label="Mobile Navigation">
+            <a href="../" class="mobile-nav-link">Startseite</a>
+            <div class="mobile-dropdown">
+                <button class="mobile-nav-link mobile-dropdown-toggle" aria-expanded="false">Schulungen</button>
+                <div class="mobile-dropdown-items">
+                    <a href="schulungen">Modulübersicht</a>
+                    <a href="termine">Termine 2026</a>
+                    <a href="foerderung">Förderung</a>
+                </div>
+            </div>
+            <a href="beratung" class="mobile-nav-link">Beratung</a>
+            <a href="tools" class="mobile-nav-link">Tools</a>
+            <a href="team" class="mobile-nav-link">Über uns</a>
+            <a href="kontakt" class="mobile-nav-link active">Kontakt</a>
+        </nav>
+    </div>
+
+    <!-- ==================== MAIN ==================== -->
+    <main id="main-content" role="main">
+
+        <!-- PAGE HERO -->
+        <section class="page-hero section">
+            <div class="container">
+                <span class="section-label reveal">Kontakt</span>
+                <h1 class="reveal reveal-delay-1">Lassen Sie uns über Ihre<br><span class="gradient-text">KI-Zukunft sprechen</span></h1>
+                <p class="section-subtitle reveal reveal-delay-2">
+                    Persönliche Beratung zu Schulungen, Förderung, Regeltreue und individuellen KI-Lösungen. Wir antworten werktags innerhalb von 12 Stunden.
+                </p>
+            </div>
+        </section>
+
+        <!-- KONTAKTFORMULAR & KONTAKTDATEN -->
+        <section class="section" id="contact-section">
+            <div class="container">
+                <div class="grid-2" style="gap: var(--space-10); align-items: start; grid-template-rows: auto;">
+
+                    <!-- Formular -->
+                    <div class="glass-card reveal">
+                        <div class="glass-card-inner">
+                            <h2 style="font-size: var(--font-xl); margin-bottom: var(--space-6);">Ihre Anfrage</h2>
+                            <form id="contact-form" action="../contact-handler.php" method="POST" novalidate>
+                                <!-- Honeypot (Bot-Schutz, versteckt) -->
+                                <input type="text" name="website" style="display:none;" tabindex="-1" autocomplete="off">
+                                <div class="form-group">
+                                    <label for="name">Name *</label>
+                                    <input type="text" id="name" name="name" required placeholder="Ihr vollständiger Name" autocomplete="name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">E-Mail *</label>
+                                    <input type="email" id="email" name="email" required placeholder="ihre@email.de" autocomplete="email">
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Telefon (optional)</label>
+                                    <input type="tel" id="phone" name="phone" placeholder="Für Rückruf" autocomplete="tel">
+                                </div>
+                                <div class="form-group">
+                                    <label for="interest">Ich interessiere mich für</label>
+                                    <select id="interest" name="interest">
+                                        <option value="" disabled selected>Bitte wählen</option>
+                                        <option value="komplett">Alle Module (Komplettpaket)</option>
+                                        <option value="modul-1">Modul 1: KI-Anwender</option>
+                                        <option value="modul-2">Modul 2: KI-Spezialist</option>
+                                        <option value="modul-3">Modul 3: KI-Projektleiter</option>
+                                        <option value="modul-4">Modul 4: KI-Manager</option>
+                                        <option value="regeltreue">Regeltreue-Beratung</option>
+                                        <option value="tools">Tool-Entwicklung</option>
+                                        <option value="inhouse">Inhouse-Schulung</option>
+                                        <option value="sonstiges">Sonstiges</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="message">Nachricht (optional)</label>
+                                    <textarea id="message" name="message" placeholder="Beschreiben Sie kurz Ihr Anliegen ..."></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <div class="checkbox-wrapper">
+                                        <input type="checkbox" id="privacy" name="privacy" required>
+                                        <label for="privacy">Ich habe die <a href="datenschutz" style="color: var(--color-primary-400); text-decoration: underline;">Datenschutzerklärung</a> gelesen und akzeptiert.</label>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary form-submit">
+                                    Nachricht senden
+                                    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Kontaktdaten -->
+                    <div>
+                        <!-- Direkte Kontaktdaten -->
+                        <div class="glass-card reveal reveal-delay-1" style="margin-bottom: var(--space-8);">
+                            <div class="glass-card-inner">
+                                <h3 style="font-size: var(--font-lg); margin-bottom: var(--space-5);">Kontaktdaten</h3>
+
+                                <div class="contact-info-item">
+                                    <div class="contact-info-icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                                    </div>
+                                    <div class="contact-info-text">
+                                        <h4><a href="mailto:info@citech-ai.de">info@citech-ai.de</a></h4>
+                                        <p>Antwort werktags innerhalb 12h</p>
+                                    </div>
+                                </div>
+
+                                <div class="contact-info-item">
+                                    <div class="contact-info-icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                                    </div>
+                                    <div class="contact-info-text">
+                                        <h4><a href="tel:020189096817">0201 89096817</a></h4>
+                                        <p>Mo–Fr 9:00 – 17:00 Uhr</p>
+                                    </div>
+                                </div>
+
+                                <div class="contact-info-item">
+                                    <div class="contact-info-icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                                    </div>
+                                    <div class="contact-info-text">
+                                        <h4><a href="https://maps.google.com/?q=Katernberger+Str.+107,+45327+Essen" target="_blank" rel="noopener">Katernberger Str. 107, 45327 Essen</a></h4>
+                                        <p>Schulungen auch Remote möglich</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Ansprechpartner -->
+                        <div class="glass-card reveal reveal-delay-2" style="margin-bottom: var(--space-8);">
+                            <div class="glass-card-inner">
+                                <h3 style="font-size: var(--font-lg); margin-bottom: var(--space-5);">Ihre Ansprechpartner</h3>
+                                <div style="display: flex; flex-direction: column; gap: var(--space-4);">
+                                    <div class="team-contact-card">
+                                        <h4>Marcel Batur</h4>
+                                        <p class="role">Geschäftsführer &amp; Lead Trainer</p>
+                                        <a href="mailto:m.batur@citech-ai.de">m.batur@citech-ai.de</a>
+                                    </div>
+                                    <div class="team-contact-card">
+                                        <h4>Dr. Ingo Poschmann</h4>
+                                        <p class="role">Geschäftsführer &amp; Senior Consultant</p>
+                                        <a href="mailto:i.poschmann@citech-ai.de">i.poschmann@citech-ai.de</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Anfahrt mit Google Maps (volle Breite unter den zwei Spalten) -->
+                <div class="glass-card reveal" style="margin-top: var(--space-10);">
+                    <div class="glass-card-inner">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-5); flex-wrap: wrap; gap: var(--space-3);">
+                            <h3 style="font-size: var(--font-lg);">Anfahrt</h3>
+                            <div style="display: flex; gap: var(--space-5); flex-wrap: wrap;">
+                                <span class="anfahrt-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> <span>S-Bahn 5 Min.</span></span>
+                                <span class="anfahrt-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg> <span>Parkplätze</span></span>
+                                <span class="anfahrt-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg> <span>Barrierefrei</span></span>
+                                <span class="anfahrt-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="12" y1="17" x2="12" y2="21"/></svg> <span>Remote möglich</span></span>
+                            </div>
+                        </div>
+                        <!-- DSGVO 2-Klick Google Maps -->
+                        <div id="map-container" style="border-radius: var(--radius-md); overflow: hidden; position: relative; width: 100%; height: 350px; background: var(--color-bg-tertiary); border: 1px solid var(--glass-border);">
+                            <div id="map-placeholder" style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: var(--space-6); cursor: pointer;" onclick="loadMap()">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="width: 40px; height: 40px; color: var(--color-primary-400); margin-bottom: var(--space-4);"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                                <p style="color: var(--color-text-secondary); font-size: var(--font-sm); margin-bottom: var(--space-3);">Katernberger Str. 107, 45327 Essen</p>
+                                <span class="btn btn-secondary btn-sm">Karte laden</span>
+                                <p style="color: var(--color-text-muted); font-size: var(--font-xs); margin-top: var(--space-3);">Beim Laden werden Daten an Google übertragen. <a href="datenschutz" style="color: var(--color-primary-400);">Datenschutz</a></p>
+                            </div>
+                            <iframe id="map-iframe" style="width: 100%; height: 100%; border: 0; display: none;" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <script>
+            function loadMap() {
+                var iframe = document.getElementById('map-iframe');
+                iframe.src = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2484.5!2d7.0386!3d51.4711!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b8c2cc8c0a2e01%3A0x0!2sKaternberger+Str.+107%2C+45327+Essen!5e0!3m2!1sde!2sde';
+                iframe.style.display = 'block';
+                document.getElementById('map-placeholder').style.display = 'none';
+            }
+        </script>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="../assets/images/logo/citech-logo-white.svg" alt="CITECH AI" class="logo-dark" width="120" height="28">
+                    <img src="../assets/images/logo/Citech Logo klassisch weißer Hintergrund mit Schatten.jpg" alt="CITECH AI" class="logo-light" width="120" height="28">
+                    <p>AZAV-zertifizierter KI-Bildungsträger aus Essen. Schulungen, Beratung und Implementierung – praxisnah und DSGVO-konform.</p>
+                </div>
+                <div><h4 class="footer-heading">Angebot</h4><ul class="footer-links"><li><a href="schulungen">Schulungen</a></li><li><a href="termine">Termine</a></li><li><a href="beratung">Beratung</a></li><li><a href="tools">KI-Tools</a></li><li><a href="foerderung">Förderung</a></li></ul></div>
+                <div><h4 class="footer-heading">Unternehmen</h4><ul class="footer-links"><li><a href="team">Über uns</a></li><li><a href="newsletter">KI-Radar Newsletter</a></li><li><a href="kontakt">Kontakt</a></li></ul></div>
+                <div><h4 class="footer-heading">Rechtliches</h4><ul class="footer-links"><li><a href="impressum">Impressum</a></li><li><a href="datenschutz">Datenschutz</a></li><li><a href="agb">AGB</a></li><li><a href="ki-transparenz">KI-Transparenz</a></li></ul></div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2025–2026 CITECH AI GmbH. Alle Rechte vorbehalten.</span>
+                <span>Design: <a href="https://www.b-line-graphix.de" target="_blank" rel="noopener">B_Line Graphix</a></span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie Banner -->
+    <div class="cookie-banner" role="dialog" aria-label="Cookie-Einstellungen">
+        <h4>Wir respektieren Ihre Privatsphäre</h4>
+        <p>Diese Website verwendet ausschließlich technisch notwendige Cookies. Keine Analyse-Tools, kein Tracking.</p>
+        <div class="cookie-buttons">
+            <button id="cookie-accept" class="btn btn-primary btn-sm">Verstanden</button>
+            <a href="datenschutz" class="btn btn-secondary btn-sm">Datenschutz lesen</a>
+        </div>
+    </div>
+
+    <script src="../js/main.js?v=1"></script>
+</body>
+</html>

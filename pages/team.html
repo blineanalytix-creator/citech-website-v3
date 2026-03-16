@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="de" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Über uns – Das Team | CITECH AI</title>
+    <meta name="description" content="Lernen Sie das CITECH AI Team kennen: Marcel Batur und Dr. Ingo Poschmann – erfahrene Praktiker mit technischem Know-how, QM-Expertise und didaktischer Kompetenz.">
+
+    <link rel="canonical" href="https://www.citech-ai.de/pages/team">
+    <link rel="alternate" hreflang="de" href="https://www.citech-ai.de/pages/team">
+    <link rel="alternate" hreflang="en" href="https://www.citech-ai.de/en/pages/team">
+
+    <meta property="og:title" content="Über uns – Das Team | CITECH AI">
+    <meta property="og:description" content="Expertise trifft Innovation. Erfahrene Praktiker für KI-Weiterbildung und EU AI Act Beratung.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.citech-ai.de/pages/team">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="CITECH AI">
+
+    <link rel="icon" type="image/png" href="../favicon.png">
+    <link rel="preload" href="../assets/fonts/Inter-VariableFont.woff2" as="font" type="font/woff2" crossorigin>
+    <style>
+        @font-face {
+            font-family: 'Inter';
+            src: url('../assets/fonts/Inter-VariableFont.woff2') format('woff2');
+            font-weight: 100 900;
+            font-style: normal;
+            font-display: swap;
+        }
+        .team-card {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: var(--space-8);
+            align-items: start;
+        }
+        /* Transparent so Living Network (MB/IP) shows through */
+        #marcel-batur .module-detail-card,
+        #ingo-poschmann .module-detail-card {
+            background: rgba(12, 17, 23, 0.15);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+        }
+        [data-theme="light"] #marcel-batur .module-detail-card,
+        [data-theme="light"] #ingo-poschmann .module-detail-card {
+            background: rgba(255, 255, 255, 0.15);
+        }
+        .team-card-image {
+            width: 200px;
+            max-width: 200px;
+            border-radius: var(--radius-lg);
+            aspect-ratio: 1;
+            object-fit: cover;
+            object-position: center top;
+        }
+        .team-card-body h3 {
+            margin-bottom: var(--space-2);
+        }
+        .team-card-body .team-role {
+            color: var(--color-primary-400);
+            font-size: var(--text-sm);
+            font-weight: 500;
+            margin-bottom: var(--space-4);
+        }
+        .team-card-body .team-bio {
+            margin-bottom: var(--space-6);
+            line-height: 1.7;
+        }
+        .skill-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-2);
+        }
+        .skill-pill {
+            padding: var(--space-1) var(--space-3);
+            background: var(--color-glow);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-full);
+            font-size: var(--font-xs);
+            color: var(--color-text-secondary);
+            white-space: nowrap;
+        }
+        @media (max-width: 768px) {
+            .team-card {
+                grid-template-columns: 1fr;
+                justify-items: center;
+                text-align: center;
+            }
+            .team-card-image {
+                width: 160px;
+            }
+            .team-card-body .content-list {
+                justify-content: center;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="../css/main.css?v=1">
+    <link rel="stylesheet" href="../css/mobile.css?v=1" media="(max-width: 1024px)">
+</head>
+<body>
+
+    <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
+
+    <div class="ambient-bg" aria-hidden="true">
+        <div class="ambient-mesh">
+            <div class="mesh-gradient mesh-gradient-1"></div>
+            <div class="mesh-gradient mesh-gradient-2"></div>
+            <div class="mesh-gradient mesh-gradient-3"></div>
+        </div>
+        <canvas id="neural-bg-canvas"></canvas>
+    </div>
+
+    <!-- HEADER -->
+    <header class="header" role="banner">
+        <div class="container header-inner">
+            <a href="../" class="header-logo" aria-label="CITECH AI Startseite">
+                <img src="../assets/images/logo/citech-logo-white.svg" alt="CITECH AI" class="logo-dark" width="140" height="32">
+                <img src="../assets/images/logo/Citech Logo klassisch weißer Hintergrund mit Schatten.jpg" alt="CITECH AI" class="logo-light" width="140" height="32">
+            </a>
+            <nav class="nav-desktop" role="navigation" aria-label="Hauptnavigation">
+                <a href="../" class="nav-link">Startseite</a>
+                <div class="nav-dropdown">
+                    <button class="nav-link nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+                        Schulungen
+                        <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M3 5l3 3 3-3"/></svg>
+                    </button>
+                    <div class="nav-dropdown-menu" role="menu">
+                        <a href="schulungen" role="menuitem">Modulübersicht</a>
+                        <a href="termine" role="menuitem">Termine 2026</a>
+                        <a href="foerderung" role="menuitem">Förderung</a>
+                    </div>
+                </div>
+                <a href="beratung" class="nav-link">Beratung</a>
+                <a href="tools" class="nav-link">Tools</a>
+                <a href="team" class="nav-link active">Über uns</a>
+                <a href="kontakt" class="nav-link">Kontakt</a>
+            </nav>
+            <div class="header-actions">
+                <a href="../en/pages/team" class="lang-toggle" aria-label="Switch to English">EN</a>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Farbschema wechseln">
+                    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                </button>
+                <button class="mobile-menu-toggle" aria-label="Menü öffnen" aria-expanded="false"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" aria-hidden="true">
+        <nav class="mobile-menu-nav" aria-label="Mobile Navigation">
+            <a href="../" class="mobile-nav-link">Startseite</a>
+            <div class="mobile-dropdown">
+                <button class="mobile-nav-link mobile-dropdown-toggle" aria-expanded="false">Schulungen</button>
+                <div class="mobile-dropdown-items">
+                    <a href="schulungen">Modulübersicht</a>
+                    <a href="termine">Termine 2026</a>
+                    <a href="foerderung">Förderung</a>
+                </div>
+            </div>
+            <a href="beratung" class="mobile-nav-link">Beratung</a>
+            <a href="tools" class="mobile-nav-link">Tools</a>
+            <a href="team" class="mobile-nav-link active">Über uns</a>
+            <a href="kontakt" class="mobile-nav-link">Kontakt</a>
+        </nav>
+    </div>
+
+    <!-- ==================== MAIN ==================== -->
+    <main id="main-content" role="main">
+
+        <!-- PAGE HERO -->
+        <section class="page-hero section">
+            <div class="container">
+                <span class="section-label reveal">Über uns</span>
+                <h1 class="reveal reveal-delay-1">Expertise trifft<br><span class="gradient-text">Innovation</span></h1>
+                <p class="section-subtitle reveal reveal-delay-2">
+                    Erfahrene Praktiker mit der perfekten Kombination aus technischem Know-how, Qualitätsmanagement-Expertise und didaktischer Kompetenz.
+                </p>
+                <div class="badges-row reveal reveal-delay-3" style="margin-top: var(--space-8); justify-content: flex-start;">
+                    <span class="badge">AZAV-zertifiziert</span>
+                    <span class="badge">Gegründet 2025</span>
+                    <span class="badge">Standort Essen</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- MARCEL BATUR -->
+        <section class="section" id="marcel-batur">
+            <div class="container">
+                <div class="module-detail-card reveal">
+                    <div class="module-detail-body">
+                        <div class="team-card">
+                            <img src="../assets/images/logo/Marcel Batur.jpg" alt="Marcel Batur – Geschäftsführer CITECH AI" class="team-card-image">
+                            <div class="team-card-body">
+                                <h3>Marcel Batur</h3>
+                                <p class="team-role">Geschäftsführer &middot; Dozent &middot; Tool-Entwicklung &middot; Regeltreue</p>
+                                <p class="team-bio">Als zertifizierter Werkstoffprüfer Metalltechnik (IHK) verbindet Marcel fundierte Qualitätsmanagement-Expertise mit innovativer KI-Entwicklung. Mit über einem Jahr Selbstständigkeit in KI-Implementation und Schulung hat er bereits zahlreiche Unternehmen erfolgreich bei der EU-AI-Act Regeltreue begleitet und komplexe KI-Systeme in bestehende Unternehmensprozesse integriert. Bei CITECH verantwortet er als Geschäftsführer die Tool-Entwicklung und vermittelt als Dozent praxisnah die rechtskonforme und effiziente Nutzung von KI-Systemen. Ab Januar 2026 vertieft er sein Wissen im Studium der Angewandten KI-Wissenschaften.</p>
+                                <div class="skill-pills">
+                                    <span class="skill-pill">Entwicklung</span>
+                                    <span class="skill-pill">Automatisierung</span>
+                                    <span class="skill-pill">EU AI Act</span>
+                                    <span class="skill-pill">QM-Systeme</span>
+                                    <span class="skill-pill">Python &amp; ML</span>
+                                    <span class="skill-pill">Schulung</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DR. INGO POSCHMANN -->
+        <section class="section" id="ingo-poschmann">
+            <div class="container">
+                <div class="module-detail-card reveal">
+                    <div class="module-detail-body">
+                        <div class="team-card">
+                            <img src="../assets/images/logo/Ingo Poschmann.jpg" alt="Dr. Ingo Poschmann – Geschäftsführer CITECH AI" class="team-card-image" style="object-position: 100% top;">
+                            <div class="team-card-body">
+                                <h3>Dr. Ingo Poschmann</h3>
+                                <p class="team-role">Geschäftsführer &middot; Dozent &middot; Regeltreue-Berater &middot; QM-Systeme</p>
+                                <p class="team-bio">Dr. Poschmann verbindet als promovierter Naturwissenschaftler und öffentlich bestellter IHK-Sachverständiger jahrzehntelange Erfahrung in Qualitätsmanagement und Prozessoptimierung. Seine Expertise in systematischer Analyse und wissenschaftlicher Methodik bildet das perfekte Fundament für die strukturierte Vermittlung von KI-Kompetenzen. Bei CITECH verantwortet er als Geschäftsführer die strategische Ausrichtung und gewährleistet als erfahrener Auditor höchste Qualitätsstandards in allen Weiterbildungsprogrammen. Als Dozent vermittelt er die Integration von KI in bestehende Managementsysteme.</p>
+                                <div class="skill-pills">
+                                    <span class="skill-pill">Strategie</span>
+                                    <span class="skill-pill">QM-Systeme</span>
+                                    <span class="skill-pill">Compliance</span>
+                                    <span class="skill-pill">Auditing</span>
+                                    <span class="skill-pill">IHK-Experte</span>
+                                    <span class="skill-pill">Schulung</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="section" id="team-cta">
+            <div class="container">
+                <div class="cta-banner reveal">
+                    <span class="section-label">Kontakt</span>
+                    <h2>Lernen Sie uns persönlich kennen</h2>
+                    <p>Ob Schulung, Beratung oder Projektanfrage – wir freuen uns auf den Austausch mit Ihnen. Vereinbaren Sie ein unverbindliches Kennenlerngespräch.</p>
+                    <div class="hero-buttons">
+                        <a href="kontakt" class="btn btn-primary">
+                            Kontakt aufnehmen
+                            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+                        </a>
+                        <a href="schulungen" class="btn btn-secondary">Schulungen entdecken</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="../assets/images/logo/citech-logo-white.svg" alt="CITECH AI" class="logo-dark" width="120" height="28">
+                    <img src="../assets/images/logo/Citech Logo klassisch weißer Hintergrund mit Schatten.jpg" alt="CITECH AI" class="logo-light" width="120" height="28">
+                    <p>AZAV-zertifizierter KI-Bildungsträger aus Essen. Schulungen, Beratung und Implementierung – praxisnah und DSGVO-konform.</p>
+                </div>
+                <div><h4 class="footer-heading">Angebot</h4><ul class="footer-links"><li><a href="schulungen">Schulungen</a></li><li><a href="termine">Termine</a></li><li><a href="beratung">Beratung</a></li><li><a href="tools">KI-Tools</a></li><li><a href="foerderung">Förderung</a></li></ul></div>
+                <div><h4 class="footer-heading">Unternehmen</h4><ul class="footer-links"><li><a href="team">Über uns</a></li><li><a href="newsletter">KI-Radar Newsletter</a></li><li><a href="kontakt">Kontakt</a></li></ul></div>
+                <div><h4 class="footer-heading">Rechtliches</h4><ul class="footer-links"><li><a href="impressum">Impressum</a></li><li><a href="datenschutz">Datenschutz</a></li><li><a href="agb">AGB</a></li><li><a href="ki-transparenz">KI-Transparenz</a></li></ul></div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2025–2026 CITECH AI GmbH. Alle Rechte vorbehalten.</span>
+                <span>Design: <a href="https://www.b-line-graphix.de" target="_blank" rel="noopener">B_Line Graphix</a></span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie Banner -->
+    <div class="cookie-banner" role="dialog" aria-label="Cookie-Einstellungen">
+        <h4>Wir respektieren Ihre Privatsphäre</h4>
+        <p>Diese Website verwendet ausschließlich technisch notwendige Cookies. Keine Analyse-Tools, kein Tracking.</p>
+        <div class="cookie-buttons">
+            <button id="cookie-accept" class="btn btn-primary btn-sm">Verstanden</button>
+            <a href="datenschutz" class="btn btn-secondary btn-sm">Datenschutz lesen</a>
+        </div>
+    </div>
+
+    <script src="../js/main.js?v=1"></script>
+</body>
+</html>

@@ -1,0 +1,342 @@
+/* ============================================
+   CITECH AI - Responsive Overrides
+   Breakpoints: 1024px / 768px / 480px / 360px
+   ============================================ */
+
+/* ============================================
+   TABLET (max-width: 1024px)
+   ============================================ */
+
+@media (max-width: 1024px) {
+    .services-grid,
+    .trust-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .modules-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-8);
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+
+    .hero-stats {
+        gap: var(--space-8);
+    }
+
+    .policy-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .module-columns {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cta-banner {
+        padding: var(--space-12) var(--space-8);
+    }
+}
+
+/* ============================================
+   MOBILE (max-width: 768px)
+   ============================================ */
+
+@media (max-width: 768px) {
+    :root {
+        --container-padding: var(--space-5);
+    }
+
+    /* --- Navigation --- */
+    .nav-desktop {
+        display: none;
+    }
+
+    .mobile-menu-toggle {
+        display: flex;
+    }
+
+    .header {
+        background: var(--glass-bg);
+        backdrop-filter: blur(var(--glass-blur));
+        -webkit-backdrop-filter: blur(var(--glass-blur));
+    }
+
+    /* --- Hero --- */
+    .hero {
+        min-height: auto;
+        padding-top: 120px;
+        padding-bottom: var(--space-16);
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .hero-stats {
+        flex-direction: column;
+        gap: var(--space-6);
+    }
+
+    .hero-stat {
+        display: flex;
+        align-items: center;
+        gap: var(--space-4);
+    }
+
+    .hero-stat-value {
+        font-size: var(--font-2xl);
+        min-width: 80px;
+    }
+
+    /* --- Sections --- */
+    .section {
+        padding: var(--space-16) 0;
+    }
+
+    .section-header {
+        margin-bottom: var(--space-10);
+    }
+
+    /* --- Grids --- */
+    .services-grid,
+    .trust-grid,
+    .modules-grid,
+    .grid-2,
+    .grid-3,
+    .grid-4 {
+        grid-template-columns: 1fr;
+    }
+
+    .glass-card {
+        padding: var(--space-6);
+    }
+
+    /* --- CTA Banner --- */
+    .cta-banner {
+        padding: var(--space-10) var(--space-6);
+    }
+
+    /* --- Footer --- */
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-6) var(--space-4);
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: var(--space-3);
+        text-align: center;
+    }
+
+    /* --- Ambient Background: Performance --- */
+    .mesh-gradient {
+        opacity: 0.2 !important;
+        filter: blur(60px) !important;
+        animation: none !important;
+        will-change: auto !important;
+    }
+
+    .mesh-gradient-1 {
+        width: 300px !important;
+        height: 300px !important;
+    }
+
+    .mesh-gradient-2 {
+        width: 250px !important;
+        height: 250px !important;
+    }
+
+    .mesh-gradient-3 {
+        display: none;
+    }
+
+    .ambient-bg::after {
+        display: none;
+    }
+
+    #neural-bg-canvas {
+        display: none;
+    }
+
+    /* --- Page Hero --- */
+    .page-hero {
+        min-height: auto;
+        padding-top: 120px;
+        padding-bottom: var(--space-12);
+    }
+
+    /* --- Modals --- */
+    .modal-overlay {
+        padding: 0;
+    }
+
+    .modal-content {
+        max-height: 100vh;
+        height: 100vh;
+        border-radius: 0;
+        padding: var(--space-6);
+        padding-top: var(--space-12);
+    }
+
+    .schedule-table {
+        font-size: var(--font-xs);
+    }
+
+    .schedule-table th,
+    .schedule-table td {
+        padding: var(--space-2) var(--space-3);
+    }
+
+    /* --- Subpage Components --- */
+    .module-columns {
+        grid-template-columns: 1fr;
+        gap: var(--space-6);
+    }
+
+    .module-meta-bar {
+        gap: var(--space-3);
+    }
+
+    .module-detail-header,
+    .module-detail-body,
+    .module-detail-footer {
+        padding: var(--space-5);
+    }
+
+    .module-detail-footer {
+        flex-direction: column;
+    }
+
+    .module-detail-footer .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .policy-list {
+        grid-template-columns: 1fr;
+    }
+
+    .badges-row {
+        justify-content: flex-start;
+    }
+
+    .promise-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tab-nav {
+        flex-wrap: wrap;
+    }
+
+    /* --- Cookie Banner --- */
+    .cookie-banner {
+        bottom: var(--space-4);
+        width: calc(100% - var(--space-6));
+    }
+
+    .cookie-buttons {
+        flex-direction: column;
+    }
+
+    /* Glass Card: Disable animated border on mobile */
+    .glass-card::after {
+        display: none;
+    }
+}
+
+/* ============================================
+   SMALL PHONES (max-width: 480px)
+   ============================================ */
+
+@media (max-width: 480px) {
+    :root {
+        --container-padding: var(--space-4);
+    }
+
+    .hero {
+        padding-top: 100px;
+        padding-bottom: var(--space-12);
+    }
+
+    .hero-badge {
+        font-size: 0.7rem;
+    }
+
+    .section {
+        padding: var(--space-12) 0;
+    }
+
+    .glass-card {
+        padding: var(--space-5);
+    }
+
+    .card-icon {
+        width: 40px;
+        height: 40px;
+        margin-bottom: var(--space-4);
+    }
+
+    .card-icon svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .trust-item {
+        padding: var(--space-6) var(--space-3);
+    }
+
+    .cta-banner {
+        padding: var(--space-8) var(--space-5);
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .header-logo img {
+        height: 26px;
+    }
+}
+
+/* ============================================
+   VERY SMALL PHONES (max-width: 360px)
+   ============================================ */
+
+@media (max-width: 360px) {
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    h2 {
+        font-size: 1.375rem;
+    }
+
+    .hero-subtitle {
+        font-size: var(--font-base);
+    }
+
+    .btn {
+        padding: var(--space-3) var(--space-5);
+        font-size: var(--font-xs);
+    }
+}

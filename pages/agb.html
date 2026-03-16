@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="de" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AGB – CITECH AI</title>
+    <meta name="description" content="Allgemeine Geschäftsbedingungen der CITECH AI GmbH – Transparente Bedingungen für Weiterbildungen im Bereich Künstliche Intelligenz.">
+
+    <link rel="canonical" href="https://www.citech-ai.de/pages/agb">
+    <link rel="alternate" hreflang="de" href="https://www.citech-ai.de/pages/agb">
+    <link rel="alternate" hreflang="en" href="https://www.citech-ai.de/en/pages/agb">
+
+    <meta property="og:title" content="AGB – CITECH AI">
+    <meta property="og:description" content="Allgemeine Geschäftsbedingungen der CITECH AI GmbH.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.citech-ai.de/pages/agb">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="CITECH AI">
+
+    <link rel="icon" type="image/png" href="../favicon.png">
+    <link rel="preload" href="../assets/fonts/Inter-VariableFont.woff2" as="font" type="font/woff2" crossorigin>
+    <style>
+        @font-face {
+            font-family: 'Inter';
+            src: url('../assets/fonts/Inter-VariableFont.woff2') format('woff2');
+            font-weight: 100 900;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        .legal-content { max-width: 800px; margin: 0 auto; padding-top: calc(80px + var(--space-12)); }
+        .legal-content h1 { margin-bottom: var(--space-8); color: var(--color-text-primary); }
+        .legal-content h2 { font-size: var(--font-xl); margin-top: var(--space-10); margin-bottom: var(--space-4); color: var(--color-primary-400); }
+        .legal-content h3 { font-size: var(--font-lg); margin-top: var(--space-6); margin-bottom: var(--space-3); color: var(--color-primary-400); }
+        .legal-content p { margin-bottom: var(--space-4); font-size: var(--font-sm); color: var(--color-text-secondary); line-height: var(--line-height-relaxed); }
+        .legal-content ul, .legal-content ol { margin-bottom: var(--space-4); padding-left: var(--space-6); }
+        .legal-content li { font-size: var(--font-sm); color: var(--color-text-secondary); line-height: var(--line-height-relaxed); margin-bottom: var(--space-2); }
+        .legal-content a { color: var(--color-primary-400); }
+    </style>
+    <link rel="stylesheet" href="../css/main.css?v=1">
+    <link rel="stylesheet" href="../css/mobile.css?v=1" media="(max-width: 1024px)">
+</head>
+<body>
+
+    <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
+
+    <div class="ambient-bg" aria-hidden="true">
+        <div class="ambient-mesh">
+            <div class="mesh-gradient mesh-gradient-1"></div>
+            <div class="mesh-gradient mesh-gradient-2"></div>
+            <div class="mesh-gradient mesh-gradient-3"></div>
+        </div>
+        <canvas id="neural-bg-canvas"></canvas>
+    </div>
+
+    <!-- HEADER -->
+    <header class="header" role="banner">
+        <div class="container header-inner">
+            <a href="../" class="header-logo" aria-label="CITECH AI Startseite">
+                <img src="../assets/images/logo/citech-logo-white.svg" alt="CITECH AI" class="logo-dark" width="140" height="32">
+                <img src="../assets/images/logo/Citech Logo klassisch weißer Hintergrund mit Schatten.jpg" alt="CITECH AI" class="logo-light" width="140" height="32">
+            </a>
+            <nav class="nav-desktop" role="navigation" aria-label="Hauptnavigation">
+                <a href="../" class="nav-link">Startseite</a>
+                <div class="nav-dropdown">
+                    <button class="nav-link nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+                        Schulungen
+                        <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M3 5l3 3 3-3"/></svg>
+                    </button>
+                    <div class="nav-dropdown-menu" role="menu">
+                        <a href="schulungen" role="menuitem">Modulübersicht</a>
+                        <a href="termine" role="menuitem">Termine 2026</a>
+                        <a href="foerderung" role="menuitem">Förderung</a>
+                    </div>
+                </div>
+                <a href="beratung" class="nav-link">Beratung</a>
+                <a href="tools" class="nav-link">Tools</a>
+                <a href="team" class="nav-link">Über uns</a>
+                <a href="kontakt" class="nav-link">Kontakt</a>
+            </nav>
+            <div class="header-actions">
+                <a href="../en/pages/agb" class="lang-toggle" aria-label="Switch to English">EN</a>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Farbschema wechseln">
+                    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                </button>
+                <button class="mobile-menu-toggle" aria-label="Menü öffnen" aria-expanded="false"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" aria-hidden="true">
+        <nav class="mobile-menu-nav" aria-label="Mobile Navigation">
+            <a href="../" class="mobile-nav-link">Startseite</a>
+            <div class="mobile-dropdown">
+                <button class="mobile-nav-link mobile-dropdown-toggle" aria-expanded="false">Schulungen</button>
+                <div class="mobile-dropdown-items">
+                    <a href="schulungen">Modulübersicht</a>
+                    <a href="termine">Termine 2026</a>
+                    <a href="foerderung">Förderung</a>
+                </div>
+            </div>
+            <a href="beratung" class="mobile-nav-link">Beratung</a>
+            <a href="tools" class="mobile-nav-link">Tools</a>
+            <a href="team" class="mobile-nav-link">Über uns</a>
+            <a href="kontakt" class="mobile-nav-link">Kontakt</a>
+        </nav>
+    </div>
+
+    <!-- ==================== MAIN ==================== -->
+    <main id="main-content" role="main">
+
+        <section class="section">
+            <div class="container legal-content">
+
+                <h1>Allgemeine Geschäftsbedingungen</h1>
+
+                <h2>§ 1 Geltungsbereich</h2>
+                <ol>
+                    <li>Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle Verträge zwischen der CITECH AI GmbH (nachfolgend "CITECH") und ihren Kunden über die Teilnahme an Weiterbildungsmaßnahmen.</li>
+                    <li>Abweichende, entgegenstehende oder ergänzende AGB werden nicht Vertragsbestandteil, es sei denn, ihrer Geltung wird ausdrücklich schriftlich zugestimmt.</li>
+                </ol>
+
+                <h2>§ 2 Vertragsgegenstand</h2>
+                <ol>
+                    <li>CITECH bietet Weiterbildungen im Bereich Künstliche Intelligenz an, insbesondere die Module "KI-Anwender", "KI-Spezialist", "KI-Projektleiter" und "KI-Manager".</li>
+                    <li>Die genauen Inhalte, Termine und Durchführungsorte ergeben sich aus der jeweiligen Kursbeschreibung.</li>
+                </ol>
+
+                <h2>§ 3 Vertragsschluss und Anmeldung</h2>
+                <ol>
+                    <li>Die Darstellung der Kurse auf unserer Website stellt kein rechtlich bindendes Angebot, sondern eine Aufforderung zur Abgabe eines Angebots dar.</li>
+                    <li>Mit der Anmeldung zu einem Kurs gibt der Kunde ein verbindliches Angebot zum Vertragsschluss ab.</li>
+                    <li>Der Vertrag kommt durch unsere schriftliche Anmeldebestätigung zustande.</li>
+                    <li>Die Platzvergabe erfolgt in der Reihenfolge der Anmeldungen.</li>
+                </ol>
+
+                <h2>§ 4 Preise und Zahlungsbedingungen</h2>
+                <ol>
+                    <li>Es gelten die zum Zeitpunkt der Anmeldung gültigen Preise.</li>
+                    <li>Alle Preise verstehen sich zzgl. der gesetzlichen Mehrwertsteuer.</li>
+                    <li>Bei Förderung durch Arbeitsagentur, Jobcenter oder andere Träger erfolgt die Abrechnung direkt mit dem Kostenträger.</li>
+                    <li>Bei Selbstzahlern ist die Kursgebühr vor Kursbeginn zu entrichten.</li>
+                </ol>
+
+                <h2>§ 5 Rücktritt und Kündigung</h2>
+
+                <h3>5.1 Rücktritt durch den Kunden</h3>
+                <ol>
+                    <li>Ein kostenfreier Rücktritt ist bis 14 Tage vor Kursbeginn möglich.</li>
+                    <li>Bei späterem Rücktritt werden 50% der Kursgebühr fällig.</li>
+                    <li>Bei Nichterscheinen oder Rücktritt am Kurstag wird die volle Kursgebühr fällig.</li>
+                </ol>
+
+                <h3>5.2 Rücktritt durch CITECH</h3>
+                <ol>
+                    <li>CITECH behält sich vor, Kurse bei zu geringer Teilnehmerzahl (weniger als 5 Teilnehmer) bis 7 Tage vor Kursbeginn abzusagen.</li>
+                    <li>Bereits gezahlte Gebühren werden in diesem Fall vollständig erstattet.</li>
+                </ol>
+
+                <h2>§ 6 Durchführung der Kurse</h2>
+                <ol>
+                    <li>CITECH ist berechtigt, Dozenten auszutauschen und geringfügige Änderungen im Kursablauf vorzunehmen.</li>
+                    <li>Die Kurse werden sowohl in Präsenz als auch online durchgeführt.</li>
+                    <li>Für Online-Kurse stellt CITECH die notwendige Software-Infrastruktur zur Verfügung.</li>
+                </ol>
+
+                <h2>§ 7 Teilnahmebescheinigung und Zertifikat</h2>
+                <ol>
+                    <li>Nach erfolgreicher Teilnahme erhält der Kunde eine Teilnahmebescheinigung.</li>
+                    <li>Bei bestandener Prüfung wird zusätzlich ein Zertifikat ausgestellt.</li>
+                    <li>Voraussetzung ist eine Anwesenheit von mindestens 80% der Unterrichtszeit.</li>
+                </ol>
+
+                <h2>§ 8 Urheberrecht</h2>
+                <ol>
+                    <li>Alle Kursunterlagen sind urheberrechtlich geschützt.</li>
+                    <li>Die Vervielfältigung, Weitergabe oder anderweitige Nutzung ist nur mit schriftlicher Genehmigung von CITECH gestattet.</li>
+                </ol>
+
+                <h2>§ 9 Haftung</h2>
+                <ol>
+                    <li>CITECH haftet unbeschränkt für Vorsatz und grobe Fahrlässigkeit.</li>
+                    <li>Bei leichter Fahrlässigkeit haftet CITECH nur bei Verletzung wesentlicher Vertragspflichten und begrenzt auf den vertragstypischen, vorhersehbaren Schaden.</li>
+                    <li>Die Haftung für Schäden aus der Verletzung des Lebens, des Körpers oder der Gesundheit bleibt unberührt.</li>
+                </ol>
+
+                <h2>§ 10 Datenschutz</h2>
+                <p>
+                    Die Verarbeitung personenbezogener Daten erfolgt gemäß unserer Datenschutzerklärung, die unter <a href="datenschutz">www.citech-ai.de/datenschutz</a> einsehbar ist.
+                </p>
+
+                <h2>§ 11 Schlussbestimmungen</h2>
+                <ol>
+                    <li>Es gilt das Recht der Bundesrepublik Deutschland.</li>
+                    <li>Gerichtsstand ist Essen.</li>
+                    <li>Sollten einzelne Bestimmungen unwirksam sein, bleibt die Wirksamkeit der übrigen Bestimmungen unberührt.</li>
+                </ol>
+
+                <h2>Dokumentenhistorie</h2>
+                <p>
+                    <strong>07.12.2025 – Version 1.0:</strong> Erstveröffentlichung der Allgemeinen Geschäftsbedingungen
+                </p>
+                <p>Diese AGB werden bei wesentlichen Änderungen der Geschäftsbedingungen aktualisiert.</p>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="../assets/images/logo/citech-logo-white.svg" alt="CITECH AI" class="logo-dark" width="120" height="28">
+                    <img src="../assets/images/logo/Citech Logo klassisch weißer Hintergrund mit Schatten.jpg" alt="CITECH AI" class="logo-light" width="120" height="28">
+                    <p>AZAV-zertifizierter KI-Bildungsträger aus Essen. Schulungen, Beratung und Implementierung – praxisnah und DSGVO-konform.</p>
+                </div>
+                <div><h4 class="footer-heading">Angebot</h4><ul class="footer-links"><li><a href="schulungen">Schulungen</a></li><li><a href="termine">Termine</a></li><li><a href="beratung">Beratung</a></li><li><a href="tools">KI-Tools</a></li><li><a href="foerderung">Förderung</a></li></ul></div>
+                <div><h4 class="footer-heading">Unternehmen</h4><ul class="footer-links"><li><a href="team">Über uns</a></li><li><a href="newsletter">KI-Radar Newsletter</a></li><li><a href="kontakt">Kontakt</a></li></ul></div>
+                <div><h4 class="footer-heading">Rechtliches</h4><ul class="footer-links"><li><a href="impressum">Impressum</a></li><li><a href="datenschutz">Datenschutz</a></li><li><a href="agb">AGB</a></li><li><a href="ki-transparenz">KI-Transparenz</a></li></ul></div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2025–2026 CITECH AI GmbH. Alle Rechte vorbehalten.</span>
+                <span>Design: <a href="https://www.b-line-graphix.de" target="_blank" rel="noopener">B_Line Graphix</a></span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie Banner -->
+    <div class="cookie-banner" role="dialog" aria-label="Cookie-Einstellungen">
+        <h4>Wir respektieren Ihre Privatsphäre</h4>
+        <p>Diese Website verwendet ausschließlich technisch notwendige Cookies. Keine Analyse-Tools, kein Tracking.</p>
+        <div class="cookie-buttons">
+            <button id="cookie-accept" class="btn btn-primary btn-sm">Verstanden</button>
+            <a href="datenschutz" class="btn btn-secondary btn-sm">Datenschutz lesen</a>
+        </div>
+    </div>
+
+    <script src="../js/main.js?v=1"></script>
+</body>
+</html>

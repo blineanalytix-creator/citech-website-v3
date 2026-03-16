@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="de" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Unsere Module – KI-Weiterbildung | CITECH AI</title>
+    <meta name="description" content="CITECH KI-Weiterbildung Module: KI-Anwender, KI-Spezialist, KI-Projektleiter, KI-Manager. AZAV-zertifiziert, praxisorientiert, förderbar.">
+
+    <link rel="canonical" href="https://www.citech-ai.de/pages/schulungen">
+    <link rel="alternate" hreflang="de" href="https://www.citech-ai.de/pages/schulungen">
+    <link rel="alternate" hreflang="en" href="https://www.citech-ai.de/en/pages/schulungen">
+
+    <meta property="og:title" content="Unsere Module – KI-Weiterbildung | CITECH AI">
+    <meta property="og:description" content="4 Module, 429 UE, AZAV-zertifiziert. Praxisnahe KI-Weiterbildung für Unternehmen und Einzelpersonen.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.citech-ai.de/pages/schulungen">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="CITECH AI">
+
+    <link rel="icon" type="image/png" href="../favicon.png">
+    <link rel="preload" href="../assets/fonts/Inter-VariableFont.woff2" as="font" type="font/woff2" crossorigin>
+    <style>
+        @font-face {
+            font-family: 'Inter';
+            src: url('../assets/fonts/Inter-VariableFont.woff2') format('woff2');
+            font-weight: 100 900;
+            font-style: normal;
+            font-display: swap;
+        }
+    </style>
+    <link rel="stylesheet" href="../css/main.css?v=1">
+    <link rel="stylesheet" href="../css/mobile.css?v=1" media="(max-width: 1024px)">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "CITECH KI-Schulungsprogramm",
+        "description": "AZAV-zertifizierte KI-Weiterbildung in 4 Modulen",
+        "itemListElement": [
+            { "@type": "Course", "position": 1, "name": "KI-Anwender", "description": "Grundlagen der KI verstehen und anwenden. 121 UE.", "provider": {"@type": "Organization", "name": "CITECH AI GmbH"}, "hasCourseInstance": {"@type": "CourseInstance", "courseMode": "onsite", "duration": "P13D"}, "offers": {"@type": "Offer", "price": "2755", "priceCurrency": "EUR"} },
+            { "@type": "Course", "position": 2, "name": "KI-Spezialist", "description": "Technische KI-Entwicklung mit Python, RAG-Systeme. 187 UE.", "provider": {"@type": "Organization", "name": "CITECH AI GmbH"}, "hasCourseInstance": {"@type": "CourseInstance", "courseMode": "onsite", "duration": "P20D"}, "offers": {"@type": "Offer", "price": "4325", "priceCurrency": "EUR"} },
+            { "@type": "Course", "position": 3, "name": "KI-Projektleiter", "description": "KI-Projekte strategisch leiten, EU AI Act Compliance. 121 UE.", "provider": {"@type": "Organization", "name": "CITECH AI GmbH"}, "hasCourseInstance": {"@type": "CourseInstance", "courseMode": "onsite", "duration": "P13D"}, "offers": {"@type": "Offer", "price": "2775", "priceCurrency": "EUR"} },
+            { "@type": "Course", "position": 4, "name": "KI-Manager", "description": "Komplettausbildung: Alle 3 Module. 429 UE.", "provider": {"@type": "Organization", "name": "CITECH AI GmbH"}, "hasCourseInstance": {"@type": "CourseInstance", "courseMode": "onsite", "duration": "P46D"}, "offers": {"@type": "Offer", "price": "9925", "priceCurrency": "EUR"} }
+        ]
+    }
+    </script>
+</head>
+<body>
+
+    <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
+
+    <div class="ambient-bg" aria-hidden="true">
+        <div class="ambient-mesh">
+            <div class="mesh-gradient mesh-gradient-1"></div>
+            <div class="mesh-gradient mesh-gradient-2"></div>
+            <div class="mesh-gradient mesh-gradient-3"></div>
+        </div>
+        <canvas id="neural-bg-canvas"></canvas>
+    </div>
+
+    <!-- HEADER -->
+    <header class="header" role="banner">
+        <div class="container header-inner">
+            <a href="../" class="header-logo" aria-label="CITECH AI Startseite">
+                <img src="../assets/images/logo/citech-logo-white.svg" alt="CITECH AI" class="logo-dark" width="140" height="32">
+                <img src="../assets/images/logo/Citech Logo klassisch weißer Hintergrund mit Schatten.jpg" alt="CITECH AI" class="logo-light" width="140" height="32">
+            </a>
+            <nav class="nav-desktop" role="navigation" aria-label="Hauptnavigation">
+                <a href="../" class="nav-link">Startseite</a>
+                <div class="nav-dropdown">
+                    <button class="nav-link nav-dropdown-toggle active" aria-expanded="false" aria-haspopup="true">
+                        Schulungen
+                        <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M3 5l3 3 3-3"/></svg>
+                    </button>
+                    <div class="nav-dropdown-menu" role="menu">
+                        <a href="schulungen" role="menuitem">Modulübersicht</a>
+                        <a href="termine" role="menuitem">Termine 2026</a>
+                        <a href="foerderung" role="menuitem">Förderung</a>
+                    </div>
+                </div>
+                <a href="beratung" class="nav-link">Beratung</a>
+                <a href="tools" class="nav-link">Tools</a>
+                <a href="team" class="nav-link">Über uns</a>
+                <a href="kontakt" class="nav-link">Kontakt</a>
+            </nav>
+            <div class="header-actions">
+                <a href="../en/pages/schulungen" class="lang-toggle" aria-label="Switch to English">EN</a>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Farbschema wechseln">
+                    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                </button>
+                <button class="mobile-menu-toggle" aria-label="Menü öffnen" aria-expanded="false"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" aria-hidden="true">
+        <nav class="mobile-menu-nav" aria-label="Mobile Navigation">
+            <a href="../" class="mobile-nav-link">Startseite</a>
+            <div class="mobile-dropdown open">
+                <button class="mobile-nav-link mobile-dropdown-toggle active" aria-expanded="true">Schulungen</button>
+                <div class="mobile-dropdown-items">
+                    <a href="schulungen">Modulübersicht</a>
+                    <a href="termine">Termine 2026</a>
+                    <a href="foerderung">Förderung</a>
+                </div>
+            </div>
+            <a href="beratung" class="mobile-nav-link">Beratung</a>
+            <a href="tools" class="mobile-nav-link">Tools</a>
+            <a href="team" class="mobile-nav-link">Über uns</a>
+            <a href="kontakt" class="mobile-nav-link">Kontakt</a>
+        </nav>
+    </div>
+
+    <!-- ==================== MAIN ==================== -->
+    <main id="main-content" role="main">
+
+        <!-- PAGE HERO -->
+        <section class="page-hero section">
+            <div class="container">
+                <span class="section-label reveal">Schulungsprogramm</span>
+                <h1 class="reveal reveal-delay-1">KI-Weiterbildung<br><span class="gradient-text">Vom Anwender zum Experten</span></h1>
+                <p class="section-subtitle reveal reveal-delay-2">
+                    Jedes Modul baut auf dem vorherigen auf, kann aber auch einzeln belegt werden. Alle Module sind AZAV-zertifiziert und förderbar.
+                </p>
+                <div class="badges-row reveal reveal-delay-3" style="margin-top: var(--space-8); justify-content: flex-start;">
+                    <span class="badge">Zertifiziert nach AZAV</span>
+                    <span class="badge">Förderbar</span>
+                    <span class="badge">Modular &middot; 429 Unterrichtseinheiten</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- MODUL 1 -->
+        <section class="section" id="modul-1">
+            <div class="container">
+                <div class="module-detail-card reveal">
+                    <div class="module-detail-header">
+                        <span class="module-number">Modul 1</span>
+                        <h3>KI-Anwender</h3>
+                        <p class="module-tagline">Die perfekte Grundlage – Verstehen Sie KI und nutzen Sie sie effektiv</p>
+                        <div class="module-meta-bar">
+                            <div class="module-meta-item"><strong>13 Tage</strong> / 121 UE</div>
+                            <div class="module-meta-item"><strong>2.755 €</strong></div>
+                        </div>
+                    </div>
+                    <div class="module-detail-body">
+                        <div class="grid-2" style="gap: var(--space-6); margin-bottom: var(--space-6);">
+                            <div>
+                                <h4>Für wen</h4>
+                                <p>Ideal für Einsteiger ohne Vorkenntnisse. Für alle, die KI verstehen und im Arbeitsalltag effektiv einsetzen möchten – von Verwaltung über Marketing bis Qualitätsmanagement.</p>
+                            </div>
+                            <div>
+                                <h4>Was danach</h4>
+                                <p>Sie nutzen KI-Tools souverän, formulieren präzise Prompts, analysieren Dokumente mit KI und setzen GPT-basierte Lösungen in Ihrem Fachbereich eigenständig ein.</p>
+                            </div>
+                        </div>
+                        <div class="module-columns">
+                            <div>
+                                <h4>Grundlagen &amp; Konzepte</h4>
+                                <ul class="content-list">
+                                    <li>Geschichte und Entwicklung von KI</li>
+                                    <li>Neuronale Netze verstehen</li>
+                                    <li>Large Language Models (LLMs)</li>
+                                    <li>Machine Learning Basics</li>
+                                    <li>Prompt Engineering</li>
+                                    <li>KI-Tools im Vergleich</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4>Praktische Anwendung</h4>
+                                <ul class="content-list">
+                                    <li>ChatGPT, Claude &amp; Gemini nutzen</li>
+                                    <li>Dokumentenanalyse mit KI</li>
+                                    <li>Bildgenerierung &amp; -erkennung</li>
+                                    <li>Text-to-Speech Anwendungen</li>
+                                    <li>KI in Office-Anwendungen</li>
+                                    <li>Ethik &amp; Datenschutz</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="module-detail-footer">
+                        <button data-modal="modal-plan-1" class="btn btn-sm">Schulungsplan</button>
+                        <a href="../assets/certificates/ki-anwender.pdf" target="_blank" class="btn btn-sm">Beispielzertifikat</a>
+                        <a href="kontakt" class="btn btn-sm">Jetzt beraten lassen</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MODUL 2 -->
+        <section class="section" id="modul-2">
+            <div class="container">
+                <div class="module-detail-card reveal">
+                    <div class="module-detail-header">
+                        <span class="module-number">Modul 2</span>
+                        <h3>KI-Spezialist</h3>
+                        <p class="module-tagline">Entwickeln und implementieren – Werden Sie zum technischen Experten</p>
+                        <div class="module-meta-bar">
+                            <div class="module-meta-item"><strong>20 Tage</strong> / 187 UE</div>
+                            <div class="module-meta-item"><strong>4.325 €</strong></div>
+                        </div>
+                    </div>
+                    <div class="module-detail-body">
+                        <div class="grid-2" style="gap: var(--space-6); margin-bottom: var(--space-6);">
+                            <div>
+                                <h4>Für wen</h4>
+                                <p>Für IT-affine Personen mit Grundkenntnissen in KI oder nach Abschluss von Modul 1. Ideal für technische Fachkräfte, die KI-Lösungen selbst entwickeln möchten.</p>
+                            </div>
+                            <div>
+                                <h4>Was danach</h4>
+                                <p>Sie programmieren eigene KI-Anwendungen mit Python, bauen RAG-Systeme auf, entwickeln Chatbots und integrieren KI in bestehende Unternehmensinfrastruktur.</p>
+                            </div>
+                        </div>
+                        <div class="module-columns">
+                            <div>
+                                <h4>Technische Skills</h4>
+                                <ul class="content-list">
+                                    <li>Python-Programmierung mit LLMs</li>
+                                    <li>Workflow-Werkzeuge &amp; Automation</li>
+                                    <li>APIs und Webhooks</li>
+                                    <li>Datenaufbereitung &amp; -konvertierung</li>
+                                    <li>Vektordatenbanken</li>
+                                    <li>CNN-Modelle &amp; Bilderkennung</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4>Praktische Projekte</h4>
+                                <ul class="content-list">
+                                    <li>Offline RAG-Systeme aufbauen</li>
+                                    <li>Chatbot-Entwicklung</li>
+                                    <li>Dokumentenverarbeitung (OCR→JSON)</li>
+                                    <li>Text-to-Speech / Speech-to-Text</li>
+                                    <li>Social Media Automation</li>
+                                    <li>KI-Integrationsprojekte</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="module-detail-footer">
+                        <button data-modal="modal-plan-2" class="btn btn-sm">Schulungsplan</button>
+                        <a href="../assets/certificates/ki-spezialist.pdf" target="_blank" class="btn btn-sm">Beispielzertifikat</a>
+                        <a href="kontakt" class="btn btn-sm">Jetzt beraten lassen</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MODUL 3 -->
+        <section class="section" id="modul-3">
+            <div class="container">
+                <div class="module-detail-card reveal">
+                    <div class="module-detail-header">
+                        <span class="module-number">Modul 3</span>
+                        <h3>KI-Projektleiter</h3>
+                        <p class="module-tagline">Strategien entwickeln und Teams führen – Gestalten Sie die KI-Zukunft</p>
+                        <div class="module-meta-bar">
+                            <div class="module-meta-item"><strong>13 Tage</strong> / 121 UE</div>
+                            <div class="module-meta-item"><strong>2.775 €</strong></div>
+                        </div>
+                    </div>
+                    <div class="module-detail-body">
+                        <div class="grid-2" style="gap: var(--space-6); margin-bottom: var(--space-6);">
+                            <div>
+                                <h4>Für wen</h4>
+                                <p>Für Führungskräfte, Projektleiter und Entscheider, die KI-Strategien entwickeln und umsetzen wollen. Vorkenntnisse aus Modul 1 oder 2 empfohlen, aber nicht zwingend.</p>
+                            </div>
+                            <div>
+                                <h4>Was danach</h4>
+                                <p>Sie leiten KI-Projekte strategisch, stellen EU AI Act-Konformität sicher, implementieren Governance-Strukturen und treffen fundierte Entscheidungen über KI-Einsatz im Unternehmen.</p>
+                            </div>
+                        </div>
+                        <div class="module-columns">
+                            <div>
+                                <h4>Regeltreue &amp; Governance</h4>
+                                <ul class="content-list">
+                                    <li>EU AI Act vollständig verstehen</li>
+                                    <li>Risikoklassen &amp; Anforderungen</li>
+                                    <li>ISO/IEC Standards (23053, 23894, 42001)</li>
+                                    <li>DSGVO &amp; KI-Spannungsfelder</li>
+                                    <li>CE-Kennzeichnung für KI</li>
+                                    <li>Dokumentationspflichten</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4>Strategische Führung</h4>
+                                <ul class="content-list">
+                                    <li>KI-Strategien entwickeln</li>
+                                    <li>Governance-Strukturen aufbauen</li>
+                                    <li>KI-Komitees leiten</li>
+                                    <li>Ethik-Frameworks implementieren</li>
+                                    <li>Organisationsentwicklung mit KI</li>
+                                    <li>Entscheidungsprozesse gestalten</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="module-detail-footer">
+                        <button data-modal="modal-plan-3" class="btn btn-sm">Schulungsplan</button>
+                        <a href="../assets/certificates/ki-projektleiter.pdf" target="_blank" class="btn btn-sm">Beispielzertifikat</a>
+                        <a href="kontakt" class="btn btn-sm">Jetzt beraten lassen</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MODUL 4 (Featured) -->
+        <section class="section" id="modul-4">
+            <div class="container">
+                <div class="module-detail-card featured reveal">
+                    <div class="module-detail-header">
+                        <span class="module-number">Modul 4</span>
+                        <h3>KI-Manager</h3>
+                        <p class="module-tagline">Die Komplettausbildung – Vom Anwender zum strategischen KI-Experten</p>
+                        <div class="module-meta-bar">
+                            <div class="module-meta-item"><strong>46 Tage</strong> / 429 UE</div>
+                            <div class="module-meta-item"><strong>9.925 €</strong></div>
+                        </div>
+                    </div>
+                    <div class="module-detail-body">
+                        <div class="grid-2" style="gap: var(--space-6); margin-bottom: var(--space-6);">
+                            <div>
+                                <h4>Für wen</h4>
+                                <p>Für alle, die das komplette KI-Wissen aufbauen möchten – von den Grundlagen über technische Implementierung bis zur strategischen Führung. Ideal für Karrierewechsler und ambitionierte Fachkräfte.</p>
+                            </div>
+                            <div>
+                                <h4>Was danach</h4>
+                                <p>Sie beherrschen KI-Anwendung, entwickeln eigene Lösungen und leiten KI-Projekte strategisch. Sie sind zertifizierter KI-Manager mit umfassendem Wissen in Technik, Compliance und Führung.</p>
+                            </div>
+                        </div>
+                        <div class="module-columns">
+                            <div>
+                                <h4>Enthaltene Module</h4>
+                                <ul class="content-list">
+                                    <li>Modul 1: KI-Anwender (13 Tage)</li>
+                                    <li>Modul 2: KI-Spezialist (20 Tage)</li>
+                                    <li>Modul 3: KI-Projektleiter (13 Tage)</li>
+                                    <li>Alle Schulungspläne und Zertifikate</li>
+                                    <li>Durchgehende Betreuung</li>
+                                    <li>Abschlusszertifikat KI-Manager</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4>Ihre Vorteile</h4>
+                                <ul class="content-list">
+                                    <li>Komplettes KI-Kompetenzspektrum</li>
+                                    <li>Nahtloser Lernpfad ohne Unterbrechung</li>
+                                    <li>Alle drei Einzelzertifikate inklusive</li>
+                                    <li>Zusätzliches KI-Manager Zertifikat</li>
+                                    <li>Förderfähig mit Bildungsgutschein</li>
+                                    <li>Optimale Vorbereitung auf den KI-Arbeitsmarkt</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="module-detail-footer">
+                        <a href="termine" class="btn btn-sm">Termine ansehen</a>
+                        <a href="kontakt" class="btn btn-sm">Jetzt beraten lassen</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FÖRDERUNG HINWEIS -->
+        <section class="section">
+            <div class="container">
+                <div class="cta-banner reveal">
+                    <span class="section-label">Förderung</span>
+                    <h2>Alle Module sind förderfähig</h2>
+                    <p>Unsere Weiterbildungen sind <a href="../assets/certificates/citech-azav-zertifikat.pdf" target="_blank" style="color: var(--color-primary-400); text-decoration: underline;">AZAV-zertifiziert durch den TÜV NORD</a>. Die Höhe einer möglichen Förderung hängt von Ihrer individuellen Situation ab. Wir beraten Sie ehrlich und persönlich, welche Förderoptionen für Sie realistisch sind.</p>
+                    <div class="hero-buttons">
+                        <a href="foerderung" class="btn btn-primary">Fördermöglichkeiten ansehen <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+                        <a href="kontakt" class="btn btn-secondary">Förderberatung anfragen</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- LEITBILD -->
+        <section class="section" id="leitbild">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-label">Unser Leitbild</span>
+                    <h2 class="section-title">Worauf wir aufbauen</h2>
+                    <p class="section-subtitle">Die CITECH AI GmbH befähigt Menschen und Unternehmen, praxisnahe, datensouveräne und regelkonforme KI produktiv zu nutzen.</p>
+                </div>
+                <div class="policy-list">
+                    <div class="policy-item reveal"><h4><span>01</span> Arbeitsmarkt- &amp; Kundenorientierung</h4><p>Schulungsinhalte entlang aktueller und absehbarer Qualifikationsbedarfe in KMU und der regionalen Arbeitsmärkte.</p></div>
+                    <div class="policy-item reveal"><h4><span>02</span> Regeltreue</h4><p>Wir erfüllen unsere Zertifizierungsanforderungen (AZAV). Zulassungen werden fristgerecht erneuert.</p></div>
+                    <div class="policy-item reveal"><h4><span>03</span> Teilnehmerschutz &amp; Transparenz</h4><p>Klare Information vor Beginn: Ziele, Inhalte, Dauer, Kosten, Zugangsvoraussetzungen, Prüfungsformen.</p></div>
+                    <div class="policy-item reveal"><h4><span>04</span> Datenschutz &amp; Informationssicherheit</h4><p>Konzeption „Offline-First" und Datenminimierung. Verarbeitung personenbezogener Daten gemäß DSGVO/BDSG.</p></div>
+                    <div class="policy-item reveal"><h4><span>05</span> KI-Compliance &amp; Ethik</h4><p>Leitplanken für verantwortungsvollen KI-Einsatz: Transparenz, Nachvollziehbarkeit, Bias-Prävention.</p></div>
+                    <div class="policy-item reveal"><h4><span>06</span> Didaktik &amp; Barrierefreiheit</h4><p>Erwachsenenpädagogische Standards, klare Lernziele, barrierearme Materialien, Chancengleichheit.</p></div>
+                    <div class="policy-item reveal"><h4><span>07</span> Lehrenden-Qualifikation</h4><p>Nachweis fachlicher und erwachsenenpädagogischer Eignung, regelmäßige Fortbildung.</p></div>
+                    <div class="policy-item reveal"><h4><span>08</span> Kooperationen &amp; Vermittlung</h4><p>Aktives Netzwerk mit KMU, Kammern und Verbänden. Matching von Praxisprojekten und Stellen.</p></div>
+                    <div class="policy-item reveal"><h4><span>09</span> Umwelt &amp; Nachhaltigkeit</h4><p>Bevorzugt energieeffiziente, lokale Rechenressourcen. Digitale Unterlagen, schonender Ressourceneinsatz.</p></div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="../assets/images/logo/citech-logo-white.svg" alt="CITECH AI" class="logo-dark" width="120" height="28">
+                    <img src="../assets/images/logo/Citech Logo klassisch weißer Hintergrund mit Schatten.jpg" alt="CITECH AI" class="logo-light" width="120" height="28">
+                    <p>AZAV-zertifizierter KI-Bildungsträger aus Essen. Schulungen, Beratung und Implementierung – praxisnah und DSGVO-konform.</p>
+                </div>
+                <div><h4 class="footer-heading">Angebot</h4><ul class="footer-links"><li><a href="schulungen">Schulungen</a></li><li><a href="termine">Termine</a></li><li><a href="beratung">Beratung</a></li><li><a href="tools">KI-Tools</a></li><li><a href="foerderung">Förderung</a></li></ul></div>
+                <div><h4 class="footer-heading">Unternehmen</h4><ul class="footer-links"><li><a href="team">Über uns</a></li><li><a href="newsletter">KI-Radar Newsletter</a></li><li><a href="kontakt">Kontakt</a></li></ul></div>
+                <div><h4 class="footer-heading">Rechtliches</h4><ul class="footer-links"><li><a href="impressum">Impressum</a></li><li><a href="datenschutz">Datenschutz</a></li><li><a href="agb">AGB</a></li><li><a href="ki-transparenz">KI-Transparenz</a></li></ul></div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2025–2026 CITECH AI GmbH. Alle Rechte vorbehalten.</span>
+                <span>Design: <a href="https://www.b-line-graphix.de" target="_blank" rel="noopener">B_Line Graphix</a></span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie Banner -->
+    <div class="cookie-banner" role="dialog" aria-label="Cookie-Einstellungen">
+        <h4>Wir respektieren Ihre Privatsphäre</h4>
+        <p>Diese Website verwendet ausschließlich technisch notwendige Cookies. Keine Analyse-Tools, kein Tracking.</p>
+        <div class="cookie-buttons">
+            <button id="cookie-accept" class="btn btn-primary btn-sm">Verstanden</button>
+            <a href="datenschutz" class="btn btn-secondary btn-sm">Datenschutz lesen</a>
+        </div>
+    </div>
+
+    <!-- ==================== MODALS ==================== -->
+
+    <!-- Schulungsplan Modul 1 -->
+    <div id="modal-plan-1" class="modal-overlay" aria-hidden="true" role="dialog" aria-label="Schulungsplan KI-Anwender">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Schließen">&times;</button>
+            <span class="module-number">Modul 1</span>
+            <h3>Schulungsplan: KI-Anwender</h3>
+            <p class="module-tagline">13 Tage intensives Training &middot; Mo–Fr 08:00–16:35</p>
+            <table class="schedule-table">
+                <thead><tr><th>Tag</th><th>Vormittag (08:00–12:30)</th><th>Nachmittag (13:30–16:35)</th></tr></thead>
+                <tbody>
+                    <tr class="week-header"><td colspan="3">Woche 1: Grundlagen &amp; Erste Praxis</td></tr>
+                    <tr><td class="day-label">Tag 1</td><td>Einführung &amp; Kursziele / Geschichte und Entwicklung von KI</td><td>Grundlegende Begriffe (KI, NN, ML, DL) / Aktuelle Entwicklungen</td></tr>
+                    <tr><td class="day-label">Tag 2</td><td>Technische Architektur von LLMs / Einführung Prompt Engineering</td><td>GPT in verschiedenen Stilen / KI-gestützte Informationsrecherche</td></tr>
+                    <tr><td class="day-label">Tag 3</td><td>Dokumentenanalyse mit GPT (RAG-Simulation) / Evaluation von KI-Outputs</td><td>Faktencheck mit GPT / GPT für Textüberarbeitung</td></tr>
+                    <tr><td class="day-label">Tag 4</td><td>Datenqualität &amp; Fehlerquellen / Bias &amp; Diskriminierung</td><td>Diskriminierende Beispiele erkennen / Bias-Vermeidung in Prompts</td></tr>
+                    <tr><td class="day-label">Tag 5</td><td>Grundlagen neuronaler Netze / Grundlagen CNNs und Bilderkennung</td><td>Bildklassifizierungssysteme / Bild Fakes &amp; Deepfakes</td></tr>
+                    <tr class="week-header"><td colspan="3">Woche 2: Vertiefung &amp; Anwendungen</td></tr>
+                    <tr><td class="day-label">Tag 6</td><td>Text-to-Speech Grundlagen / KI in Präsentationen</td><td>PowerPoint mit vertontem Text / Video &amp; Audio Deepfakes</td></tr>
+                    <tr><td class="day-label">Tag 7</td><td>Übersicht über KI-Plattformen / Open-Source vs. Proprietär</td><td>Low-Code-Programmierung mit KI / API-Integration</td></tr>
+                    <tr><td class="day-label">Tag 8</td><td>KI in Verwaltung, Buchhaltung / KI in Marketing und Vertrieb</td><td>Social-Media-Posts mit GPT / KI in Produktion und Logistik</td></tr>
+                    <tr><td class="day-label">Tag 9</td><td>KI im Qualitätswesen / KI in der Weiterbildung</td><td>Quiz generieren mit GPT / KI in Forschung und Entwicklung</td></tr>
+                    <tr><td class="day-label">Tag 10</td><td>KI-Governance und Compliance / Datenschutz und Urheberrecht</td><td>Checkliste Datenschutz bei KI / EU AI Act Überblick</td></tr>
+                    <tr class="week-header"><td colspan="3">Woche 3: Projektarbeit &amp; Prüfung</td></tr>
+                    <tr><td class="day-label">Tag 11</td><td>Transparenz und Erklärbarkeit von KI / Verantwortung und Haftung</td><td>Fallstudien-Diskussion / Kritische Evaluation von KI-Outputs</td></tr>
+                    <tr><td class="day-label">Tag 12</td><td>Projektarbeit 1: KI für wirtschaftliche Abläufe</td><td>Projektarbeit 2: KI-Chatbot – Konzeption und Umsetzung</td></tr>
+                    <tr><td class="day-label">Tag 13</td><td>KI-Chatbot (Fortsetzung) / Lernerfolgskontrolle: Theorie (MC)</td><td>Prüfung: Projektarbeit / KI-Anwendung zur Prozessautomatisierung</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Schulungsplan Modul 2 -->
+    <div id="modal-plan-2" class="modal-overlay" aria-hidden="true" role="dialog" aria-label="Schulungsplan KI-Spezialist">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Schließen">&times;</button>
+            <span class="module-number">Modul 2</span>
+            <h3>Schulungsplan: KI-Spezialist</h3>
+            <p class="module-tagline">20 Tage intensives technisches Training &middot; Mo–Fr 08:00–16:35</p>
+            <table class="schedule-table">
+                <thead><tr><th>Tag</th><th>Vormittag (08:00–12:30)</th><th>Nachmittag (13:30–16:35)</th></tr></thead>
+                <tbody>
+                    <tr class="week-header"><td colspan="3">Woche 1: Python &amp; Workflow-Tools</td></tr>
+                    <tr><td class="day-label">Tag 1</td><td>Python-Grundlagen / Code-Generierung mit LLMs</td><td>Programmierbeispiele im Jupyter Notebook / Test und Bewertung</td></tr>
+                    <tr><td class="day-label">Tag 2</td><td>Coding mit Workflow-Werkzeugen – Grundlagen</td><td>Python und Workflow-Werkzeuge / Test und Bewertung</td></tr>
+                    <tr><td class="day-label">Tag 3</td><td>Coding mit Workflow-Werkzeugen – Anwendungen</td><td>Python und Workflow-Werkzeuge / Test und Bewertung</td></tr>
+                    <tr><td class="day-label">Tag 4</td><td>Datenaufbereitung und Datenbereinigung</td><td>Datenbereinigung praktisch / Test und Bewertung</td></tr>
+                    <tr><td class="day-label">Tag 5</td><td>Datenverarbeitung: PDF → OCR → JSON</td><td>Von PDF über OCR zum JSON / Test und Bewertung</td></tr>
+                    <tr class="week-header"><td colspan="3">Woche 2: RAG-Systeme &amp; Vektordatenbanken</td></tr>
+                    <tr><td class="day-label">Tag 6</td><td>Chunking &amp; Vectorizing verstehen</td><td>Embeddings praktisch / Test und Bewertung</td></tr>
+                    <tr><td class="day-label">Tag 7</td><td>Aufbau eines einfachen Offline-LLM</td><td>Programmierung und Betrieb eines Offline-LLM</td></tr>
+                    <tr><td class="day-label">Tag 8</td><td>Vektordatenbanken bauen und nutzen</td><td>Similarity Search praktisch / Test und Bewertung</td></tr>
+                    <tr><td class="day-label">Tag 9</td><td>Aufbau eines einfachen Offline RAG-Modells</td><td>Wissen lokal abrufen / Test und Bewertung</td></tr>
+                    <tr><td class="day-label">Tag 10</td><td>Offline-RAGs in Unternehmensprozessen</td><td>Antworten aus internen Dokumenten</td></tr>
+                    <tr class="week-header"><td colspan="3">Woche 3: Chatbots &amp; Bilderkennung</td></tr>
+                    <tr><td class="day-label">Tag 11</td><td>Chatbot mit Offline RAG aufbauen</td><td>Workflow Tools für Chatbots / Test und Bewertung</td></tr>
+                    <tr><td class="day-label">Tag 12</td><td>APIs und Webhooks in Action</td><td>Bestellungen automatisieren / Test und Bewertung</td></tr>
+                    <tr><td class="day-label">Tag 13</td><td>Symbolische KI / Regelbasierte Entscheidungen</td><td>Interner IT-Helpdesk mit KI / Test und Bewertung</td></tr>
+                    <tr><td class="day-label">Tag 14</td><td>Bilderkennung mit CNN-Modellen – Grundlagen</td><td>Von der Form zur Bezeichnung / Test und Bewertung</td></tr>
+                    <tr><td class="day-label">Tag 15</td><td>Bilderkennung mit CNN – Anwendungen</td><td>CNN und Workflow kombinieren / Test und Bewertung</td></tr>
+                    <tr class="week-header"><td colspan="3">Woche 4: Integration &amp; Automation</td></tr>
+                    <tr><td class="day-label">Tag 16</td><td>TTS-Applikationen – Slides-to-Voice</td><td>Text-to-Speech praktisch / Test und Bewertung</td></tr>
+                    <tr><td class="day-label">Tag 17</td><td>STT-Applikationen – Voice-to-Report</td><td>Speech-to-Text für Qualitätssicherung</td></tr>
+                    <tr><td class="day-label">Tag 18</td><td>APIs und Soziale Netze</td><td>Beiträge posten bei Facebook &amp; Co.</td></tr>
+                    <tr><td class="day-label">Tag 19</td><td>API-Sicherheit und Datenverschlüsselung</td><td>Sichere API-Entwicklung praktisch</td></tr>
+                    <tr><td class="day-label">Tag 20</td><td>KI-Integrationsprojekt: Marketing-Automation</td><td>Kampagnenplattformen anbinden / Bewertung</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Schulungsplan Modul 3 -->
+    <div id="modal-plan-3" class="modal-overlay" aria-hidden="true" role="dialog" aria-label="Schulungsplan KI-Projektleiter">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Schließen">&times;</button>
+            <span class="module-number">Modul 3</span>
+            <h3>Schulungsplan: KI-Projektleiter</h3>
+            <p class="module-tagline">13 Tage Management- und Regeltreue-Training &middot; Mo–Fr 08:00–16:35</p>
+            <table class="schedule-table">
+                <thead><tr><th>Tag</th><th>Vormittag (08:00–12:30)</th><th>Nachmittag (13:30–16:35)</th></tr></thead>
+                <tbody>
+                    <tr class="week-header"><td colspan="3">Woche 1: Projektmanagement Grundlagen</td></tr>
+                    <tr><td class="day-label">Tag 1</td><td>Grundlagen Projektmanagement mit KI-Schwerpunkt</td><td>Stakeholder-Analyse / Projektorganisation</td></tr>
+                    <tr><td class="day-label">Tag 2</td><td>Projektphasen &amp; Meilensteine / PSP</td><td>Arbeitspaketbeschreibungen / Vorlagen erstellen</td></tr>
+                    <tr><td class="day-label">Tag 3</td><td>Berichtswesen &amp; Dokumentation</td><td>Kommunikationsmatrix / Führungsmethoden</td></tr>
+                    <tr><td class="day-label">Tag 4</td><td>Risikomanagement &amp; Risikomatrix</td><td>Benefit Management / Nutzenorientierung</td></tr>
+                    <tr><td class="day-label">Tag 5</td><td>Portfoliomanagement &amp; Priorisierung</td><td>KI-relevante Gesetze, Normen / EU AI Act Überblick</td></tr>
+                    <tr class="week-header"><td colspan="3">Woche 2: EU AI Act &amp; Regeltreue</td></tr>
+                    <tr><td class="day-label">Tag 6</td><td>EU AI Act Risikoklassen / Hochrisiko-KI</td><td>Fallstudie HR-KI / Konformitätsbewertung &amp; CE</td></tr>
+                    <tr><td class="day-label">Tag 7</td><td>Konformitätsprozess simulieren</td><td>ISO/IEC 23053 / ISO/IEC 23894</td></tr>
+                    <tr><td class="day-label">Tag 8</td><td>ISO/IEC 42001 / DIN SPEC 92001</td><td>Governance-Strukturen / Menschliche Aufsicht, DSGVO</td></tr>
+                    <tr><td class="day-label">Tag 9</td><td>Rollenspiel: Projektleiter vs. Compliance</td><td>Gesellschaftliche Folgenabschätzung / Ethik-Frameworks</td></tr>
+                    <tr><td class="day-label">Tag 10</td><td>Datensicherheit &amp; Privacy by Design</td><td>KI-Strategie entwickeln / KI-Roadmap</td></tr>
+                    <tr class="week-header"><td colspan="3">Woche 3: Strategie &amp; Abschluss</td></tr>
+                    <tr><td class="day-label">Tag 11</td><td>KPIs &amp; Erfolgsmessung / Change Management</td><td>Akzeptanz für KI entwickeln / Review &amp; Transfer</td></tr>
+                    <tr><td class="day-label">Tag 12</td><td>Best Practices &amp; Fallstudien / Rechtliche Spezialthemen</td><td>Compliance &amp; Audit / Audit-Simulation</td></tr>
+                    <tr><td class="day-label">Tag 13</td><td>Lernerfolgskontrolle: Theorie (MC) / Praxis (Fallstudie)</td><td>Gruppenarbeit / Präsentation &amp; Fachgespräch</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="../js/main.js?v=1"></script>
+</body>
+</html>

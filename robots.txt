@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+# Sensible Bereiche
+Disallow: /assets/certificates/
+Disallow: /assets/fonts/
+
+# Sitemap
+Sitemap: https://www.citech-ai.de/sitemap.xml
+
+# Crawl-Rate
+Crawl-delay: 1

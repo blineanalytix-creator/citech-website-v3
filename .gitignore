@@ -1,0 +1,25 @@
+# OS
+.DS_Store
+Thumbs.db
+Desktop.ini
+nul
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Claude
+.claude/
+
+# Screenshots (development only)
+Screenshot*.jpg
+Screenshot*.png
+
+# Backups
+*.bak
+*.backup
+
+# Node (if used for build tools)
+node_modules/

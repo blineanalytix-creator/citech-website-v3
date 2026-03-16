@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="de" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Beratung – EU AI Act Regeltreue & KI-Compliance | CITECH AI</title>
+    <meta name="description" content="EU AI Act Beratung: Risikoklassifizierung, Gap-Analyse, technische Dokumentation und Audit-Vorbereitung. CITECH AI begleitet Sie zur KI-Compliance.">
+
+    <link rel="canonical" href="https://www.citech-ai.de/pages/beratung">
+    <link rel="alternate" hreflang="de" href="https://www.citech-ai.de/pages/beratung">
+    <link rel="alternate" hreflang="en" href="https://www.citech-ai.de/en/pages/beratung">
+
+    <meta property="og:title" content="Beratung – EU AI Act Regeltreue & KI-Compliance | CITECH AI">
+    <meta property="og:description" content="Risikoklassifizierung, Gap-Analyse, Dokumentation und Audit-Vorbereitung für EU AI Act Compliance.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.citech-ai.de/pages/beratung">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="CITECH AI">
+
+    <link rel="icon" type="image/png" href="../favicon.png">
+    <link rel="preload" href="../assets/fonts/Inter-VariableFont.woff2" as="font" type="font/woff2" crossorigin>
+    <style>
+        @font-face {
+            font-family: 'Inter';
+            src: url('../assets/fonts/Inter-VariableFont.woff2') format('woff2');
+            font-weight: 100 900;
+            font-style: normal;
+            font-display: swap;
+        }
+    </style>
+    <link rel="stylesheet" href="../css/main.css?v=1">
+    <link rel="stylesheet" href="../css/mobile.css?v=1" media="(max-width: 1024px)">
+</head>
+<body>
+
+    <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
+
+    <div class="ambient-bg" aria-hidden="true">
+        <div class="ambient-mesh">
+            <div class="mesh-gradient mesh-gradient-1"></div>
+            <div class="mesh-gradient mesh-gradient-2"></div>
+            <div class="mesh-gradient mesh-gradient-3"></div>
+        </div>
+        <canvas id="neural-bg-canvas"></canvas>
+    </div>
+
+    <!-- HEADER -->
+    <header class="header" role="banner">
+        <div class="container header-inner">
+            <a href="../" class="header-logo" aria-label="CITECH AI Startseite">
+                <img src="../assets/images/logo/citech-logo-white.svg" alt="CITECH AI" class="logo-dark" width="140" height="32">
+                <img src="../assets/images/logo/Citech Logo klassisch weißer Hintergrund mit Schatten.jpg" alt="CITECH AI" class="logo-light" width="140" height="32">
+            </a>
+            <nav class="nav-desktop" role="navigation" aria-label="Hauptnavigation">
+                <a href="../" class="nav-link">Startseite</a>
+                <div class="nav-dropdown">
+                    <button class="nav-link nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+                        Schulungen
+                        <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M3 5l3 3 3-3"/></svg>
+                    </button>
+                    <div class="nav-dropdown-menu" role="menu">
+                        <a href="schulungen" role="menuitem">Modulübersicht</a>
+                        <a href="termine" role="menuitem">Termine 2026</a>
+                        <a href="foerderung" role="menuitem">Förderung</a>
+                    </div>
+                </div>
+                <a href="beratung" class="nav-link active">Beratung</a>
+                <a href="tools" class="nav-link">Tools</a>
+                <a href="team" class="nav-link">Über uns</a>
+                <a href="kontakt" class="nav-link">Kontakt</a>
+            </nav>
+            <div class="header-actions">
+                <a href="../en/pages/beratung" class="lang-toggle" aria-label="Switch to English">EN</a>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Farbschema wechseln">
+                    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                </button>
+                <button class="mobile-menu-toggle" aria-label="Menü öffnen" aria-expanded="false"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" aria-hidden="true">
+        <nav class="mobile-menu-nav" aria-label="Mobile Navigation">
+            <a href="../" class="mobile-nav-link">Startseite</a>
+            <div class="mobile-dropdown">
+                <button class="mobile-nav-link mobile-dropdown-toggle" aria-expanded="false">Schulungen</button>
+                <div class="mobile-dropdown-items">
+                    <a href="schulungen">Modulübersicht</a>
+                    <a href="termine">Termine 2026</a>
+                    <a href="foerderung">Förderung</a>
+                </div>
+            </div>
+            <a href="beratung" class="mobile-nav-link active">Beratung</a>
+            <a href="tools" class="mobile-nav-link">Tools</a>
+            <a href="team" class="mobile-nav-link">Über uns</a>
+            <a href="kontakt" class="mobile-nav-link">Kontakt</a>
+        </nav>
+    </div>
+
+    <!-- ==================== MAIN ==================== -->
+    <main id="main-content" role="main">
+
+        <!-- PAGE HERO -->
+        <section class="page-hero section">
+            <div class="container">
+                <span class="section-label reveal">Beratung</span>
+                <h1 class="reveal reveal-delay-1">Regeltreue ist kein Hindernis<br><span class="gradient-text">für Innovation</span></h1>
+                <p class="section-subtitle reveal reveal-delay-2">
+                    Sondern das Fundament für nachhaltigen Erfolg mit KI. Wir begleiten Sie von der Risikoklassifizierung bis zur Zertifizierung – praxisnah und rechtssicher.
+                </p>
+                <div class="badges-row reveal reveal-delay-3" style="margin-top: var(--space-8); justify-content: flex-start;">
+                    <span class="badge">EU AI Act</span>
+                    <span class="badge">ISO/IEC 42001</span>
+                    <span class="badge">DSGVO-konform</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB SYSTEM -->
+        <section class="section" id="leistungen">
+            <div class="container tab-wrapper">
+
+                <!-- Tab Navigation -->
+                <div class="tab-nav reveal">
+                    <button class="tab-btn active" data-tab="tab-beratung">Unsere Beratung</button>
+                    <button class="tab-btn" data-tab="tab-leitbild">Unser Leitbild</button>
+                </div>
+
+                <!-- ======== TAB 1: UNSERE BERATUNG ======== -->
+                <div class="tab-content active" id="tab-beratung">
+
+                    <!-- Leistungen als Accent-Cards -->
+                    <div class="section-header reveal">
+                        <span class="section-label">Unsere Leistungen</span>
+                        <h2 class="section-title">Regeltreue-Beratung im Überblick</h2>
+                    </div>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); margin-bottom: var(--space-16);">
+                        <div class="accent-card reveal">
+                            <h4>Klassifizierung von KI-Systemen</h4>
+                            <p>Systematische Einordnung nach EU AI Act mit klaren Handlungsempfehlungen je Risikostufe.</p>
+                        </div>
+                        <div class="accent-card reveal">
+                            <h4>Gap-Analyse</h4>
+                            <p>Identifikation von Lücken zwischen IST-Zustand und regulatorischen Anforderungen.</p>
+                        </div>
+                        <div class="accent-card reveal">
+                            <h4>Technische Dokumentation</h4>
+                            <p>Risikomanagementsystem, Datenqualitätsnachweise, Transparenzberichte.</p>
+                        </div>
+                        <div class="accent-card reveal">
+                            <h4>Audit- &amp; Konformitätsvorbereitung</h4>
+                            <p>Simulation der Prüfszenarien und Aufbau interner Prüfroutinen.</p>
+                        </div>
+                        <div class="accent-card reveal">
+                            <h4>CE-Kennzeichnungsbegleitung</h4>
+                            <p>Begleitung des gesamten Konformitätsbewertungsverfahrens.</p>
+                        </div>
+                        <div class="accent-card reveal">
+                            <h4>Mitarbeiterschulung</h4>
+                            <p>Compliance-Training für Teams im Umgang mit KI-Systemen.</p>
+                        </div>
+                    </div>
+
+                    <!-- Risikoklassen -->
+                    <div class="section-header reveal" id="risikoklassen">
+                        <span class="section-label">EU AI Act</span>
+                        <h2 class="section-title">Die vier Risikoklassen</h2>
+                        <p class="section-subtitle">Bei Verstößen drohen Bußgelder von bis zu 35 Mio. EUR oder 7 % des weltweiten Jahresumsatzes.</p>
+                    </div>
+                    <div class="services-grid" style="margin-bottom: var(--space-16);">
+                        <div class="glass-card reveal reveal-delay-1">
+                            <div class="glass-card-inner">
+                                <span style="display:inline-block; width:10px; height:10px; border-radius:50%; background:#22c55e; margin-bottom: var(--space-4);"></span>
+                                <h3>Minimales Risiko</h3>
+                                <p style="margin-bottom: var(--space-4);"><strong>Freiwillige Verhaltenskodizes</strong></p>
+                                <ul class="content-list"><li>Spam-Filter</li><li>KI in Videospielen</li><li>Empfehlungssysteme</li><li>Automatische Textkorrektur</li></ul>
+                            </div>
+                        </div>
+                        <div class="glass-card reveal reveal-delay-2">
+                            <div class="glass-card-inner">
+                                <span style="display:inline-block; width:10px; height:10px; border-radius:50%; background:var(--color-primary-400); margin-bottom: var(--space-4);"></span>
+                                <h3>Begrenztes Risiko</h3>
+                                <p style="margin-bottom: var(--space-4);"><strong>Transparenzpflichten</strong></p>
+                                <ul class="content-list"><li>Chatbots und Konversations-KI</li><li>Emotionserkennung</li><li>Deepfake-Generierung</li><li>KI-generierte Inhalte</li></ul>
+                            </div>
+                        </div>
+                        <div class="glass-card reveal reveal-delay-3">
+                            <div class="glass-card-inner">
+                                <span style="display:inline-block; width:10px; height:10px; border-radius:50%; background:#f59e0b; margin-bottom: var(--space-4);"></span>
+                                <h3>Hohes Risiko</h3>
+                                <p style="margin-bottom: var(--space-4);"><strong>Strenge Auflagen &amp; CE-Kennzeichnung</strong></p>
+                                <ul class="content-list"><li>KI im Personalwesen</li><li>Biometrische Identifizierung</li><li>Kritische Infrastruktur</li><li>Kreditwürdigkeitsprüfung</li></ul>
+                            </div>
+                        </div>
+                        <div class="glass-card reveal reveal-delay-4">
+                            <div class="glass-card-inner">
+                                <span style="display:inline-block; width:10px; height:10px; border-radius:50%; background:#ef4444; margin-bottom: var(--space-4);"></span>
+                                <h3>Unzulässiges Risiko</h3>
+                                <p style="margin-bottom: var(--space-4);"><strong>Anwendungsverbot</strong></p>
+                                <ul class="content-list"><li>Social Scoring durch Behörden</li><li>Unterschwellige Manipulation</li><li>Ausnutzung vulnerabler Gruppen</li><li>Biometrische Echtzeit-Fernidentifizierung</li></ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 5-Phasen als Timeline -->
+                    <div class="section-header reveal">
+                        <span class="section-label">Unser Vorgehen</span>
+                        <h2 class="section-title">In 5 Phasen zur Regeltreue</h2>
+                    </div>
+                    <div class="process-timeline" style="margin-bottom: var(--space-16);">
+                        <div class="process-step reveal">
+                            <div class="process-number">1</div>
+                            <div class="process-body">
+                                <h4>Analyse &amp; Bestandsaufnahme</h4>
+                                <p>Erfassung aller KI-Systeme, Dokumentenanalyse, Stakeholder-Interviews zur IST-Zustandsermittlung.</p>
+                            </div>
+                        </div>
+                        <div class="process-step reveal">
+                            <div class="process-number">2</div>
+                            <div class="process-body">
+                                <h4>Risikobewertung &amp; Klassifizierung</h4>
+                                <p>Systematische Einordnung nach EU AI Act. Identifikation von Regeltreue-Lücken und kritischen Bereichen.</p>
+                            </div>
+                        </div>
+                        <div class="process-step reveal">
+                            <div class="process-number">3</div>
+                            <div class="process-body">
+                                <h4>Konzeption der Maßnahmen</h4>
+                                <p>Individueller Umsetzungsplan mit priorisierten Handlungsempfehlungen und definierten Meilensteinen.</p>
+                            </div>
+                        </div>
+                        <div class="process-step reveal">
+                            <div class="process-number">4</div>
+                            <div class="process-body">
+                                <h4>Implementierung</h4>
+                                <p>Dokumentenerstellung, Prozessanpassung, Aufbau des Risikomanagementsystems, Mitarbeiterschulung.</p>
+                            </div>
+                        </div>
+                        <div class="process-step reveal">
+                            <div class="process-number">5</div>
+                            <div class="process-body">
+                                <h4>Zertifizierung &amp; Audit</h4>
+                                <p>Audit-Vorbereitung, interne Simulation, Zertifizierungsprozessbegleitung, Behördennachweisführung.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pakete-Vergleich -->
+                    <div class="section-header reveal" id="pakete">
+                        <span class="section-label">Beratungspakete</span>
+                        <h2 class="section-title">Das passende Paket</h2>
+                    </div>
+                    <div class="glass-card reveal" style="overflow-x: auto; margin-bottom: var(--space-16);">
+                        <div class="glass-card-inner">
+                            <table class="schedule-table">
+                                <thead><tr><th style="min-width:160px;">Leistung</th><th>Quick Check</th><th>Regeltreue-Paket</th><th>Enterprise</th></tr></thead>
+                                <tbody>
+                                    <tr><td class="day-label">Umfang</td><td>1-Tages-Workshop</td><td>Vollständige Begleitung</td><td>Konzernweite Lösung</td></tr>
+                                    <tr><td class="day-label">IST-Analyse</td><td>Überblick</td><td>Detailliert</td><td>Multi-System</td></tr>
+                                    <tr><td class="day-label">Gap-Analyse</td><td style="color:var(--color-primary-400);">&#10003;</td><td style="color:var(--color-primary-400);">&#10003;</td><td style="color:var(--color-primary-400);">&#10003;</td></tr>
+                                    <tr><td class="day-label">Dokumentation</td><td>Management Summary</td><td>Vollständig</td><td>International</td></tr>
+                                    <tr><td class="day-label">Schulungen</td><td style="color:var(--color-text-muted);">—</td><td>Enthalten</td><td>Umfassend</td></tr>
+                                    <tr><td class="day-label">Begleitung</td><td style="color:var(--color-text-muted);">—</td><td>3 Monate</td><td>Dauerhaft</td></tr>
+                                    <tr><td class="day-label">Audit-Vorbereitung</td><td style="color:var(--color-text-muted);">—</td><td style="color:var(--color-primary-400);">&#10003;</td><td style="color:var(--color-primary-400);">&#10003;</td></tr>
+                                    <tr><td class="day-label">Preis</td><td>Auf Anfrage</td><td>Auf Anfrage</td><td>Auf Anfrage</td></tr>
+                                </tbody>
+                            </table>
+                            <div style="display:flex; justify-content:center; margin-top:var(--space-6);"><a href="kontakt" class="btn btn-sm">Beratung anfragen</a></div>
+                        </div>
+                    </div>
+
+                    <!-- Standards -->
+                    <div class="section-header reveal">
+                        <span class="section-label">Referenzrahmen</span>
+                        <h2 class="section-title">Standards &amp; Normen</h2>
+                    </div>
+                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-4);">
+                        <div class="accent-card reveal" style="text-align: center;"><h4>ISO/IEC 42001</h4><p>KI-Managementsysteme</p></div>
+                        <div class="accent-card reveal" style="text-align: center;"><h4>ISO 9001</h4><p>QM-Integration</p></div>
+                        <div class="accent-card reveal" style="text-align: center;"><h4>DSGVO</h4><p>Datenschutzrecht</p></div>
+                    </div>
+
+                </div>
+
+                <!-- ======== TAB 2: UNSER LEITBILD ======== -->
+                <div class="tab-content" id="tab-leitbild">
+
+                    <!-- Kernaussage -->
+                    <div class="section-header reveal">
+                        <span class="section-label">Unser Leitbild</span>
+                        <h2 class="section-title">Regeltreue-Beratung</h2>
+                        <p class="section-subtitle">Wir begleiten Organisationen zur rechtssicheren und ethisch verantwortungsvollen Nutzung von KI – mit klarem Fokus auf pragmatische Umsetzbarkeit statt überbordender Bürokratie.</p>
+                    </div>
+                    <div class="accent-card reveal" style="margin-bottom: var(--space-16);">
+                        <p style="font-size: var(--font-base); color: var(--color-text-secondary); line-height: var(--line-height-relaxed);">Regulatorische Anforderungen sollen KI-Innovation nicht ersticken, sondern auf ein sicheres Fundament stellen.</p>
+                    </div>
+
+                    <!-- 5 Beratungsprinzipien als Timeline -->
+                    <div class="section-header reveal">
+                        <h3 class="section-title" style="font-size: var(--font-2xl);">Unsere 5 Prinzipien</h3>
+                    </div>
+                    <div class="process-timeline" style="margin-bottom: var(--space-16);">
+                        <div class="process-step reveal">
+                            <div class="process-number">1</div>
+                            <div class="process-body">
+                                <h4>Hören vor Urteilen</h4>
+                                <p>Wir verstehen Ihre Geschäftsprozesse, bevor wir Compliance-Anforderungen auferlegen.</p>
+                            </div>
+                        </div>
+                        <div class="process-step reveal">
+                            <div class="process-number">2</div>
+                            <div class="process-body">
+                                <h4>Iterativ statt Big Bang</h4>
+                                <p>Schrittweise Umsetzung mit Quick Wins, nicht jahrelange Großprojekte.</p>
+                            </div>
+                        </div>
+                        <div class="process-step reveal">
+                            <div class="process-number">3</div>
+                            <div class="process-body">
+                                <h4>Befähigen statt Bevormunden</h4>
+                                <p>Wir schulen Ihre Teams, sodass Sie zunehmend selbstständig agieren können.</p>
+                            </div>
+                        </div>
+                        <div class="process-step reveal">
+                            <div class="process-number">4</div>
+                            <div class="process-body">
+                                <h4>Dokumentieren mit Maß</h4>
+                                <p>So viel wie nötig, so wenig wie möglich – Compliance-Dokumentation soll helfen, nicht lähmen.</p>
+                            </div>
+                        </div>
+                        <div class="process-step reveal">
+                            <div class="process-number">5</div>
+                            <div class="process-body">
+                                <h4>Langfristige Partnerschaft</h4>
+                                <p>Compliance ist kein Einmalprojekt. Wir bleiben an Ihrer Seite, wenn sich Gesetze oder Ihre KI-Landschaft ändern.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Was wir NICHT tun -->
+                    <div class="section-header reveal">
+                        <h3 class="section-title" style="font-size: var(--font-2xl);">Was wir nicht tun</h3>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: var(--space-4); margin-bottom: var(--space-16);">
+                        <div class="accent-card reveal">
+                            <h4>Angst schüren</h4>
+                            <p>Wir arbeiten nicht mit Panik-Rhetorik, sondern mit nüchterner Risikoeinschätzung.</p>
+                        </div>
+                        <div class="accent-card reveal">
+                            <h4>Überkomplizieren</h4>
+                            <p>Keine aufgeblähten Compliance-Frameworks, die mehr Verwaltungsaufwand als Nutzen bringen.</p>
+                        </div>
+                        <div class="accent-card reveal">
+                            <h4>Juristische Ersatzleistung</h4>
+                            <p>Wir sind Berater, keine Rechtsanwälte. Bei rechtlich heiklen Einzelfragen vermitteln wir spezialisierte Kanzleien.</p>
+                        </div>
+                        <div class="accent-card reveal">
+                            <h4>Technologie-agnostisch bleiben</h4>
+                            <p>Wir verstehen die KI-Systeme, über die wir beraten – oberflächliche Compliance-Checks ohne technisches Verständnis lehnen wir ab.</p>
+                        </div>
+                        <div class="accent-card reveal">
+                            <h4>Fertiglösungen verkaufen</h4>
+                            <p>Jede Organisation ist anders. Copy-Paste-Compliance funktioniert nicht.</p>
+                        </div>
+                    </div>
+
+                    <!-- Unser Versprechen -->
+                    <div class="section-header reveal">
+                        <h3 class="section-title" style="font-size: var(--font-2xl);">Unser Versprechen</h3>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: var(--space-4); margin-bottom: var(--space-16);">
+                        <div class="accent-card reveal">
+                            <h4>Ehrliche Beratung</h4>
+                            <p>Wir sagen, was Sie hören müssen, nicht was Sie hören wollen.</p>
+                        </div>
+                        <div class="accent-card reveal">
+                            <h4>Vertraulichkeit</h4>
+                            <p>Ihre Daten, Prozesse und Compliance-Lücken bleiben unter strikter Geheimhaltung.</p>
+                        </div>
+                        <div class="accent-card reveal">
+                            <h4>Aktualität</h4>
+                            <p>Unsere Empfehlungen basieren auf dem neuesten Stand von Gesetzgebung und Best Practices.</p>
+                        </div>
+                        <div class="accent-card reveal">
+                            <h4>Nachvollziehbarkeit</h4>
+                            <p>Jede Compliance-Anforderung, die wir empfehlen, begründen wir mit der dahinterstehenden Rechtsnorm oder dem Risiko.</p>
+                        </div>
+                        <div class="accent-card reveal">
+                            <h4>Partnerschaften</h4>
+                            <p>Wir arbeiten mit spezialisierten Rechtsanwaltskanzleien, Zertifizierungsstellen und technischen Experten zusammen – für ganzheitliche Lösungen.</p>
+                        </div>
+                    </div>
+
+                    <!-- Regeltreue-Checkliste -->
+                    <div class="section-header reveal">
+                        <h3 class="section-title" style="font-size: var(--font-2xl);">Regeltreue-Checkliste</h3>
+                        <p class="section-subtitle">Prüfen Sie Ihren aktuellen Stand – je mehr Punkte offen sind, desto dringender ist eine Beratung.</p>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: var(--space-3);">
+                        <div class="accent-card reveal"><p style="display: flex; align-items: center; gap: var(--space-3);">&#9744; Alle eingesetzten KI-Systeme sind identifiziert und dokumentiert</p></div>
+                        <div class="accent-card reveal"><p style="display: flex; align-items: center; gap: var(--space-3);">&#9744; Die Risikoklasse jeder KI-Anwendung ist bekannt und klassifiziert</p></div>
+                        <div class="accent-card reveal"><p style="display: flex; align-items: center; gap: var(--space-3);">&#9744; Technische Dokumentation liegt vollständig vor</p></div>
+                        <div class="accent-card reveal"><p style="display: flex; align-items: center; gap: var(--space-3);">&#9744; Ein systematisches KI-Risikomanagement ist etabliert</p></div>
+                        <div class="accent-card reveal"><p style="display: flex; align-items: center; gap: var(--space-3);">&#9744; Transparenzanforderungen werden erfüllt</p></div>
+                        <div class="accent-card reveal"><p style="display: flex; align-items: center; gap: var(--space-3);">&#9744; Menschliche Aufsicht ist gewährleistet (Human-in-the-Loop)</p></div>
+                        <div class="accent-card reveal"><p style="display: flex; align-items: center; gap: var(--space-3);">&#9744; Datenschutz-Folgenabschätzung wurde durchgeführt</p></div>
+                        <div class="accent-card reveal"><p style="display: flex; align-items: center; gap: var(--space-3);">&#9744; Mitarbeitende sind im Umgang mit KI-Systemen geschult</p></div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="section" id="beratung-cta">
+            <div class="container">
+                <div class="cta-banner reveal">
+                    <span class="section-label">Nächster Schritt</span>
+                    <h2>Starten Sie mit einer Erstberatung</h2>
+                    <p>Der EU AI Act ist in Kraft – die Übergangsfristen laufen. Lassen Sie uns gemeinsam prüfen, wo Ihr Unternehmen steht und welche Schritte jetzt Priorität haben.</p>
+                    <div class="hero-buttons">
+                        <a href="kontakt" class="btn btn-primary">
+                            Beratung anfragen
+                            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+                        </a>
+                        <a href="schulungen" class="btn btn-secondary">Schulungen ansehen</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="../assets/images/logo/citech-logo-white.svg" alt="CITECH AI" class="logo-dark" width="120" height="28">
+                    <img src="../assets/images/logo/Citech Logo klassisch weißer Hintergrund mit Schatten.jpg" alt="CITECH AI" class="logo-light" width="120" height="28">
+                    <p>AZAV-zertifizierter KI-Bildungsträger aus Essen. Schulungen, Beratung und Implementierung – praxisnah und DSGVO-konform.</p>
+                </div>
+                <div><h4 class="footer-heading">Angebot</h4><ul class="footer-links"><li><a href="schulungen">Schulungen</a></li><li><a href="termine">Termine</a></li><li><a href="beratung">Beratung</a></li><li><a href="tools">KI-Tools</a></li><li><a href="foerderung">Förderung</a></li></ul></div>
+                <div><h4 class="footer-heading">Unternehmen</h4><ul class="footer-links"><li><a href="team">Über uns</a></li><li><a href="newsletter">KI-Radar Newsletter</a></li><li><a href="kontakt">Kontakt</a></li></ul></div>
+                <div><h4 class="footer-heading">Rechtliches</h4><ul class="footer-links"><li><a href="impressum">Impressum</a></li><li><a href="datenschutz">Datenschutz</a></li><li><a href="agb">AGB</a></li><li><a href="ki-transparenz">KI-Transparenz</a></li></ul></div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2025–2026 CITECH AI GmbH. Alle Rechte vorbehalten.</span>
+                <span>Design: <a href="https://www.b-line-graphix.de" target="_blank" rel="noopener">B_Line Graphix</a></span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie Banner -->
+    <div class="cookie-banner" role="dialog" aria-label="Cookie-Einstellungen">
+        <h4>Wir respektieren Ihre Privatsphäre</h4>
+        <p>Diese Website verwendet ausschließlich technisch notwendige Cookies. Keine Analyse-Tools, kein Tracking.</p>
+        <div class="cookie-buttons">
+            <button id="cookie-accept" class="btn btn-primary btn-sm">Verstanden</button>
+            <a href="datenschutz" class="btn btn-secondary btn-sm">Datenschutz lesen</a>
+        </div>
+    </div>
+
+    <script src="../js/main.js?v=1"></script>
+</body>
+</html>

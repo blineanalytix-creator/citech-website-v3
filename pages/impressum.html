@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="de" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Impressum – CITECH AI</title>
+    <meta name="description" content="Impressum der CITECH AI GmbH – Rechtliche Informationen, Handelsregister, AZAV-Zertifizierung und Kontaktdaten.">
+
+    <link rel="canonical" href="https://www.citech-ai.de/pages/impressum">
+    <link rel="alternate" hreflang="de" href="https://www.citech-ai.de/pages/impressum">
+    <link rel="alternate" hreflang="en" href="https://www.citech-ai.de/en/pages/impressum">
+
+    <meta property="og:title" content="Impressum – CITECH AI">
+    <meta property="og:description" content="Impressum der CITECH AI GmbH – Rechtliche Informationen.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.citech-ai.de/pages/impressum">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="CITECH AI">
+
+    <link rel="icon" type="image/png" href="../favicon.png">
+    <link rel="preload" href="../assets/fonts/Inter-VariableFont.woff2" as="font" type="font/woff2" crossorigin>
+    <style>
+        @font-face {
+            font-family: 'Inter';
+            src: url('../assets/fonts/Inter-VariableFont.woff2') format('woff2');
+            font-weight: 100 900;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        .legal-content { max-width: 800px; margin: 0 auto; padding-top: calc(80px + var(--space-12)); }
+        .legal-content h1 { margin-bottom: var(--space-8); color: var(--color-text-primary); }
+        .legal-content h2 { font-size: var(--font-xl); margin-top: var(--space-10); margin-bottom: var(--space-4); color: var(--color-primary-400); }
+        .legal-content h3 { font-size: var(--font-lg); margin-top: var(--space-6); margin-bottom: var(--space-3); color: var(--color-primary-400); }
+        .legal-content p { margin-bottom: var(--space-4); font-size: var(--font-sm); color: var(--color-text-secondary); line-height: var(--line-height-relaxed); }
+        .legal-content ul, .legal-content ol { margin-bottom: var(--space-4); padding-left: var(--space-6); }
+        .legal-content li { font-size: var(--font-sm); color: var(--color-text-secondary); line-height: var(--line-height-relaxed); margin-bottom: var(--space-2); }
+        .legal-content a { color: var(--color-primary-400); }
+    </style>
+    <link rel="stylesheet" href="../css/main.css?v=1">
+    <link rel="stylesheet" href="../css/mobile.css?v=1" media="(max-width: 1024px)">
+</head>
+<body>
+
+    <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
+
+    <div class="ambient-bg" aria-hidden="true">
+        <div class="ambient-mesh">
+            <div class="mesh-gradient mesh-gradient-1"></div>
+            <div class="mesh-gradient mesh-gradient-2"></div>
+            <div class="mesh-gradient mesh-gradient-3"></div>
+        </div>
+        <canvas id="neural-bg-canvas"></canvas>
+    </div>
+
+    <!-- HEADER -->
+    <header class="header" role="banner">
+        <div class="container header-inner">
+            <a href="../" class="header-logo" aria-label="CITECH AI Startseite">
+                <img src="../assets/images/logo/citech-logo-white.svg" alt="CITECH AI" class="logo-dark" width="140" height="32">
+                <img src="../assets/images/logo/Citech Logo klassisch weißer Hintergrund mit Schatten.jpg" alt="CITECH AI" class="logo-light" width="140" height="32">
+            </a>
+            <nav class="nav-desktop" role="navigation" aria-label="Hauptnavigation">
+                <a href="../" class="nav-link">Startseite</a>
+                <div class="nav-dropdown">
+                    <button class="nav-link nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+                        Schulungen
+                        <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M3 5l3 3 3-3"/></svg>
+                    </button>
+                    <div class="nav-dropdown-menu" role="menu">
+                        <a href="schulungen" role="menuitem">Modulübersicht</a>
+                        <a href="termine" role="menuitem">Termine 2026</a>
+                        <a href="foerderung" role="menuitem">Förderung</a>
+                    </div>
+                </div>
+                <a href="beratung" class="nav-link">Beratung</a>
+                <a href="tools" class="nav-link">Tools</a>
+                <a href="team" class="nav-link">Über uns</a>
+                <a href="kontakt" class="nav-link">Kontakt</a>
+            </nav>
+            <div class="header-actions">
+                <a href="../en/pages/impressum" class="lang-toggle" aria-label="Switch to English">EN</a>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Farbschema wechseln">
+                    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                </button>
+                <button class="mobile-menu-toggle" aria-label="Menü öffnen" aria-expanded="false"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" aria-hidden="true">
+        <nav class="mobile-menu-nav" aria-label="Mobile Navigation">
+            <a href="../" class="mobile-nav-link">Startseite</a>
+            <div class="mobile-dropdown">
+                <button class="mobile-nav-link mobile-dropdown-toggle" aria-expanded="false">Schulungen</button>
+                <div class="mobile-dropdown-items">
+                    <a href="schulungen">Modulübersicht</a>
+                    <a href="termine">Termine 2026</a>
+                    <a href="foerderung">Förderung</a>
+                </div>
+            </div>
+            <a href="beratung" class="mobile-nav-link">Beratung</a>
+            <a href="tools" class="mobile-nav-link">Tools</a>
+            <a href="team" class="mobile-nav-link">Über uns</a>
+            <a href="kontakt" class="mobile-nav-link">Kontakt</a>
+        </nav>
+    </div>
+
+    <!-- ==================== MAIN ==================== -->
+    <main id="main-content" role="main">
+
+        <section class="section">
+            <div class="container legal-content">
+
+                <h1>Impressum</h1>
+
+                <h2>Angaben gemäß § 5 TMG</h2>
+                <p>
+                    <strong>CITECH AI GmbH</strong><br>
+                    Katernberger Str. 107<br>
+                    45327 Essen<br>
+                    Deutschland
+                </p>
+
+                <h2>Vertreten durch</h2>
+                <p>
+                    Geschäftsführer: Marcel Batur<br>
+                    Geschäftsführer: Dr. Ingo Poschmann
+                </p>
+
+                <h2>Kontakt</h2>
+                <p>
+                    <strong>E-Mail:</strong> info@citech-ai.de<br>
+                    <strong>Web:</strong> www.citech-ai.de
+                </p>
+
+                <h2>Registereintrag</h2>
+                <p>
+                    Eintragung im Handelsregister<br>
+                    Registergericht: Amtsgericht Essen<br>
+                    Registernummer: HRB 37447
+                </p>
+
+                <h2>Umsatzsteuer-ID</h2>
+                <p>
+                    Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:<br>
+                    DE458959833
+                </p>
+
+                <h2>Berufsrechtliche Angaben</h2>
+                <p>
+                    <strong>AZAV-Zertifizierung:</strong> Zugelassener Träger nach dem Recht der Arbeitsförderung<br>
+                    Zugelassen für: Maßnahmen der beruflichen Weiterbildung<br>
+                    Zertifizierungsstelle: TÜV NORD CERT GmbH (DAkkS-akkreditiert)<br>
+                    Zertifikat-Registrier-Nr.: 44 727 251914<br>
+                    Gültig: 29.12.2025 bis 28.12.2030
+                </p>
+
+                <h2>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>
+                <p>
+                    Marcel Batur<br>
+                    Katernberger Str. 107<br>
+                    45327 Essen
+                </p>
+
+                <h2>EU-Streitschlichtung</h2>
+                <p>
+                    Die Online-Streitbeilegungsplattform (ODR) der EU wurde zum 20. Juli 2025 eingestellt.
+                    Informationen zu Streitbeilegungsstellen in den EU-Mitgliedstaaten finden Sie unter:<br>
+                    <a href="https://consumer-redress.ec.europa.eu/dispute-resolution-bodies_en" target="_blank" rel="noopener">https://consumer-redress.ec.europa.eu</a>
+                </p>
+                <p>Unsere E-Mail-Adresse finden Sie oben im Impressum.</p>
+
+                <h2>Verbraucherstreitbeilegung</h2>
+                <p>
+                    Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
+                </p>
+
+                <h2>Dokumentenhistorie</h2>
+                <p>
+                    <strong>17.02.2026 – Version 1.1:</strong> AZAV-Zertifizierung aktualisiert: Zulassung durch TÜV NORD CERT erteilt (Zertifikat-Nr. 44 727 251914)<br>
+                    <strong>07.12.2025 – Version 1.0:</strong> Erstveröffentlichung mit vollständigen Angaben gemäß § 5 TMG
+                </p>
+                <p>Dieses Impressum wird bei Änderungen der Unternehmensdaten aktualisiert.</p>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="../assets/images/logo/citech-logo-white.svg" alt="CITECH AI" class="logo-dark" width="120" height="28">
+                    <img src="../assets/images/logo/Citech Logo klassisch weißer Hintergrund mit Schatten.jpg" alt="CITECH AI" class="logo-light" width="120" height="28">
+                    <p>AZAV-zertifizierter KI-Bildungsträger aus Essen. Schulungen, Beratung und Implementierung – praxisnah und DSGVO-konform.</p>
+                </div>
+                <div><h4 class="footer-heading">Angebot</h4><ul class="footer-links"><li><a href="schulungen">Schulungen</a></li><li><a href="termine">Termine</a></li><li><a href="beratung">Beratung</a></li><li><a href="tools">KI-Tools</a></li><li><a href="foerderung">Förderung</a></li></ul></div>
+                <div><h4 class="footer-heading">Unternehmen</h4><ul class="footer-links"><li><a href="team">Über uns</a></li><li><a href="newsletter">KI-Radar Newsletter</a></li><li><a href="kontakt">Kontakt</a></li></ul></div>
+                <div><h4 class="footer-heading">Rechtliches</h4><ul class="footer-links"><li><a href="impressum">Impressum</a></li><li><a href="datenschutz">Datenschutz</a></li><li><a href="agb">AGB</a></li><li><a href="ki-transparenz">KI-Transparenz</a></li></ul></div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2025–2026 CITECH AI GmbH. Alle Rechte vorbehalten.</span>
+                <span>Design: <a href="https://www.b-line-graphix.de" target="_blank" rel="noopener">B_Line Graphix</a></span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie Banner -->
+    <div class="cookie-banner" role="dialog" aria-label="Cookie-Einstellungen">
+        <h4>Wir respektieren Ihre Privatsphäre</h4>
+        <p>Diese Website verwendet ausschließlich technisch notwendige Cookies. Keine Analyse-Tools, kein Tracking.</p>
+        <div class="cookie-buttons">
+            <button id="cookie-accept" class="btn btn-primary btn-sm">Verstanden</button>
+            <a href="datenschutz" class="btn btn-secondary btn-sm">Datenschutz lesen</a>
+        </div>
+    </div>
+
+    <script src="../js/main.js?v=1"></script>
+</body>
+</html>
