@@ -2002,6 +2002,11 @@ p {
         display: none !important;
     }
 
+    /* Hero: more top padding for header clearance */
+    .hero {
+        padding-top: 110px !important;
+    }
+
     /* Hero badge no cutoff */
     .hero-badge {
         font-size: 0.65rem !important;
