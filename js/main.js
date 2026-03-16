@@ -968,7 +968,50 @@
     };
 
     /* ========================================
-       10. SMOOTH ANCHOR LINKS
+       10. PAGE TRANSITIONS
+       ======================================== */
+
+    const PageTransitions = {
+        overlay: null,
+
+        init() {
+            // Create transition overlay (sits in DOM permanently, hidden)
+            this.overlay = document.createElement('div');
+            this.overlay.className = 'page-transition-overlay';
+            document.body.appendChild(this.overlay);
+
+            // If arriving from a transition, fade the overlay out
+            if (sessionStorage.getItem('citech_page_transition')) {
+                sessionStorage.removeItem('citech_page_transition');
+                this.overlay.classList.add('active');
+                requestAnimationFrame(() => {
+                    requestAnimationFrame(() => {
+                        this.overlay.classList.remove('active');
+                    });
+                });
+            }
+
+            // Intercept internal link clicks
+            document.addEventListener('click', (e) => {
+                const link = e.target.closest('a[href]');
+                if (!link) return;
+
+                const href = link.getAttribute('href');
+                if (!href || href.startsWith('#') || href.startsWith('http') ||
+                    href.startsWith('tel:') || href.startsWith('mailto:') ||
+                    link.target === '_blank' || href.endsWith('.pdf')) return;
+
+                e.preventDefault();
+                sessionStorage.setItem('citech_page_transition', 'true');
+                this.overlay.classList.add('active');
+
+                setTimeout(() => { window.location.href = href; }, 300);
+            });
+        }
+    };
+
+    /* ========================================
+       11. SMOOTH ANCHOR LINKS
        ======================================== */
 
     const SmoothScroll = {
@@ -1003,6 +1046,7 @@
         Modals.init();
         Tabs.init();
         ContactTab.init();
+        PageTransitions.init();
         CookieBanner.init();
         SmoothScroll.init();
     };

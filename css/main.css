@@ -2104,6 +2104,25 @@ p {
 }
 
 /* ============================================
+   PAGE TRANSITIONS
+   ============================================ */
+
+.page-transition-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9998;
+    background: var(--color-bg-primary);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.page-transition-overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+/* ============================================
    CRITICAL MOBILE OVERRIDES (in main.css for cache reliability)
    ============================================ */
 @media (max-width: 768px) {
