@@ -2006,12 +2006,12 @@ p {
     z-index: 10;
 }
 
-/* Symbol */
+/* Symbol (full logo SVG) */
 .intro-symbol {
     opacity: 0;
-    transform: scale(0.8);
-    transition: opacity 0.8s ease, transform 0.8s ease;
-    filter: drop-shadow(0 0 30px rgba(0, 212, 255, 0.3));
+    transform: scale(0.85);
+    transition: opacity 1s ease, transform 1s ease;
+    filter: drop-shadow(0 0 40px rgba(0, 212, 255, 0.2));
 }
 
 .intro-symbol.visible {
