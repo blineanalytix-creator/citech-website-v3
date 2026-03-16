@@ -292,7 +292,9 @@
         resize() {
             const dpr = window.devicePixelRatio || 1;
             this.width = window.innerWidth;
-            this.height = window.innerHeight;
+            // Mobile: Höhe beim ersten Laden fixieren (Adressleiste ändert innerHeight)
+            if (!this._initialHeight) this._initialHeight = window.innerHeight;
+            this.height = this.isMobile ? this._initialHeight : window.innerHeight;
             this.canvas.width = this.width * dpr;
             this.canvas.height = this.height * dpr;
             this.canvas.style.width = this.width + 'px';
@@ -301,7 +303,11 @@
         },
 
         handleResize() {
-            this.isMobile = window.innerWidth <= 768;
+            // Mobile: nur bei Breitenänderung resizen (Adressleiste ändert Höhe beim Scroll)
+            const newWidth = window.innerWidth;
+            if (this.isMobile && Math.abs(newWidth - this.width) < 2) return;
+
+            this.isMobile = newWidth <= 768;
             this.resize();
             this.nodes = [];
             this.flashes = [];
